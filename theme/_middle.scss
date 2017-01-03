@@ -1,0 +1,21 @@
+#main {
+  background-color: #fff;
+
+}
+.speakout-container {
+  padding: 20px 52px;
+}
+#main {
+  @extend .center-vertical;
+  background-color: #fff;
+  margin-bottom: 0px;
+}
+
+
+.page-header {
+  border-bottom-width: 0px;
+}
+  
+#slide_top {
+  display: none;
+}

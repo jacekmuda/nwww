@@ -1,0 +1,35 @@
+// Main SCSS file for Cyklop
+// It should contain Bootstrap theme agnostic CSS classes
+// so definitions of semantic classes, CSS logic (hiding, layout, etc)
+
+// global variables for apps' SASS
+@import "global_variables";
+
+// SASS compiler import contains also ../theme path where a bootswatch Akcja Demokracja theme is placed
+// This is a typical _variables.scss file of a bootstrap theme
+@import "variables";
+
+/*
+ Shared bootstrap library and others [example]
+ */
+@import "bootstrap";
+//@import "lib/datepicker";
+//@import "lib/font_awesome";
+//@import "lib/codemirror";
+//@import "lib/codemirror_elegant";
+//@import "lib/codemirror_mustache";
+
+// this apps' SASS files in this directory [example]
+// @import "main";
+// @import "reporting";
+
+/*
+  Per-theme bootswatch file (if you don't want to use it, leave an empty file)
+  and theme file, where all customization changing bootstrap+bootswatch go
+*/
+@import "bootswatch";
+@import "theme";
+
+
+// theme/_theme.scss file includes classes/styling for Speakout app.
+// This apps' classes should be added without clashing the Speakout theme.

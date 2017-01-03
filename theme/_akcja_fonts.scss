@@ -1,0 +1,47 @@
+
+@font-face {
+  font-family: 'LicensePlate';
+  /* src: url('fonts/LicensePlatePL.ttf'); */
+  src: url('fonts/LicensePlatePL.eot?#iefix') format('embedded-opentype'),
+			url('fonts/LicensePlatePL.otf') format('otf'),
+			url('fonts/LicensePlatePL.woff') format('woff'),
+			url('fonts/LicensePlatePL.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'FFDINWebProCondBold';
+	src: url('fonts/FFDINWebProCondBold.eot');
+	src: url('fonts/FFDINWebProCondBold.eot?#iefix') format('embedded-opentype'),
+			url('fonts/FFDINWebProCondBold.woff2') format('woff2'),
+			url('fonts/FFDINWebProCondBold.woff') format('woff'),
+			url('fonts/FFDINWebProCondBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Caladea";
+	src: url('fonts/caladea-regular.ttf') format('truetype');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Caladea";
+	src: url('fonts/caladea-italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+@font-face {
+	font-family: "Caladea";
+	src: url('fonts/caladea-bold.ttf') format('truetype');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Caladea";
+	src: url('fonts/caladea-bolditalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}

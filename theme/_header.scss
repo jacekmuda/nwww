@@ -1,0 +1,144 @@
+.navbar-admin {
+  margin-bottom: 0px;
+}
+#header {
+  @extend .center-vertical;
+  padding: 20px 20px 10px 20px;
+  background-color: #fff;
+  a {
+    color: $gray-base;
+  }
+  a:hover {
+    color: $brand-danger;
+  }
+}
+#social {
+  text-align: right;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+      font-size: 20px;
+      margin-left: -5px;
+    }
+  }
+}
+#logo {
+  margin: 0 0 50px 0;
+  img {
+    width: 100%;
+    max-width: 135px;
+  }
+}
+#sign-in {
+  text-align: right;
+  .btn-sign-in {
+    font-family: $font-family-serif;
+    background-color: $gray-base;
+    color: $btn-primary-color;
+    border-radius: 25px;
+    font-size: 14px;
+    margin: 30px 0;
+    padding: 6px 20px;
+  }
+}
+#menu {
+  border-style: solid;
+  border-color: $gray-base;
+  border-width: 2px 0 2px 0;
+  margin: 0;
+  ul {
+    list-style-type: none;
+    padding: 7px 0 0 0;
+    margin: 0 0 2px 0;
+    li {
+      font-family: 'LicensePlate';
+      font-size: 23px;
+      display: inline;
+      padding: 0 28px;
+      border-style: solid;
+      border-color: $gray-base;
+      border-width: 0 2px 0 0;
+    }
+    li:last-child {
+      border-width: 0px;
+    }
+  }
+  .responsive-button {
+    display: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    background-color: $brand-primary;
+    margin: 20px auto;
+    cursor: pointer;
+    .hamburger-bar {
+      margin: 29px 15px;
+      width: 30px;
+      height: 4px;
+      background-color: #fff;
+      float: left;
+      border-radius: 3px;
+      position: relative;
+    }
+    .hamburger-bar::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      width: 30px;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 3px;
+    }
+    .hamburger-bar::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      width: 30px;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 3px;
+    }
+  }
+}
+// Mobile & Tablet
+@media  (max-width: $screen-sm) {
+  #social {
+    text-align: center;
+  }
+  #logo {
+    text-align: center;
+    margin: 20px 0 10px 0;
+  }
+  #sign-in {
+    text-align: center;
+    .btn-sign-in {
+      width: 80%;
+      max-width: 400px;
+    }
+  }
+  #menu {
+    ul {
+      text-align: center;
+      li {
+        display: block;
+        border-width: 0;
+        margin: 10px 0;
+      }
+    }
+    .responsive-button {
+      display: block;
+    }
+  }
+  //Class for jquery rollup effect
+  .menu-closed {
+    max-height: 105px;
+    overflow: hidden;
+  }
+  .menu-open {
+    overflow: auto;
+    max-height: 100%;
+  }
+}

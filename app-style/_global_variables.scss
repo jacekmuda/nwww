@@ -1,0 +1,16 @@
+/*
+  This is a shared, global _variables.scss counterpart.
+  It contains necessary variables to make generic (vanilla Bootstrap) theme work.
+  (basically these are Lumen variables which are used in Speakout but are not present in vanilla Bootstrap).
+  Variables can be overriden by individual _variables.scss declarations.
+*/
+
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower. (copied from lumen theme)
+
+//** Load fonts from this directory.
+$icon-font-path:          "../fonts/";
+//** File name for all font files.
+$icon-font-name:          "glyphicons-halflings-regular";
+//** Element ID within SVG icon file.
+$icon-font-svg-id:        "glyphicons_halflingsregular";
+

@@ -1,0 +1,24 @@
+body {
+      background: repeating-linear-gradient(-45deg,#ffe100 0px,#ffe100 200px,#009b37 200px,#009b37 400px,#f00600 400px,#f00600 600px,#0049aa 600px,#0049aa 800px,#ffe100 800px );
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      overflow-x: hidden;
+}
+#page {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.center-vertical {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+//Firefox outline fix
+a {
+  outline: none;
+}

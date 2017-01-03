@@ -1,0 +1,155 @@
+.raction {
+  .action-form-container {
+    background: $brand-warning;
+    padding: 33px;
+    margin-bottom: 20px;
+  }
+  .invalid-form-element-error {
+    background-color: $brand-primary;
+    color: #fff;
+    font-size: 14px;
+    padding: 6px;
+    a {
+      color: $brand-warning;
+      }
+
+  }
+}
+.progress {
+  border-radius: 2px;
+}
+//Form style for campaigns & donations
+.form-control {
+  border: 1px solid $brand-primary;
+  padding: 6px;
+  height: 36px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+
+}
+.form-control:focus {
+  border: 4px solid $brand-danger;
+  box-shadow: none;
+}
+//Known Member
+.known-member {
+  background-color: $brand-primary;
+  padding: 6px;
+  color: #fff;
+  .known-member-you {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+  }
+  a {
+    color: #fff;
+
+  }
+}
+.already-signed {
+  background-color: #fff;
+  text-align: center;
+  padding: 6px;
+  margin: 10px 0;
+  font-size: 16px;
+  p {
+    margin: 0 0 20px 0;
+  }
+}
+//Recent comments
+.recent-comments {
+  margin-top: 20px;
+  border: 16px solid $brand-danger;
+  padding: 28px;
+}
+
+//Mailform
+#rmail {
+  .left-column {
+    .form-group {
+      border:16px solid $brand-primary;
+      padding: 20px;
+      font-size: 16px;
+      strong {
+        @extend h3;
+        margin: 0 0 10px 0;
+        display: block;
+      }
+    }
+    .form-explanation {
+      border: 16px solid $brand-danger;
+      padding: 20px;
+      border-radius: 0;
+      background-color: #fff;
+      color: $gray-base !important;
+      font-size: 14px;
+    }
+  }
+  .right-column {
+    background-color: $brand-warning;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    .letter-input {
+      background-color: $brand-warning;
+      border: none;
+      .letter-input-subject {
+        border: none;
+      }
+    }
+  }
+
+  .decision-checkboxes .form-group {
+    max-height: 350px;
+    overflow-y: scroll;
+    background-color: white;
+  }
+  }
+
+//Mobile Tablet
+#fixed-sign {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background: white;
+  width: 100%;
+  z-index: 99;
+  padding: 10px;
+  margin: 0!important;
+  .progress {
+    border-radius: 4px;
+    span {
+      color: $gray-base;
+      width: 100%;
+      text-align: center;
+      display: block;
+      position: absolute;
+      font-size: 16px;
+      padding: 10px 0;
+      font-weight: bold;
+    }
+  }
+}
+
+
+//CALL
+.rcall-decision {
+  display: block;
+  padding: 16px;
+  text-align: center;
+  border: 16px solid $brand-primary;
+  margin: 20px 0;
+  font-size: 18px;
+}
+.rcall-msg {
+  display: block;
+  padding: 0 16px;
+  text-align: center;
+  font-family: $font-family-sans-serif;
+  margin-bottom: 10px;
+}
+.rcall-dial {
+  strong {
+    color: $brand-danger;
+  }
+}
