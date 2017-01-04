@@ -81,12 +81,43 @@ inferowana z faktu, że _mother_ jest puste).
 
 ### Kampania zwykła
 
-Kampania zwykła ma odpowiadającą kampanię w innym systemie.
+Kampania zwykła ma odpowiadającą kampanię w innym systemie. Taka
+kampania jest powiązana z kampanią w aplikacji Speakout.
 
+Zwykła kampania posiada pole adresu kampanii speakout:
+`https://dzialaj.akcjademokracja.pl/campaigns/127`.
 
-kampania speakout – odpowiada kampanii w zewnętrznej aplikacji
-Speakout (opis niżej)
+Zwykła kampania może pobrać dane ze Speakout, które zawierają np
+liczniki akcji. JSON z danami kampanii jest tworzony przez dodanie
+`.json` do adresu kampanii, np: `https://dzialaj.akcjademokracja.pl/campaigns/127.json`
 
+Zwrócone dane w formacie JSON to:
 
+```
+{
+ "id":127,
+ "slug":"nie-dla-rzeczpospolitej-mysliwskiej",
+ "name":"Nie dla Rzeczpospolitej Myśliwskiej",
+ "internal_name":"polowania",
+ "twitter_share_text":"STOP udziałowi dzieci w polowaniach. NIE dla
+ władzy myśliwych w lasach @AkcjaDemokracja",
+"finished":false,
+"rsign_recipients":24753,
+"rmails":0,
+"rtweets":0,
+"rcalls":0,
+"rsigns":24752,
+"rfacebooks":0,
+"action_count":24752,
+"rmail_recipients":0,
+"rtweet_recipients":0,
+"rcall_sessions":0,
+"rfacebook_recipients":0,
+"goal":50000,
+"uniquersigns":23343
+}
+```
+
+### 
 
 kampania matka – posiada własną stronę oraz agreguje inne kampanie speakout, posty typu blog oraz dowolny tekst HTML.
