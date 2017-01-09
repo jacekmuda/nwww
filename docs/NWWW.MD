@@ -85,11 +85,12 @@ Kampania zwykła ma odpowiadającą kampanię w innym systemie. Taka
 kampania jest powiązana z kampanią w aplikacji Speakout.
 
 Zwykła kampania posiada pole adresu kampanii speakout:
-`https://dzialaj.akcjademokracja.pl/campaigns/127`.
+`https://dzialaj.akcjademokracja.pl/campaigns/127` zamiennie z `https://dzialaj.akcjademokracja.pl/campaigns/nazwa_wewnętrzna`.
 
 Zwykła kampania może pobrać dane ze Speakout, które zawierają np
 liczniki akcji. JSON z danami kampanii jest tworzony przez dodanie
-`.json` do adresu kampanii, np: `https://dzialaj.akcjademokracja.pl/campaigns/127.json`
+`.json` do adresu kampanii, np:
+`https://dzialaj.akcjademokracja.pl/campaigns/127.json`, `https://dzialaj.akcjademokracja.pl/campaigns/nazwa_wewnętrzna.json`.
 
 Zwrócone dane w formacie JSON to:
 
@@ -118,6 +119,56 @@ Zwrócone dane w formacie JSON to:
 }
 ```
 
-### 
+Pola oznaczają:
 
-kampania matka – posiada własną stronę oraz agreguje inne kampanie speakout, posty typu blog oraz dowolny tekst HTML.
+- id - unikalny identyfikator kampanii Speakout
+- slug - unikalny ciąg w adresie url kampanii (/campaigns/`slug`)
+- name - tytuł kampanii
+- internal_name - nazwa wewnętrzn używana jako przystępny dla ludzi
+  identyfikator w tym i innych systemach
+- finished - true/false - czy kampania jest zamknięta?
+- rmails - ile osób wyłało email w tej kampanii
+- rtweets - ile osób zatweetowało w tej kampanii
+- rfacebooks - ile osób zapostsowało w tej kampanii
+- rfaxes - ile osób wysłało fax w tej kampanii
+- rcalls - ile osób wykonało telefon 
+- rsigns - ile jest podpisów pod apel w kampanii
+- uniquersigns - ile jest unikalnych (według email) podpisów pod apelem
+- goal - jaki jest cel zbierania podpisów? Potrzebny, aby wyświetlić
+  pasek postępu. Zmienny. Rośnie w miarę dochodzenia podpisów, tak że
+  nigdy nie jest tak naprawdę osiągnięty. Jeżeli kampania jest już
+  zamknięta, pokazujemy ostatecznie zebrane podpisy (uniquersigns) i ignorujemy ten cel.
+- action_counts - ile w ogóle akcji wykonano
+
+Zwykła Kampania powinna posiadać także krótki opis, który jest
+edytowalny w WP (nie jest pobiereny ze speakout), obrazek kampanii.
+
+Powinna być możliwość ustawienia (albo mogłoby to być wykryte),
+liczniki jakich akcji są wyświetlone. Speakout udostępnia liczniki
+akcji: podpis (razem z celem `goal`), wysłlanie maila, tweeta, posta
+facebookowego, faksu, zrobienia telefonu. Nie wszystkie akcje są
+dostępne w każdej kampanii. WP mogłby wykrywać, że nie ma co
+wyświetlać danej akcji, jeżeli licznik wynosi 0; mogłoby to też być
+ustawiane.
+
+
+### Kampania matka
+
+Kampania matka jest długotrwałą kampanią w której skład wchodzą inne
+kampanie, odpowiadające różnym jej momentom lub działaniom w jej
+ramach. Kampania matka powstaje przez awans/wypromowanie ze zwykłej
+kampanii. Często jest to zwykła kampania, w której zbierane są
+podpisy, następnie okazuje się, że chcemy tę kampanię
+rozbudować. Awansujemy ją na kampanię matkę - to do niej będą przez
+cały długi czas trwania zbierane podpisy. Możemy jednak uruchomić inną
+zwykłą kampanię w jej ramach, takie jak np. akcja wysyłania maili do
+posłów. Ta zwykła kampania będzie krótkotrwała i jest podrzędna
+względem kampanii matki.
+
+Kampania matka powinna mieć osobną stronę na WP. Będą w niej
+wyświetlone jej dane (takie jak kampanii zwykłej), ale także będą
+zagregowane kapmanie zwykłe których jest matką, oraz przyporządkowane
+tej kampanii posty aktualności, można także dodać blok dowolny blok
+HTML. Te informacje - podpięte kampanie (wraz np z ich licznikami),
+aktualności oraz dowolny tekst - powinny być wyświetlone w kolejności,
+którą można z mienić (domyślnie data utworzenia obiektu, od najnowszych).
