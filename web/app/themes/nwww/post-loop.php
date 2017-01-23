@@ -29,11 +29,21 @@ while (have_posts()) : the_post(); ?>
     </div>
     </article>
 <?php endwhile; ?>
+    <?php if (is_archive() || is_home()) :?>
     <div class="row">
-    <div class="col-md-12">
-        <a class="micro" href="<?php echo get_next_posts_page_link( ); ?>"> więcej wpisów  </a>
+        <div class="col-md-12">
+
+            <nav aria-label="...">
+                <ul class="pager micro">
+                    <li><?php echo get_previous_posts_link( ); ?></li>
+                    <li><?php echo get_next_posts_link( ); ?></li>
+
+                </ul>
+            </nav>
+
+        </div>
     </div>
-    </div>
+    <?php endif; ?>
 <?php endif; ?>
 
 </div>

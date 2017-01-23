@@ -21,11 +21,7 @@ global $app;
                 endwhile;
                 endif;
                 ?>
-<!--           --><?php //wp_nav_menu([
-//                    'menu' => 'Bottom',
-//                    'menu_class' => 'nav navbar-nav ',
-//                    'container' => false
-//                ]); ?>
+
 
             </div>
         </div>
@@ -35,6 +31,14 @@ global $app;
             <?php $app->get_social(); ?>
 
         </div>
+                <div class="col-md-12 text-center">
+                    <?php wp_nav_menu([
+                        'menu' => 'Bottom',
+                        'menu_class' => 'footer__menu',
+                        'container' => false
+                    ]); ?>
+
+                </div>
         </div>
         </div>
 

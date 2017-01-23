@@ -6,34 +6,8 @@ get_header(); ?>
     <section class="padded section container c__w" id="content" role="main">
 
     <div class="row">
-        <div class="col-md-3 campaign__cats">
 
-        <div class="c__r">
-            <header><h1>Kampanie</h1></header>
-    <?php
-
-    $categories = get_categories( array(
-        'orderby' => 'name',
-        'order'   => 'ASC',
-        'posts_per_page' => -1
-    ));
-
-    foreach( $categories as $category ) {
-        $category_link = sprintf(
-            '<a href="%1$s" >%2$s (%3$s)</a>',
-            esc_url( get_category_link( $category->term_id ) ),
-            esc_html( $category->name ),
-            $category->count
-        );
-
-    echo  sprintf( esc_html__( '%s', 'textdomain' ), $category_link ) ;
-
-    }
-    echo '<a class="showall" href="#">Wszystkie</a>';
-    ?>
-
-        </div>
-        </div>
+        <?php get_template_part('categories'); ?>
 
         <div class="col-md-9 campaign__list">
 		<?php

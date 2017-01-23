@@ -19,10 +19,9 @@ if ( have_posts() ) : ?>
                     <?php
 
                     $children =  $app->get_children($post->ID);
+                    $child_page = $app->get_child_if_no_content($post);
 
                     $title = get_the_title($post);
-
-
 
                     if ($app->has_parent($post)) {
                         $parentid = $app->has_parent($post);
@@ -30,15 +29,25 @@ if ( have_posts() ) : ?>
                         $title = get_the_title($parentid);
                     }
 
-
                     echo sprintf('<header><h1 class="h2 side__title">%s</h1></header>', $title);
 
                     if ($children) {
+
+
+
+
+
                         foreach ($children as $c) {
+
+                            $classes = 'cat__link';
+                            if ($child_page['ID'] == $c['ID']) {
+                                $classes .= ' active';
+                            }
+
                             $app->render('link', [
                                 'text' => $c['name'],
                                 'link' => $c['link'],
-
+                                'classes' => $classes
                             ]);
                         }
                     }
@@ -54,10 +63,19 @@ if ( have_posts() ) : ?>
 
                 <div class="row">
 
-                        <article class="col-md-12 campaign__in__list">
+                        <article class="col-md-12">
+
+                            <?php
+
+                            if ($child_page) :
+                                $post = get_post($child_page['ID']);
+                                setup_postdata($post);
+                            endif; ?>
+
                             <header>
                                 <h1><?php  the_title(); ?></h1>
                             </header>
+
                             <?php  the_content(); ?>
 
                         </article>
@@ -68,14 +86,7 @@ if ( have_posts() ) : ?>
             </div>
         </div>
     </section><!-- #primary -->
-                    <?php endwhile;
-
-    the_posts_navigation();
-
-else :
-
-
-
+<?php endwhile;
 endif; ?>
 <?php
 

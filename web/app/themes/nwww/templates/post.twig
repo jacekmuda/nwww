@@ -11,15 +11,12 @@
         </div>
         <div class="col-sm-8">
             {% endif %}
-            <h1 class="h3">
-                {% if link %}
-                <a href="{{ link }}">{{ title }}</a>
-                {% else %}
-                {{ title }}
-                {% endif %}
-            </h1>
+
+            {% include 'title-link.twig' with { 'link': link, 'title' : title } %}
 
             <p>{{ content | raw }}</p>
+
+
             {% if img %}
         </div>
     </div>
@@ -35,8 +32,6 @@
     <div class="row">
         <div class="col-sm-8">
             <time class="micro"> {{ time }}</time>
-
-
         </div>
         <div class="col-sm-4 text-right">
             {% if link %}    <a class="micro" href="{{ link }}">więcej...</a>  {% endif %}

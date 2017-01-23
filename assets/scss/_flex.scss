@@ -5,6 +5,10 @@
 .row.is-flex > [class*='col-'] {
   display: flex;
   flex-direction: column;
+  align-content: stretch;
+  .exp {
+    height: 100%;
+  }
 }
 .self-end {
   align-self: flex-end;

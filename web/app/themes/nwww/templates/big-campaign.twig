@@ -1,29 +1,23 @@
 <div class="promo__campaign row">
 <div class="col-sm-6">
-<a href="{{ link }}" >
-    <div class="thumb">
-    {{ img | raw }}
-    </div>
-</a>
+
+
+    {% include 'thumb-link.twig' with { 'img': img, 'link': link } %}
 
 </div>
-    <div class="col-sm-6">
+<div class="col-sm-6">
     <div class="c__w promo__campaign__text">
-    <h1 class="h3">
-        <a href="{{ link }}" >
-        {{ title }}
-        </a>
 
-    </h1>
+
+        {% include 'title-link.twig' with { 'link': link, 'title' : title } %}
+
+
         {% if signed %}
-        <div class="signed">
-            <div class="perc c__g" style="width: {{ signed.perc }}%">
-
-            </div>
-            <span class="micro"> {{ signed.signed }} osób</span>
-        </div>
+        {% include 'campaign-signed.twig' with { 'signed': signed } %}
         {% endif %}
+
         <p>  {{ excerpt | raw }}</p>
+
         {% if children %}
         <h2 class="h4">Nasze działania</h2>
         <ul>

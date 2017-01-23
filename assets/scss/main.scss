@@ -1,14 +1,17 @@
+@import "variables";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 @import "../../bower_components/NWWW/sass/app-style/application";
 
-@import "global_variables";
+
 @import "flex";
 @import "global";
+
 @import "header";
 @import "page";
 @import "footer";
 @import "posts";
+
 @import "campaigns";
 
 

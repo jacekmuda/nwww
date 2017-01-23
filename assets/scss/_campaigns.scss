@@ -9,7 +9,11 @@
       color: inherit;
       display: block;
       padding: 2rem $padding;
+      transition: all 200ms ease-in-out;
       &:hover {
+        background-color: map-get($colors, b);
+      }
+      &.active {
         background-color: map-get($colors, b);
       }
     }

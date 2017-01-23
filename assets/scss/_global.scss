@@ -1,9 +1,4 @@
 
-$fonts: (
-        license-plate: 'LicensePlate',
-        din: 'FFDINWebProCondBold',
-        caladea: 'Caladea'
-);
 
 $padding: 2.5rem;
 
@@ -44,7 +39,7 @@ h1 a {
   font-size: 1.5rem;
   line-height: 1;
 }
-$colors: (g: #009B37, r: #F00601, y: #ffe100, b: #0049AA, w: #ffffff);
+
 @each $name, $color in $colors {
   .c__#{$name} {
     background-color: map-get($colors, $name);
@@ -55,7 +50,6 @@ $colors: (g: #009B37, r: #F00601, y: #ffe100, b: #0049AA, w: #ffffff);
 .super {
   font-size: 10rem;
 }
-
 
 
 body {
@@ -92,6 +86,12 @@ body {
     }
   }
   }
+
+.input-group {
+  input {
+    height: 3em;
+  }
+}
 
 @media (min-width: $screen-sm-min) {
   .padded {

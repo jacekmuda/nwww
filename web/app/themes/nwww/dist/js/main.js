@@ -23,22 +23,50 @@ var H = {
     }
 };
 
-var AD = {};
+var AD = {
+
+    ajax: app.ajax_url
+
+};
 
 AD.init = function () {
     this.menu_scroll = this.menu_scroll.bind(this);
     this.menu_toggle = this.menu_toggle.bind(this);
+    this.ajax_load = this.ajax_load.bind(this);
 
     window.addEventListener('scroll', this.menu_scroll);
 
     var toggle_btn = document.querySelector('.menu_toggle');
     toggle_btn.addEventListener('click', this.menu_toggle);
+
+    // let cat = document.querySelectorAll('.cat__link'), i;
+    //
+    // for (i = 0; i < cat.length; ++i) {
+    //     cat[i].addEventListener('click', this.ajax_load);
+    //
+    // }
+
 };
 AD.menu_toggle = function (e) {
     console.log('clickd');
     var navbar = document.querySelector('.navbar__right'),
         cl = 'hidden-xs';
     H.toggleClass(navbar, cl);
+};
+
+AD.ajax_load = function (e) {
+    console.log(e);
+    e.preventDefault();
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://localhost/nwww/web/?cat=4');
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            console.log(xhr.responseText);
+        } else {
+            console.log(xhr.status);
+        }
+    };
+    xhr.send();
 };
 
 AD.menu_scroll = function (e) {

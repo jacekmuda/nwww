@@ -4,7 +4,7 @@
 if (have_posts()) while (have_posts()) : the_post(); ?>
     <section class="padded section container c__y" id="content" role="main">
 
-        <div class="row">
+        <div class="row is-flex">
 
             <div class=" col-sm-6 col-md-4 col-lg-4 ">
 
@@ -41,11 +41,11 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
             </div>
 
             <div class="col-sm-6 col-md-8 col-lg-8 ">
-                <article class="c__w padded">
+                <article class="c__w padded exp">
 
 
 
-                            <?php $app->cat_link($id); ?>
+                            <?php $app->cat_link($post->ID); ?>
                             <h1> <a href="<?php the_permalink();?>"><?php the_title(); ?></a></h1>
                             <?php the_content(); ?>
 

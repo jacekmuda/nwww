@@ -8,6 +8,9 @@ class App {
 
     function __construct() {
 
+        global $adm;
+        $adm = new Admin();
+
         add_action( 'init', [$this, 'register_campaigns'], 0 );
         add_action( 'init', [$this, 'register_menus'], 0 );
         add_action( 'init', [$this, 'unregister_taxonomies'], 0 );
@@ -17,12 +20,14 @@ class App {
         add_filter( 'the_content_more_link', [$this, 'modify_read_more_link'] );
         add_action( 'wp_enqueue_scripts', [$this, 'do_assets']);
         add_action( 'pre_get_posts', [$this, 'pre'] );
+
+
     }
     function do_assets() {
 
         wp_enqueue_script('app', $this->_assetUrl('js/main.js'), [],  random_int(111,222), true);
         wp_enqueue_style('app', $this->_assetUrl('css/main.css'), [], random_int(111,222));
-
+        wp_localize_script( 'app', 'app', ['ajax_url' => admin_url( 'admin-ajax.php' )]);
     }
 
     function load_twig()
@@ -63,7 +68,7 @@ class App {
 
     function unregister_taxonomies() {
         unregister_taxonomy_for_object_type( 'post_tag', 'post' );
-        unregister_taxonomy_for_object_type( 'category', 'post' );
+       unregister_taxonomy_for_object_type( 'category', 'post' );
     }
     function modify_read_more_link() {
         return '';
@@ -156,25 +161,52 @@ class App {
         ];
         $children = get_children( $args );
 
+        $r = [];
 
-        return array_map(function($c){
-            return [
+        foreach ($children as $c) {
+            $r[] = [
                 'name' => get_the_title($c->ID),
                 'link' => get_permalink($c->ID),
                 'img' => get_the_post_thumbnail($c->ID, 'mid'),
                 'ID' => $c->ID
             ];
-        }, $children);
+        }
+
+        return $r;
     }
 
     public function pre($query){
         if ( $query->is_post_type_archive('campaign') && $query->is_main_query() ) {
-            $query->set( 'post_parent', 0 );
+           $query->set( 'post_parent', 0 );
+            $query->set( 'posts_per_page', 26 );
+
         }
         if ( $query->is_home() && $query->is_main_query() ) {
             $query->set( 'posts_per_page', 6 );
         }
+        if( is_category() ) {
+            $post_type = get_query_var('post_type');
+            if($post_type)
+                $post_type = $post_type;
+            else
+                $post_type = array('nav_menu_item', 'post', 'campaign'); // don't forget nav_menu_item to allow menus to work!
+                $query->set('post_type', $post_type);
+            return $query;
+        }
+
     }
+
+    public function get_child_if_no_content($post){
+        $no_content = $post->post_content < 10;
+        $has_child = $this->has_children($post);
+        if ($no_content && $has_child) {
+            $children = $this->get_children($post->ID);
+            return $children[0];
+        }
+
+    }
+
+
     public function get_signed($id) {
         $speakout = $this->get_speakout_info($id);
         return $this->calc_perc($speakout);
@@ -199,12 +231,16 @@ class App {
         return $content;
     }
     public function cat_link($id) {
-        $cat = get_the_category( $id  )[0] ;
-        $this->render('link', [
-            'link'=> get_category_link( $cat->term_id ) ,
-            'text'=>$cat->name,
-            'classes' => 'micro'
-        ]);
+
+        $cat = get_the_category( $id  ) ;
+        if ($cat) {
+            $this->render('link', [
+                'link'=> get_category_link( $cat[0]->term_id ) ,
+                'text'=> $cat[0]->name,
+                'classes' => 'micro'
+            ]);
+        }
+
     }
 }
 

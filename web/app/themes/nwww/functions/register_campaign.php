@@ -34,7 +34,7 @@
         'description'           => __( 'Post Type', 'nwww' ),
         'labels'                => $labels,
         'supports'              => [ 'title', 'editor', 'excerpt', 'thumbnail', 'page-attributes', ],
-        'taxonomies'            => ['category'],
+        'taxonomies'            => [ 'category' ],
         'hierarchical'          => true,
         'public'                => true,
         'show_ui'               => true,
@@ -43,13 +43,14 @@
         'show_in_admin_bar'     => true,
         'show_in_nav_menus'     => true,
         'can_export'            => true,
-        'has_archive'           => 'kampanie',
+        'has_archive'           => '/kampanie/wszystkie',
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
         'rewrite' => [
-            'slug' => 'kampanie','with_front' => false
-        ],
+            'slug' => 'kampania',
+            'with_front' => false
+        ]
     ];
     register_post_type( 'campaign', $args );
 

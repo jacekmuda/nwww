@@ -37,7 +37,7 @@
 
 ?>
           <div class="col-sm-12">
-              <?php echo  get_post_type_archive_link( 'kampanie' );
+              <?php
               $app->render('link', [
                   'link' =>  get_post_type_archive_link( 'post' ),
                   'text' => 'Wszytskie aktualnosci',
@@ -55,16 +55,33 @@
         </div>
 
     </div>
+
+<?php get_template_part('sign'); ?>
+
+<section class="section padded container c__b">
+    <div class="row is-flex">
+        <div class="col-md-4">
+            <?php $img = get_field('img')['sizes']['mid']; ?>
+            <img src="<?php echo $img; ?>">
+        </div>
+        <div class="col-md-8">
+            <div class="c__w padded exp">
+                <span class="h4">O ruchu</span>
+                <h1><?php the_field('title'); ?></h1>
+
+                    <?php the_field('content'); ?>
+
+            </div>
+        </div>
+
+    </div>
+</section>
     <section class="section padded container c__r">
         <div class="row">
         <div class="col-md-12">
         <div class="c__w padded">
-            <h1>Dorzutka? Dzięki!</h1>
-            <p class="lead">
-                Akcja Demokracja to zarejestrowana formalnie fundacja. Nasze działania nie mają na celu zysku. Jesteśmy po to, żeby razem z Tobą budować ruch ludzi zaangażowanych w ważne dla nich sprawy. Każda kwota się liczy.
-                Dzięki nim zespół Akcji Demokracji przygotowuje kampanie, w których biorą udział tysiące osób.
-            </p>
-            <a href="https://dzialaj.akcjademokracja.pl/campaigns/dorzuc-sie" class="btn-primary btn-lg btn"><span>Dorzuć się</span></a>
+            <?php the_field('tekst'); ?>
+            <a href="<?php the_field('link'); ?>" class="btn-primary btn-lg btn"><span><?php the_field('link_txt'); ?></span></a>
          </div>
          </div>
          </div>

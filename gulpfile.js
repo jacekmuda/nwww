@@ -1,6 +1,9 @@
 let gulp = require('gulp'),
     $    = require('gulp-load-plugins')();
 
+let nodemon = require('gulp-nodemon'),
+    env = require('gulp-env');
+
 let themebase =  'web/app/themes/nwww',
     dist = themebase+'/dist',
     bower = 'bower_components/';
