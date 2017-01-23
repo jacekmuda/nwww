@@ -1,0 +1,73 @@
+.campaign__cats{
+  .c__r {
+  h1 {
+    margin: 0;
+    padding: $padding;
+  }
+    color:white;
+    a {
+      color: inherit;
+      display: block;
+      padding: 2rem $padding;
+      &:hover {
+        background-color: map-get($colors, b);
+      }
+    }
+  }
+}
+
+.promo__campaign {
+  .thumb {
+    overflow: hidden;
+    img {
+      transform: scale(1);
+      transition: transform 300ms ease-in-out;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.campaign__in__list {
+  .promo__campaign {
+    margin-bottom: $padding * 2;
+    &__text {
+      padding-left: 0;
+    }
+    .signed {
+      margin-bottom: $padding;
+    }
+  }
+}
+
+.children__campaigns {
+  padding: $padding;
+}
+
+.post__in__list {
+  margin-bottom: 5rem;
+}
+
+.signed {
+  position: relative;
+  background-color: #dedede;
+  height: 30px;
+  .perc {
+    height: 100%;
+  }
+  span {
+    position: absolute;
+    top:0;
+    left:0;
+    display: inline-block;
+    color: black;
+
+    padding: .7rem 2rem;
+  }
+}

@@ -1,0 +1,46 @@
+<article class="col-md-{{ width|default('12')}} post__in__list">
+
+
+
+
+    {% if img %}
+    <div class="row">
+        <div class="col-sm-4">
+         <img src="{{ img | raw }}">
+
+        </div>
+        <div class="col-sm-8">
+            {% endif %}
+            <h1 class="h3">
+                {% if link %}
+                <a href="{{ link }}">{{ title }}</a>
+                {% else %}
+                {{ title }}
+                {% endif %}
+            </h1>
+
+            <p>{{ content | raw }}</p>
+            {% if img %}
+        </div>
+    </div>
+
+
+    {% endif %}
+
+
+
+
+
+    {% if link or time %}
+    <div class="row">
+        <div class="col-sm-8">
+            <time class="micro"> {{ time }}</time>
+
+
+        </div>
+        <div class="col-sm-4 text-right">
+            {% if link %}    <a class="micro" href="{{ link }}">więcej...</a>  {% endif %}
+        </div>
+    </div>
+    {% endif %}
+</article>

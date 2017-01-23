@@ -1,0 +1,41 @@
+<div class="promo__campaign row">
+<div class="col-sm-6">
+<a href="{{ link }}" >
+    <div class="thumb">
+    {{ img | raw }}
+    </div>
+</a>
+
+</div>
+    <div class="col-sm-6">
+    <div class="c__w promo__campaign__text">
+    <h1 class="h3">
+        <a href="{{ link }}" >
+        {{ title }}
+        </a>
+
+    </h1>
+        {% if signed %}
+        <div class="signed">
+            <div class="perc c__g" style="width: {{ signed.perc }}%">
+
+            </div>
+            <span class="micro"> {{ signed.signed }} osób</span>
+        </div>
+        {% endif %}
+        <p>  {{ excerpt | raw }}</p>
+        {% if children %}
+        <h2 class="h4">Nasze działania</h2>
+        <ul>
+            {% for c in children %}
+            <li>
+                <a href="{{ c.link }}">{{ c.name }}</a>
+
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+
+</div>
+</div>

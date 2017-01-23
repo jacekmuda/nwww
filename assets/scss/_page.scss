@@ -1,0 +1,32 @@
+.posts__loop {
+  h1 {
+    margin-top:0;
+    a {
+      color: inherit;
+    }
+  }
+
+  article {
+    margin-bottom: $padding;
+  }
+}
+
+
+
+.promo__campaign {
+  h1 {
+    margin-top: 0;
+
+  }
+  &__text {
+    padding: $padding;
+  }
+
+}
+
+.form__row {
+  padding: 0 40px;
+  input {
+    margin-bottom: $padding;
+  }
+}

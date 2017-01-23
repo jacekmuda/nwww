@@ -1,0 +1,101 @@
+
+$fonts: (
+        license-plate: 'LicensePlate',
+        din: 'FFDINWebProCondBold',
+        caladea: 'Caladea'
+);
+
+$padding: 2.5rem;
+
+$bord: 2px black solid;
+
+.no-gutter > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
+
+.container {
+
+}
+.padded {
+  padding: $padding/2;
+}
+.section {
+  margin: $padding auto;
+}
+.side__title {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container__inner {
+  background-color: white;
+  padding: $padding;
+}
+
+h1 a {
+  color: inherit;
+}
+.micro {
+  font-family: map-get($fonts, din);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+$colors: (g: #009B37, r: #F00601, y: #ffe100, b: #0049AA, w: #ffffff);
+@each $name, $color in $colors {
+  .c__#{$name} {
+    background-color: map-get($colors, $name);
+
+  }
+}
+
+.super {
+  font-size: 10rem;
+}
+
+
+
+body {
+  font-family: "Cambria",Caladea,"Times New Roman",Times,"Nimbus Roman No9 L",serif;
+}
+
+
+
+.btn-black {
+  color: white;
+  background-color: black;
+  border-radius: 2em;
+  border:none;
+  padding:.5rem 2rem;
+  letter-spacing: .1em;
+  font-size: 2rem;
+
+  &:hover {
+    background-color: map-get($colors, b);
+    color:white;
+
+  }
+
+  &.social {
+    padding:1rem 0;
+    height:4rem;
+    width:4rem;
+    margin-right:  15px;
+    svg {
+      height: 2rem;
+    }
+    path {
+      fill:white;
+    }
+  }
+  }
+
+@media (min-width: $screen-sm-min) {
+  .padded {
+    padding: $padding;
+  }
+
+}

@@ -1,0 +1,50 @@
+.page__footer{
+
+  padding-bottom: 0;
+  color: white;
+  .page__footer__inner {
+    padding: 60px 0;
+  }
+  a {
+    color: map-get($colors, y);
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    margin-top: 0;
+    margin-bottom: $padding;
+  }
+  .col-md-6.text-center:nth-child(1) {
+    margin-bottom: $padding;
+  }
+
+  .page__footer__social {
+    padding: 60px 0;
+    .btn-black {
+      background-color: map-get($colors, g);
+      width:5rem;
+      height:5rem;
+      path {
+        fill:  map-get($colors, b);
+      }
+      svg {
+        height: 3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+
+  .page__footer{
+    .col-md-6.text-center:nth-child(1) {
+      border-right: 2px white solid;
+      margin-bottom: 0;
+    }
+
+  }
+
+}
