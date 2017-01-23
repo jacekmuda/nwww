@@ -1,8 +1,8 @@
 let gulp = require('gulp'),
     $    = require('gulp-load-plugins')();
 
-let nodemon = require('gulp-nodemon'),
-    env = require('gulp-env');
+let gutil = require('gulp-util'),
+    ftp = require('vinyl-ftp');
 
 let themebase =  'web/app/themes/nwww',
     dist = themebase+'/dist',
@@ -14,6 +14,7 @@ let sassPaths = [
     bower+'NWWW/sass/theme',
     bower+'NWWW/sass/app-style'
 ];
+
 
 
 var browserSync = require('browser-sync').create();
@@ -81,22 +82,25 @@ gulp.task('default', ['sass', 'js', 'browser-sync'], function() {
 });
 
 
-gulp.task('deploy', function () {
+var env = require('./env.json');
 
-    function ftpco() {
-        return ftp.create({
-            host: '',
-            port: 21,
-            user: '',
-            password: '',
-            parallel: 5,
-            log: gutil.log
-        });
-    }
+
+function ftpco() {
+    return ftp.create({
+        host: env.host,
+        port: env.port,
+        user: env.user,
+        password: env.password,
+        parallel:5,
+        log: gutil.log
+    });
+}
+
+gulp.task('deploy', function () {
 
     var connect = ftpco();
   
-    var remoteFolder = ''.themebase;
+    var remoteFolder = env.base+themebase;
   
     return gulp.src([themebase+'/**/*'], {
         base: themebase,

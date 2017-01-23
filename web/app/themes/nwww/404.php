@@ -9,7 +9,7 @@
 <h1 class="super">404</h1>
         </div> <div class="col-md-6 text-center">
             <p class="lead">
-                Nie znaleziono strony.
+                Nie znaleziono strony. <br>
             </p>
 
         </div>
