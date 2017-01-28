@@ -14,6 +14,7 @@
 
 body {
   padding-top: 60px;
+  background: white;
 }
 
 
@@ -22,7 +23,7 @@ body {
   margin-bottom: 2.5rem;
 }
 .main__menu {
-  font-family: map-get($fonts, license-plate);
+  font-family: map-get($fonts, din);
   ul {
     margin-right: 0;
   }
@@ -62,6 +63,37 @@ body {
   .navbar__right {
     margin-top: 0;
   }
+
+  .logo {
+    overflow:visible !important;
+    g {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+      transition-duration: 200ms;
+      transform: translate(0,0);
+    }
+    &:hover {
+      g#ak {
+        transform: translate(-5px,-5px);
+      }
+      g#kcja {
+        transform: translate(5px,-5px);
+      }
+      g#demo {
+        transform: translate(-5px,5px);
+      }
+      g#kracja {
+        transform: translate(5px,5px);
+      }
+    }
+
+
+  }
+
+
+
+
+
 }
 @media (min-width: $screen-md-min) {
   body {
