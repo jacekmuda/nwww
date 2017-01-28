@@ -35,8 +35,8 @@
       <file leaf-file-name="_header.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scss/_header.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="93" column="18" lean-forward="false" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
+            <state relative-caret-position="62">
+              <caret line="94" column="21" lean-forward="false" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -1099,12 +1099,12 @@
       <workItem from="1484916684595" duration="2936000" />
       <workItem from="1485078709325" duration="57533000" />
       <workItem from="1485169110101" duration="1069000" />
-      <workItem from="1485587770433" duration="4710000" />
+      <workItem from="1485587770433" duration="4821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66248000" />
+    <option name="totallyTimeSpent" value="66359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1822" y="-209" width="1518" height="1003" extended-state="0" />
@@ -1588,8 +1588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/_header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="93" column="18" lean-forward="false" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
+        <state relative-caret-position="62">
+          <caret line="94" column="21" lean-forward="false" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
           <folding />
         </state>
       </provider>
