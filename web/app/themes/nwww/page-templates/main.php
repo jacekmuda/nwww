@@ -6,7 +6,7 @@
     <div class="section page__content padded container c__y" id="content" role="main">
 
         <div class="row">
-    <div class="col-sm-6 col-md-8 col-lg-8 posts__loop">
+    <div class="col-sm-12 col-md-12 col-lg-6 posts__loop">
         <div class="c__w container__inner">
         <div class="row">
 <?php
@@ -15,7 +15,7 @@
 
     $args = [
             'post_type' => 'post',
-        'posts_per_page' => 5,
+        'posts_per_page' => 4,
         'post_status'=> 'publish'
     ];
 

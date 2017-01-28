@@ -28,6 +28,7 @@ gulp.task('bs-reload', function () {
 
 
 
+
 gulp.task('browser-sync', function() {
     browserSync.init([dist+'/css/*.css', dist+'/js/*.js'], {
 

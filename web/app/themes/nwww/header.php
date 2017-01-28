@@ -28,7 +28,7 @@
     <div class="row is-flex">
         <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 text-left">
             <a href="<?php echo home_url(); ?>">
-                <img class="logo" src="<?php $app->_eImg('logo.png'); ?>">
+                <?php $app->render('header-logo'); ?>
             </a>
         </div>
         <div class="col-xs-6 text-right hidden-sm hidden-lg menu__toggle hidden-md">
@@ -39,7 +39,7 @@
 
                 <?php $app->get_social();?>
 
-                <a class="btn btn-default btn-sm btn-black" href="#" role="button">dopisz się</a>
+
             </div>
 
 
