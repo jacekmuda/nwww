@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2e78f3e6-b25d-4c55-9d06-ce522b69cb0d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_campaigns.scss" afterPath="$PROJECT_DIR$/assets/scss/_campaigns.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_global.scss" afterPath="$PROJECT_DIR$/assets/scss/_global.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_header.scss" afterPath="$PROJECT_DIR$/assets/scss/_header.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_variables.scss" afterPath="$PROJECT_DIR$/assets/scss/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/env.json" afterPath="$PROJECT_DIR$/env.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/css/main.css" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/header.php" afterPath="$PROJECT_DIR$/web/app/themes/nwww/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/last-actions.php" afterPath="$PROJECT_DIR$/web/app/themes/nwww/last-actions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/page-templates/main.php" afterPath="$PROJECT_DIR$/web/app/themes/nwww/page-templates/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/promo-campaign.php" afterPath="$PROJECT_DIR$/web/app/themes/nwww/promo-campaign.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,8 +35,8 @@
       <file leaf-file-name="_header.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scss/_header.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="67" column="31" lean-forward="false" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+            <state relative-caret-position="185">
+              <caret line="93" column="18" lean-forward="false" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -1108,16 +1099,16 @@
       <workItem from="1484916684595" duration="2936000" />
       <workItem from="1485078709325" duration="57533000" />
       <workItem from="1485169110101" duration="1069000" />
-      <workItem from="1485587770433" duration="3775000" />
+      <workItem from="1485587770433" duration="4710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65313000" />
+    <option name="totallyTimeSpent" value="66248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1822" y="-209" width="1518" height="1003" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1130,7 +1121,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2524698" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2524698" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18631436" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1597,8 +1588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/_header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="67" column="31" lean-forward="false" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+        <state relative-caret-position="185">
+          <caret line="93" column="18" lean-forward="false" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
           <folding />
         </state>
       </provider>

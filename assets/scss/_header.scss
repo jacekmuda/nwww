@@ -51,6 +51,7 @@ body {
   align-content: center;
   align-items: flex-end;
   justify-content: center;
+  cursor: pointer;
   rect {
     fill: map-get($colors, b)
   }
@@ -90,6 +91,34 @@ body {
 
   }
 
+  .page__header * {
+    transition: all 500ms ease;
+  }
+
+  .scrolled {
+    .page__header {
+
+      .logo {
+        height: 60px;
+      }
+    }
+
+    .navbar__right {
+
+        display:flex;
+        flex-direction: row-reverse !important;
+        flex-wrap: nowrap;
+      align-items: center;
+      & > * {
+        display: flex;
+      }
+      .navbar__links {
+        margin:0;
+        margin-left: 20px;
+      }
+
+    }
+  }
 
 
 
