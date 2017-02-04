@@ -1,0 +1,48 @@
+.last__actions__inner {
+  padding-bottom: 0;
+}
+.last__actions__actions {
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+
+  &.loaded {
+    opacity:1;
+
+
+
+  }
+  .last__actions__action {
+    padding: 10px 0;
+    time {
+      font-size: .9em;
+      color: map_get($colors, r);
+      margin: 0;
+      display: block;
+    }
+
+  }
+.swiper-slide-prev {
+  opacity: 0;
+  transform: translateY(-30px);
+
+}
+
+.swiper-slide {
+  opacity: 0;
+  transition: all 1s ease;
+
+
+}
+  .swiper-slide-active {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  .swiper-slide-next {
+    opacity: 0;
+    transform: translateY(40px);
+
+  }
+
+}

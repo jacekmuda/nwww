@@ -1,12 +1,28 @@
-<div class=" col-sm-6 col-md-6 col-lg-6 last__actions">
-<div class="last__actions__inner c__w">
-    <h3 class="side__title">Ostatnie akcje</h3>
+<?php global $app; ?>
 
-   <ul>
-       <li>Lorem ipsum </li>
-       <li>Dolor sit </li>
-       <li>Amet </li>
-   </ul>
+<?php
+$json = file_get_contents('http://nwww.dev:3000/sample.json');
+$r = json_decode($json);
 
-</div>
-</div>
+if ($r) :
+
+    ?>
+    <div class=" col-sm-6 col-md-6 col-lg-6 last__actions">
+        <div class="last__actions__inner c__w">
+            <h3 class="side__title">Ostatnie akcje</h3>
+
+            <div class="last__actions__actions swiper-container">
+                <?php $app->render('loader'); ?>
+                <div class="swiper-wrapper">
+                    <?php foreach ($r as $itm) :
+                        $time = strtotime($itm->timestamp);
+                        $format = '<div class="last__actions__action swiper-slide"><p>%s</p><time class="h5">%s temu</time></div>';
+                        echo sprintf($format, $itm->content, human_time_diff($time));
+                    endforeach; ?>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<?php endif; ?>

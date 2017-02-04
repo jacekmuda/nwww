@@ -4,6 +4,19 @@ $padding: 2.5rem;
 $bord: 2px black solid;
 
 
+@mixin spread {
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .no-gutter > [class*='col-'] {
   padding-right:0;
   padding-left:0;

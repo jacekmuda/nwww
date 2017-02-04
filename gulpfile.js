@@ -17,6 +17,8 @@ let themebase =  'web/app/themes/nwww',
 let sassPaths = [
     bower+'bootstrap-sass/assets/stylesheets',
     bower+'NWWW/sass/theme',
+    'node_modules/swiper/dist/css',
+
     bower+'NWWW/sass/app-style'
 ];
 
@@ -64,7 +66,7 @@ gulp.task('sass', function() {
 });
 
 
-gulp.task('default', ['sass',  'browser-sync'], function() {
+gulp.task('default', ['sass', 'js', 'browser-sync'], function() {
 
 
   gulp.watch(['assets/js/**/*.js'], ['js']);
@@ -74,8 +76,8 @@ gulp.task('default', ['sass',  'browser-sync'], function() {
       browserSync.reload({stream: true})
   });
 
-    gulp.watch([themebase+'/**/*.php'], ['bs-reload']);
-    gulp.watch([themebase+'/**/*.twig'], ['bs-reload']);
+  gulp.watch([themebase+'/**/*.php', themebase+'/**/*.twig'], ['bs-reload']);
+
 
 });
 
