@@ -1,6 +1,11 @@
 let gulp = require('gulp'),
     $    = require('gulp-load-plugins')();
 
+let plumber = require('gulp-plumber');
+let exec = require('child_process').exec;
+let webpack = require('gulp-webpack');
+let browserSync = require('browser-sync').create();
+
 let gutil = require('gulp-util'),
     ftp = require('vinyl-ftp');
 
@@ -16,17 +21,12 @@ let sassPaths = [
 ];
 
 
-
-var browserSync = require('browser-sync').create();
-var reload = browserSync.reload;
-
+let reload = browserSync.reload;
 
 
 gulp.task('bs-reload', function () {
     browserSync.reload();
 });
-
-
 
 
 gulp.task('browser-sync', function() {
@@ -41,13 +41,12 @@ gulp.task('browser-sync', function() {
 
 gulp.task('js', function (){
   return gulp.src('assets/js/*.js')
-        .pipe($.babel({
-            presets: ['es2015']
-        }))
-        .pipe(gulp.dest(dist+'/js'))
-        .pipe(reload({stream: true}))
-});
+      .pipe(plumber())
+      .pipe(webpack( require('./webpack.config.js') ))
+      .pipe(gulp.dest(dist+'/js'))
+      .pipe(reload({stream: true}))
 
+});
 
 
 gulp.task('sass', function() {
@@ -65,15 +64,13 @@ gulp.task('sass', function() {
 });
 
 
-
-gulp.task('default', ['sass', 'js', 'browser-sync'], function() {
+gulp.task('default', ['sass',  'browser-sync'], function() {
 
 
   gulp.watch(['assets/js/**/*.js'], ['js']);
   gulp.watch(['assets/scss/**/*.scss'], ['sass']);
 
   gulp.watch([themebase+'/**/*.php']).on('change', function(file){
-
       browserSync.reload({stream: true})
   });
 
@@ -99,14 +96,18 @@ function ftpco() {
 
 gulp.task('deploy', function () {
 
+    gutil.log('Deploy to ', gutil.colors.magenta(env.host));
+
     var connect = ftpco();
-  
+
     var remoteFolder = env.base+themebase;
-  
+
     return gulp.src([themebase+'/**/*'], {
         base: themebase,
         buffer: false
     })
         .pipe(connect.newer(remoteFolder))
         .pipe(connect.dest(remoteFolder));
+
+
 });
