@@ -10,7 +10,7 @@
     a {
       color: inherit;
       display: block;
-      padding: 2rem $padding;
+      padding: 1.3rem $padding;
       transition: all 200ms ease-in-out;
       &:hover {
         background-color: map-get($colors, b);

@@ -3,67 +3,20 @@
 global $app;
 get_header(); ?>
 <?php
-if ( have_posts() ) : ?>
+if (have_posts()) : $children = $app->get_children($post->ID);
+    $child_page = $app->get_child_if_no_content($post);
 
+    $title = get_the_title($post);
 
-    <?php
+    while (have_posts()) : the_post(); ?>
+        <section class="padded section container c__w" id="content">
 
-    while ( have_posts() ) : the_post(); ?>
-    <section class="padded section container c__w" id="content">
+            <div class="row">
+                <div class="col-md-9 about__page" role="main">
 
-        <div class="row">
-            <div class="col-md-3 campaign__cats">
+                    <div class="row">
 
-                <div class="c__r">
-
-                    <?php
-
-                    $children =  $app->get_children($post->ID);
-                    $child_page = $app->get_child_if_no_content($post);
-
-                    $title = get_the_title($post);
-
-                    if ($app->has_parent($post)) {
-                        $parentid = $app->has_parent($post);
-                        $children =  $app->get_children($parentid);
-                        $title = get_the_title($parentid);
-                    }
-
-                    echo sprintf('<header><h1 class="h2 side__title">%s</h1></header>', $title);
-
-                    if ($children) {
-
-
-
-
-
-                        foreach ($children as $c) {
-
-                            $classes = 'cat__link';
-                            if ($child_page['ID'] == $c['ID']) {
-                                $classes .= ' active';
-                            }
-
-                            $app->render('link', [
-                                'text' => $c['name'],
-                                'link' => $c['link'],
-                                'classes' => $classes
-                            ]);
-                        }
-                    }
-
-
-
-                      ?>
-
-                </div>
-            </div>
-
-            <div class="col-md-9 about__page"  role="main">
-
-                <div class="row">
-
-                        <article class="col-md-12">
+                        <article class="col-md-12 padded">
 
                             <?php
 
@@ -73,20 +26,59 @@ if ( have_posts() ) : ?>
                             endif; ?>
 
                             <header>
-                                <h1><?php  the_title(); ?></h1>
+                                <h1><?php the_title(); ?></h1>
                             </header>
 
-                            <?php  the_content(); ?>
+                            <?php the_content(); ?>
 
                         </article>
 
 
-
+                    </div>
                 </div>
+                <div class="col-md-3 campaign__cats">
+
+                    <div class="c__g">
+
+                        <?php
+
+
+                        if ($app->has_parent($post)) {
+                            $parentid = $app->has_parent($post);
+                            $children = $app->get_children($parentid);
+                            $title = get_the_title($parentid);
+                        }
+
+                        echo sprintf('<header><h1 class="h3 side__title">%s</h1></header>', $title);
+
+                        if ($children) {
+
+
+                            foreach ($children as $c) {
+
+                                $classes = 'cat__link';
+                                if ($child_page['ID'] == $c['ID']) {
+                                    $classes .= ' active';
+                                }
+
+                                $app->render('link', [
+                                    'text' => $c['name'],
+                                    'link' => $c['link'],
+                                    'classes' => $classes
+                                ]);
+                            }
+                        }
+
+
+                        ?>
+
+                    </div>
+                </div>
+
+
             </div>
-        </div>
-    </section><!-- #primary -->
-<?php endwhile;
+        </section><!-- #primary -->
+    <?php endwhile;
 endif; ?>
 <?php
 

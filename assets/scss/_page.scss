@@ -1,6 +1,6 @@
 .posts__loop {
   h1 {
-    margin-top:0;
+    margin-top: 0;
     a {
       color: inherit;
     }
@@ -11,7 +11,11 @@
   }
 }
 
-
+.about__page {
+  p {
+    text-align: justify;
+  }
+}
 
 .promo__campaign {
   h1 {
@@ -31,9 +35,8 @@
   }
 }
 
-
 .sign__in {
   .btn {
-    width:100px;
+    width: 100px;
   }
 }
