@@ -3,9 +3,10 @@
     {% include 'thumb-link.twig' with { 'img': img, 'link': link } %}
 
     {% if signed %}
+    <div class="padded c__w signed__outer">
 
-    {% include 'campaign-signed.twig' with { 'signed': signed } %}
-
+        {% include 'campaign-signed.twig' with { 'signed': signed } %}
+    </div>
     {% endif %}
 
     {% if title or excerpt %}

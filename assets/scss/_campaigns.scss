@@ -19,6 +19,7 @@
         background-color: map-get($colors, b);
       }
     }
+    padding-bottom: 20px;
   }
 }
 
@@ -51,7 +52,7 @@
     margin-bottom: $padding * 2;
     &__text {
       padding-left: 0;
-      padding-top: 0;
+
     }
     .signed {
       margin-bottom: $padding;
@@ -68,26 +69,26 @@
 }
 
 .signed__outer {
-  padding-top: 0;
+
   padding-bottom: 0;
+}
 
-  .signed {
-    position: relative;
-    background-color: white;
-    height: 30px;
-    background-image: repeating-linear-gradient(-45deg, #0049AA, #0049AA 2px, transparent 3px, transparent 4px, #0049AA 4px, #0049AA 8px);
-    .perc {
-      height: 100%;
-      background-color: map-get($colors, b);
-    }
-    span {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: inline-block;
-      color: white;
+.signed {
+  position: relative;
+  background-color: white;
+  height: 30px;
+  background-image: repeating-linear-gradient(-45deg, #0049AA, #0049AA 2px, transparent 3px, transparent 4px, #0049AA 4px, #0049AA 8px);
+  .perc {
+    height: 100%;
+    background-color: map-get($colors, b);
+  }
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    color: white;
 
-      padding: 1rem 2rem;
-    }
+    padding: 1rem 2rem;
   }
 }

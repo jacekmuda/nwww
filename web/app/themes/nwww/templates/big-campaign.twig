@@ -1,35 +1,36 @@
 <div class="promo__campaign row">
-<div class="col-sm-6">
+    <div class="col-sm-6">
+        <div class="c__b padded">
 
+            {% include 'thumb-link.twig' with { 'img': img, 'link': link } %}
 
-    {% include 'thumb-link.twig' with { 'img': img, 'link': link } %}
-
-</div>
-<div class="col-sm-6">
-    <div class="c__w promo__campaign__text">
-
-
-        {% include 'title-link.twig' with { 'link': link, 'title' : title } %}
-
-
-        {% if signed %}
-        {% include 'campaign-signed.twig' with { 'signed': signed } %}
-        {% endif %}
-
-        <p>  {{ excerpt | raw }}</p>
-
-        {% if children %}
-        <h2 class="h4">Nasze działania</h2>
-        <ul>
-            {% for c in children %}
-            <li>
-                <a href="{{ c.link }}">{{ c.name }}</a>
-
-            </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
+        </div>
     </div>
+    <div class="col-sm-6">
+        <div class="c__w promo__campaign__text">
 
-</div>
+
+            {% include 'title-link.twig' with { 'link': link, 'title' : title } %}
+
+
+            {% if signed %}
+            {% include 'campaign-signed.twig' with { 'signed': signed } %}
+            {% endif %}
+
+            <p> {{ excerpt | raw }}</p>
+
+            {% if children %}
+            <h2 class="h4">Nasze działania</h2>
+            <ul>
+                {% for c in children %}
+                <li>
+                    <a href="{{ c.link }}">{{ c.name }}</a>
+
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+
+    </div>
 </div>

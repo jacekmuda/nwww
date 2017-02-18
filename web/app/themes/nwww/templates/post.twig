@@ -1,41 +1,37 @@
 <article class="col-md-{{ width|default('12')}} post__in__list">
+    <div class="padded c__w">
+
+        {% if img %}
+        <div class="row">
+            <div class="col-sm-4 col-md-12">
+                <img src="{{ img | raw }}">
+
+            </div>
+            <div class="col-sm-8 col-md-12">
+                {% endif %}
+
+                {% include 'title-link.twig' with { 'link': link, 'title' : title } %}
+
+                <p>{{ content | raw }}</p>
 
 
-
-
-    {% if img %}
-    <div class="row">
-        <div class="col-sm-4">
-         <img src="{{ img | raw }}">
-
+                {% if img %}
+            </div>
         </div>
-        <div class="col-sm-8">
-            {% endif %}
-
-            {% include 'title-link.twig' with { 'link': link, 'title' : title } %}
-
-            <p>{{ content | raw }}</p>
 
 
-            {% if img %}
+        {% endif %}
+
+
+        {% if link or time %}
+        <div class="row">
+            <div class="col-sm-8 col-md-12">
+                <time class="micro"> {{ time }}</time>
+            </div>
+            <div class="col-sm-4 col-md-12 text-right">
+                {% if link %} <a class="micro" href="{{ link }}">więcej...</a> {% endif %}
+            </div>
         </div>
+        {% endif %}
     </div>
-
-
-    {% endif %}
-
-
-
-
-
-    {% if link or time %}
-    <div class="row">
-        <div class="col-sm-8">
-            <time class="micro"> {{ time }}</time>
-        </div>
-        <div class="col-sm-4 text-right">
-            {% if link %}    <a class="micro" href="{{ link }}">więcej...</a>  {% endif %}
-        </div>
-    </div>
-    {% endif %}
 </article>
