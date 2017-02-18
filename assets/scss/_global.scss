@@ -1,11 +1,9 @@
-
-$padding: 2.5rem;
+$padding: 2.8rem;
 
 $bord: 2px black solid;
 
-
 @mixin spread {
-  top:0;
+  top: 0;
   left: 0;
   bottom: 0;
   right: 0;
@@ -18,22 +16,30 @@ $bord: 2px black solid;
 }
 
 .no-gutter > [class*='col-'] {
-  padding-right:0;
-  padding-left:0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .container {
 
 }
+
 .padded {
   padding: $padding/2;
 }
+
 .section {
   margin: $padding auto;
 }
+
 .side__title {
   margin: 0;
 }
+
+.lead {
+  font-size: 18px;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -47,15 +53,35 @@ img {
 h1 a {
   color: inherit;
 }
+
 .micro {
   font-family: map-get($fonts, din);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1;
+  letter-spacing: .02em;
+}
+
+.btn {
+  text-transform: uppercase;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  transition: all 200ms ease;
+  width: 100%;
+}
+
+.input-group-btn {
+  .btn {
+    padding: 2rem;
+  }
 }
 
 @each $name, $color in $colors {
   .c__#{$name} {
     background-color: map-get($colors, $name);
+
+  }
+  .t__#{$name} {
+    color: map-get($colors, $name);
 
   }
 }
@@ -64,41 +90,38 @@ h1 a {
   font-size: 10rem;
 }
 
-
 body {
-  font-family: "Cambria",Caladea,"Times New Roman",Times,"Nimbus Roman No9 L",serif;
+  font-family: "Cambria", Caladea, "Times New Roman", Times, "Nimbus Roman No9 L", serif;
 }
-
-
 
 .btn-black {
   color: white;
   background-color: black;
   border-radius: 2em;
-  border:none;
-  padding:.5rem 2rem;
+  border: none;
+  padding: .5rem 2rem;
   letter-spacing: .1em;
   font-size: 2rem;
 
   &:hover {
     background-color: map-get($colors, b);
-    color:white;
+    color: white;
 
   }
 
   &.social {
-    padding:1rem 0;
-    height:4rem;
-    width:4rem;
-    margin-right:  15px;
+    padding: 1rem 0;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 15px;
     svg {
       height: 2rem;
     }
     path {
-      fill:white;
+      fill: white;
     }
   }
-  }
+}
 
 .input-group {
   input {
@@ -110,5 +133,10 @@ body {
   .padded {
     padding: $padding;
   }
-
+  .btn {
+    width: auto;
+  }
+  .separator {
+    height: 80px
+  }
 }

@@ -8,13 +8,13 @@ $r = json_decode($json);
 if ($r) :
 
     ?>
-    <div class=" col-sm-12 col-md-6 col-lg-6 last__actions">
-        <div class="last__actions__inner c__w">
-            <h3 class="side__title">Ostatnie akcje</h3>
+    <div class=" c__g  last__actions">
+        <div class="padded ">
+            <h3 class="side__title t__y h5 micro">Ostatnie akcje</h3>
 
             <div class="last__actions__actions swiper-container">
                 <?php $app->render('loader'); ?>
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper t__w">
                     <?php foreach ($r as $itm) :
                         $time = strtotime($itm->timestamp);
                         $format = '<div class="last__actions__action swiper-slide"><p>%s</p><time class="h5">%s temu</time></div>';

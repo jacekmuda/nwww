@@ -1,17 +1,28 @@
-<div class="promo__campaign">
+<div class="promo__campaign padded c__b">
 
     {% include 'thumb-link.twig' with { 'img': img, 'link': link } %}
 
     {% if signed %}
+
     {% include 'campaign-signed.twig' with { 'signed': signed } %}
+
     {% endif %}
 
     {% if title or excerpt %}
-    <div class="c__w promo__campaign__text">
+    <div class="c__w padded promo__campaign__title">
 
         {% include 'title-link.twig' with { 'link': link, 'title' : title } %}
 
-        <p>  {{ excerpt | raw }}</p>
+        <p> {{ excerpt | raw }}</p>
+
+
+        {% if link %}
+        <p class="text-right "><a class="btn btn-default c__g primary" href="{{ link }}">
+                Podpisz
+            </a></p>
+        {% endif %}
+
+
     </div>
     {% endif %}
 

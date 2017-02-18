@@ -1,6 +1,14 @@
 .last__actions__inner {
   padding-bottom: 0;
+  margin-top: 0;
+  color: white;
+  .h5 {
+
+    margin-bottom: 1rem;
+  }
+
 }
+
 .last__actions__actions {
   height: 150px;
   position: relative;
@@ -8,33 +16,31 @@
   opacity: 0;
 
   &.loaded {
-    opacity:1;
-
-
+    opacity: 1;
 
   }
   .last__actions__action {
     padding: 10px 0;
     time {
       font-size: .9em;
-      color: map_get($colors, r);
+      color: map_get($colors, y);
       margin: 0;
+      margin-top: 2rem;
       display: block;
     }
 
   }
-.swiper-slide-prev {
-  opacity: 0;
-  transform: translateY(-30px);
+  .swiper-slide-prev {
+    opacity: 0;
+    transform: translateY(-30px);
 
-}
+  }
 
-.swiper-slide {
-  opacity: 0;
-  transition: all 1s ease;
+  .swiper-slide {
+    opacity: 0;
+    transition: all 1s ease;
 
-
-}
+  }
   .swiper-slide-active {
     transform: translateY(0px);
     opacity: 1;
@@ -45,4 +51,10 @@
 
   }
 
+}
+
+@media (min-width: $screen-md-min) {
+  .last__actions {
+    width: 60%;
+  }
 }
