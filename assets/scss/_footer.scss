@@ -2,7 +2,9 @@
 
   padding-bottom: 0;
   .footer__logo {
-    max-width: 100px;
+    img {
+      max-width: 100px;
+    }
   }
   .page__footer__inner {
     padding: 60px 0;
@@ -62,7 +64,9 @@
 @media (min-width: $screen-sm-min) {
 
   .footer__logo {
-    max-width: 200px;
+    img {
+      max-width: 200px;
+    }
   }
 
 }

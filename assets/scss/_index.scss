@@ -1,3 +1,7 @@
-.about__img {
-  margin-top: $padding;
+@media (min-width: $screen-md-min) {
+
+  .about__img {
+    margin-top: $padding;
+  }
+
 }
