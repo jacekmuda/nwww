@@ -136,6 +136,20 @@ body {
   }
 }
 
+.ellipsis {
+
+  &:after {
+    content: '⬤⬤⬤';
+    display: inline-block;
+    vertical-align: middle;
+    color: map_get($colors, r);
+    font-size: 8px;
+    letter-spacing: .5rem;
+    margin-left: 2rem;
+
+  }
+}
+
 @media (min-width: $screen-sm-min) {
   .padded {
     padding: $padding;
@@ -144,6 +158,12 @@ body {
     width: auto;
   }
   .separator {
-    height: 80px
+    height: 50px
+  }
+}
+
+@media(max-width: 767px) {
+  .small-center {
+    text-align: center;
   }
 }

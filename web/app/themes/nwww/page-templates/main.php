@@ -105,7 +105,7 @@
 
                     <div class="row is-flex items-center">
 
-                        <div class=" col-md-6">
+                        <div class="col-xs-12 col-md-6">
 
                             <?php
                             $app->render('link', [
@@ -117,7 +117,7 @@
 
 
                         </div>
-                        <div class="text-right col-md-6">
+                        <div class="text-right col-md-6 col-xs-12">
                             <a href="<?php the_field('link'); ?>" class="btn-primary c__y t__r btn-lg btn">
                                 <span><?php the_field('link_txt'); ?></span>
                             </a>

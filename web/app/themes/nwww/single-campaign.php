@@ -119,7 +119,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                                         'width' => 4,
                                         'title' => get_the_title($post_id),
                                         'content' => get_the_excerpt($id),
-                                        'classes' => 'c__y',
+                                        'classes' => 'padded',
                                         'link' => get_post_permalink($post_id),
                                         'time' => human_time_diff(get_post_time('U', $id), current_time('timestamp')) . ' temu'
                                     ]);
@@ -130,6 +130,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                                     $app->render('post', [
                                         'width' => 4,
                                         'title' => get_sub_field('title'),
+                                        'classes' => 'padded',
                                         'content' => get_sub_field('content'),
                                         'img' => get_sub_field('img')['sizes']['mid']
                                     ]);
