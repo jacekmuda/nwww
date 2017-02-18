@@ -167,3 +167,10 @@ body {
     text-align: center;
   }
 }
+
+@media(min-width: 1200px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}

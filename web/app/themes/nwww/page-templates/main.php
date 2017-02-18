@@ -6,7 +6,7 @@
 <div class="section page__content container " id="content" role="main">
 
     <div class="row no-gutter">
-        <div class="col-sm-12 col-md-12 col-lg-6 posts__loop ">
+        <div class="col-sm-12 col-md-7 col-lg-6 posts__loop ">
             <div class=" padded c__y ">
                 <div class="c__w padded ">
                     <div class="row ">
@@ -52,7 +52,7 @@
 
             </div>
         </div>
-        <div class=" col-sm-12 col-md-6 col-lg-6">
+        <div class=" col-sm-12 col-md-5 col-lg-6">
             <div class="padded c__w small-center">
                 <span class="t__r micro">Promowana kampania</span>
             </div>

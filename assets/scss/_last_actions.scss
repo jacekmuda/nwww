@@ -53,8 +53,6 @@
 
 }
 
-@media (min-width: $screen-md-min) {
-  .last__actions {
-    width: 60%;
-  }
+.last__actions {
+  max-width: 450px;
 }
