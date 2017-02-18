@@ -27,7 +27,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                 $app->render('campaign', [
                     'signed' => $app->calc_perc($speakout),
                     'link' => false,
-                    'img' => get_the_post_thumbnail($post->ID, 'medium')
+                    'img' => get_the_post_thumbnail($post->ID, 'large')
                 ]); ?>
 
 
