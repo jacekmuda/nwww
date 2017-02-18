@@ -26,7 +26,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
 
                 $app->render('campaign', [
                     'signed' => $app->calc_perc($speakout),
-                    'link' => get_post_permalink($post->ID),
+                    'link' => false,
                     'img' => get_the_post_thumbnail($post->ID, 'medium')
                 ]); ?>
 
@@ -119,6 +119,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                                         'width' => 4,
                                         'title' => get_the_title($post_id),
                                         'content' => get_the_excerpt($id),
+                                        'classes' => 'c__y',
                                         'link' => get_post_permalink($post_id),
                                         'time' => human_time_diff(get_post_time('U', $id), current_time('timestamp')) . ' temu'
                                     ]);
