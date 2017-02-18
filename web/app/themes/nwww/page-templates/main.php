@@ -53,7 +53,9 @@
             </div>
         </div>
         <div class=" col-sm-12 col-md-6 col-lg-6">
-            <div class="padded c__w small-center"><span class="t__r micro">Promowana kampania</span></div>
+            <div class="padded c__w small-center">
+                <span class="t__r micro">Promowana kampania</span>
+            </div>
             <?php get_template_part('promo-campaign'); ?>
             <?php get_template_part('last-actions'); ?>
         </div>
@@ -67,7 +69,7 @@
     <div class="row no-gutter is-flex items-center">
         <div class="col-md-6 about__img exp">
             <div class="padded c__r ">
-                <?php $img = get_field('img')['sizes']['mid']; ?>
+                <?php $img = get_field('img')['sizes']['large']; ?>
                 <img src="<?php echo $img; ?>">
             </div>
         </div>

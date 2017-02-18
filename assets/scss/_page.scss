@@ -11,6 +11,15 @@
   }
 }
 
+.single-post {
+  .posts__loop {
+    p {
+      max-width: 800px;
+      text-align: justify;
+    }
+  }
+}
+
 .about__page {
   p {
     text-align: justify;

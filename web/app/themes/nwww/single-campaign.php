@@ -55,7 +55,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                                 'title' => get_the_title($campaign_id),
                                 'excerpt' => false,
                                 'link' => false,
-                                'img' => get_the_post_thumbnail($campaign_id, 'medium')
+                                'img' => get_the_post_thumbnail($campaign_id, 'semi')
                             ]);
                             echo '<br>';
 
