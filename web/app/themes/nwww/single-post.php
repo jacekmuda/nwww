@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <section class="section post__content container " id="content" role="main">
 
-        <div class="row">
+        <div class="row no-gutter">
 
             <?php get_template_part('post-loop'); ?>
 
