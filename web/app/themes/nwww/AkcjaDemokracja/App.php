@@ -141,7 +141,7 @@ class App
 
 
             $this->set_transient($id);
-
+            $json = get_transient('speakout_' . $id);
         }
 
 
