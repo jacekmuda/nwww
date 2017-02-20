@@ -7,17 +7,16 @@ get_header(); ?>
 
         <div class="row">
 
-            <?php get_template_part('categories'); ?>
 
             <div class="col-md-9 campaign__list">
                 <?php
-                if ( have_posts() ) : ?>
+                if (have_posts()) : ?>
                 <div class="row">
 
 
                     <?php
 
-                    while ( have_posts() ) : the_post(); ?>
+                    while (have_posts()) : the_post(); ?>
                         <article class="col-md-12 campaign__in__list">
 
                             <?php
@@ -45,11 +44,11 @@ get_header(); ?>
                     else :
 
 
-
                     endif; ?>
 
                 </div>
             </div>
+            <?php get_template_part('categories'); ?>
         </div>
     </section><!-- #primary -->
 
