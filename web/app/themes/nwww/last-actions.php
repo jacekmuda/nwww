@@ -10,16 +10,16 @@ if ($r) :
     ?>
     <div class="last__actions">
         <h3 class="h1">Z ostatniej chwili</h3>
-        <div class="padded c__y">
+        <div class=" c__y">
 
 
             <div class="last__actions__actions swiper-container">
                 <?php $app->render('loader'); ?>
                 <div class="swiper-wrapper ">
                     <?php foreach ($r as $itm) :
-                        $time = strtotime($itm->timestamp);
-                        $format = '<div class="last__actions__action swiper-slide"><p>%s</p><time class="h5">%s temu</time></div>';
-                        echo sprintf($format, $itm->content, human_time_diff($time));
+
+                        $format = '<div class="last__actions__action padded swiper-slide"><div class="nick h4">%s temu</div><p>%s</p></div>';
+                        echo sprintf($format, $itm->nick, $itm->content);
                     endforeach; ?>
                 </div>
             </div>

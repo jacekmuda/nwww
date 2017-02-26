@@ -7,7 +7,7 @@
 <?php get_template_part('inc/intro'); ?>
 <div class="section page__content container " id="content" role="main">
 
-    <div class="row">
+    <div class="row flex_row">
         <div class="col-sm-12 col-md-8">
 
             <?php get_template_part('promo-campaign'); ?>

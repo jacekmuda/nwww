@@ -77,9 +77,15 @@ body {
   z-index: 999;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  &.open ul li {
-    opacity: 1;
-    transform: translateX(0px);
+
+  pointer-events: none;
+
+  &.open {
+    pointer-events: auto;
+    ul li {
+      opacity: 1;
+      transform: translateX(0px);
+    }
   }
 
   ul {
