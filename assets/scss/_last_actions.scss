@@ -15,6 +15,10 @@
     }
   }
 
+  & > .c__y {
+    overflow: hidden;
+  }
+
 }
 
 @media (min-width: $screen-md-min) {
@@ -28,7 +32,7 @@
     }
     & > .c__y {
       flex-grow: 1;
-      overflow: hidden;
+
     }
 
   }
