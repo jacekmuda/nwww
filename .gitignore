@@ -23,6 +23,8 @@ vendor/*
 
 node_modules/
 bower_components/
+web/app/themes/nwww/dist/css/*
+web/app/themes/nwww/dist/js/*
 
 **/*.DS_Store
 **/.DS_Store
