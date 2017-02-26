@@ -5,14 +5,7 @@
 
   h3 {
     margin-bottom: 3rem;
-    &:before {
-      content: ' ';
-      background-color: map-get($colors, r);
-      width: 100px;
-      height: 10px;
-      display: block;
-      margin-bottom: 3rem;
-    }
+
   }
 
   & > .c__y {

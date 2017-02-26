@@ -103,6 +103,17 @@ h1 a {
   }
 }
 
+.line__over {
+  &:before {
+    content: ' ';
+    background-color: map-get($colors, r);
+    width: 100px;
+    height: 10px;
+    display: block;
+    margin-bottom: 3rem;
+  }
+}
+
 @each $name, $color in $colors {
   .c__#{$name} {
     background-color: map-get($colors, $name);

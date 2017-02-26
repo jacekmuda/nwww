@@ -9,7 +9,7 @@ if ($r) :
 
     ?>
     <div class="last__actions">
-        <h3 class="h1">Z ostatniej chwili</h3>
+        <h3 class="h1 line__over">Z ostatniej chwili</h3>
         <div class=" c__y">
 
 

@@ -4,6 +4,16 @@
   }
 }
 
+.section__posts {
+  h1 {
+    margin-bottom: $grid-gutter-width;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
 .post__header {
   position: relative;
   .post__cats {

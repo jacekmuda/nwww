@@ -35,6 +35,12 @@ endif; ?>
 <section class="section section__posts">
     <div class="container">
         <div class="row">
+
+            <div class="col-xs-12 text-center">
+                <h1>Aktualności</h1>
+
+            </div>
+
             <?php global $app;
             $args = [
                 'post_type' => 'post',
@@ -59,6 +65,16 @@ endif; ?>
             }
 
             ?>
+            <div class="col-xs-12 text-left">
+
+                <?php
+                $app->render('link', [
+                    'link' => get_post_type_archive_link('post'),
+                    'text' => 'pokaż więcej',
+                    'classes' => 'h1 line__over',
+                ]);
+                ?>
+            </div>
         </div>
     </div>
 </section>
