@@ -3,6 +3,8 @@
  */ ?>
 <?php get_header(); ?>
 <?php global $app; ?>
+
+<?php get_template_part('inc/intro'); ?>
 <div class="section page__content container " id="content" role="main">
 
     <div class="row no-gutter">
