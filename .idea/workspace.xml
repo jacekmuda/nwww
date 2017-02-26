@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2e78f3e6-b25d-4c55-9d06-ce522b69cb0d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_campaigns.scss" afterPath="$PROJECT_DIR$/assets/scss/_campaigns.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_global.scss" afterPath="$PROJECT_DIR$/assets/scss/_global.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_last_actions.scss" afterPath="$PROJECT_DIR$/assets/scss/_last_actions.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/css/main.css" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/templates/campaign-signed.twig" afterPath="$PROJECT_DIR$/web/app/themes/nwww/templates/campaign-signed.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,7 +45,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_campaigns.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_campaigns.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/_campaigns.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="282">
@@ -85,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_last_actions.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_last_actions.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scss/_last_actions.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -118,8 +118,8 @@
       <file leaf-file-name="_global.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/_global.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="105" column="11" lean-forward="false" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="11" />
+            <state relative-caret-position="75">
+              <caret line="77" column="13" lean-forward="false" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -220,12 +220,12 @@
         <option value="$PROJECT_DIR$/web/app/themes/nwww/templates/post.twig" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/templates/title-link.twig" />
         <option value="$PROJECT_DIR$/assets/scss/_posts.scss" />
-        <option value="$PROJECT_DIR$/assets/scss/_last_actions.scss" />
-        <option value="$PROJECT_DIR$/assets/scss/_global.scss" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/page-templates/main.php" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/last-actions.php" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/templates/campaign-signed.twig" />
         <option value="$PROJECT_DIR$/assets/scss/_campaigns.scss" />
+        <option value="$PROJECT_DIR$/assets/scss/_global.scss" />
+        <option value="$PROJECT_DIR$/assets/scss/_last_actions.scss" />
       </list>
     </option>
   </component>
@@ -1040,12 +1040,12 @@
       <workItem from="1486242226114" duration="1767000" />
       <workItem from="1486251001846" duration="488000" />
       <workItem from="1487407496281" duration="18252000" />
-      <workItem from="1488135558490" duration="13482000" />
+      <workItem from="1488135558490" duration="13628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116301000" />
+    <option name="totallyTimeSpent" value="116447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1784" y="-225" width="1518" height="1002" extended-state="0" />
@@ -1483,22 +1483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/_global.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="105" column="11" lean-forward="false" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/_last_actions.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/templates/post.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1545,6 +1529,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="93" column="40" lean-forward="false" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/_global.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="77" column="13" lean-forward="false" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/_last_actions.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
           <folding />
         </state>
       </provider>

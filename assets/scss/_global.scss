@@ -75,7 +75,7 @@ h1 a {
 
 .framed {
   border: 10px map_get($colors, r) solid;
-  padding: .3em;
+  padding: .5em;
   transition: all 300ms ease;
   a {
     display: block;
