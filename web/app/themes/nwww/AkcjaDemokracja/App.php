@@ -340,6 +340,16 @@ class App
         global $post;
         return get_field('przerywnik', $post->id);
     }
+
+    public function get_page($slug)
+    {
+        $pg = get_page_by_title($slug);
+
+        return [
+            'link' => get_permalink($pg),
+            'name' => $pg->name
+        ];
+    }
 }
 
 

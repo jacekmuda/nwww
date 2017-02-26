@@ -34,6 +34,20 @@
                         <div class="col-sm-5">
                             <button class="btn-primary c__g btn-lg btn" type="button">Wyślij</button>
                         </div>
+
+
+                    </div>
+                    <div class="form-group row no-gutter">
+                        <div class="col-sm-12">
+                            <?php
+                            global $app;
+                            $pg = $app->get_page('Polityka prywatności');
+                            $app->render('link', [
+                                'text' => ' Zapisując się akceptujesz obowiązującą politykę prywatności',
+                                'link' => $pg['link']
+                            ]);
+                            ?>
+                        </div>
                     </div>
                 </form>
             </div>
