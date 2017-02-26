@@ -81,14 +81,17 @@
   }
 }
 
+$blue: map_get($colors, g);
 .signed {
   position: relative;
   background-color: white;
-  height: 30px;
-  background-color: map-get($colors, b);
+  height: 45px;
+  background-image: repeating-linear-gradient(-45deg, $blue 0px, $blue 3px, transparent 3px, transparent 6px, $blue 6px, $blue 12px);
+
+  //background-color: map-get($colors, b);
   .perc {
     height: 100%;
-    background-color: map-get($colors, g);
+    background-color: map-get($colors, b);
   }
   span {
     position: absolute;
@@ -96,7 +99,9 @@
     left: 0;
     display: inline-block;
     color: white;
-
-    padding: 1rem 2rem;
+    margin: 0;
+    padding-top: 4px;
+    line-height: 45px;
+    padding-left: 2rem;
   }
 }
