@@ -313,6 +313,14 @@ class App
 
 
     }
+
+
+    public function big_lead()
+    {
+
+        global $post;
+        return get_field('przerywnik', $post->id);
+    }
 }
 
 

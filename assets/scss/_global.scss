@@ -54,6 +54,14 @@ img {
   padding: $padding;
 }
 
+.big__lead {
+  padding: 50px 0;
+  .h1 {
+    font-size: 2.5rem
+
+  }
+}
+
 h1 a {
   color: inherit;
 }
@@ -176,7 +184,12 @@ body {
 }
 
 @media (min-width: $screen-md-min) {
-
+  .big__lead {
+    padding: 100px;
+    .h1 {
+      line-height: 1.5;
+    }
+  }
   .flex_row {
     display: flex;
   }
