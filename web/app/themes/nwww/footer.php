@@ -3,6 +3,7 @@ global $app;
 
 
 ?>
+<?php get_template_part('sign'); ?>
 <footer class="page__footer  c__w" id="footer">
     <div class="page__footer__inner  container">
         <div class="row is-flex padded items-center ">

@@ -46,6 +46,14 @@
 
 .sign__in {
   .btn {
-    width: 100px;
+    width: 100%;
+  }
+  input {
+    border: 10px map_get($colors, b);
+  }
+  .btn, input {
+
+    height: 54px;
+
   }
 }
