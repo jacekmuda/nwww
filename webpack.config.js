@@ -4,7 +4,7 @@ var webpack = require("webpack");
 
 module.exports = {
     resolve: {
-        modulesDirectories: [ "node_modules", "bower_components"]
+        modulesDirectories: ["node_modules", "bower_components"]
     },
     devtool: 'source-map',
     debug: true,
@@ -18,8 +18,15 @@ module.exports = {
             }
         })
     ],
-    entry: './assets/js/main.js',
-    output: { path: __dirname +'/web/app/themes/nwww/dist/js', filename: 'main.js' },
+    entry: {
+        main: './assets/js/main.js',
+        intro: './assets/js/intro.js',
+
+    },
+    output: {
+        path: __dirname + '/web/app/themes/nwww/dist/js',
+        filename: "[name].js"
+    },
     devtool: 'source-map',
     module: {
         loaders: [
@@ -31,7 +38,8 @@ module.exports = {
                     presets: ['es2015']
                 }
             },
-            { test: /\/bower_components\/.+\.(jsx|js)$/,
+            {
+                test: /\/bower_components\/.+\.(jsx|js)$/,
                 loader: 'imports?jQuery=jquery,$=jquery,this=>window'
             }
 

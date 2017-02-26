@@ -30,6 +30,12 @@ class App
     {
 
         wp_enqueue_script('app', $this->_assetUrl('js/main.js'), [], random_int(111, 222), true);
+
+        if (is_page(get_option('page_on_front'))) {
+            wp_enqueue_script('intro', $this->_assetUrl('js/intro.js'), [], random_int(111, 222), true);
+
+        }
+
         wp_enqueue_style('app', $this->_assetUrl('css/main.css'), [], random_int(111, 222));
         wp_localize_script('app', 'app', ['ajax_url' => admin_url('admin-ajax.php')]);
     }
@@ -275,6 +281,36 @@ class App
                 'classes' => 'micro'
             ]);
         }
+
+    }
+
+    public function intro_data($first = false)
+    {
+        $id = get_option('page_on_front');
+
+        $photos = get_field('photos', $id);
+        $lead = get_field('lead', $id);
+
+        $photos = array_map(function ($c) {
+            return [
+                'full' => $c['url'],
+                'small' => $c['sizes']['medium'],
+            ];
+        }, $photos);
+        if ($first) {
+            return [
+                'photos' => $photos[0]['full'],
+                'lead' => $lead[0]['content']
+            ];
+
+
+        } else {
+            return json_encode([
+                'photos' => $photos,
+                'lead' => $lead
+            ]);
+        }
+
 
     }
 }
