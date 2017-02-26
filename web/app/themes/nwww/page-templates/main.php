@@ -7,61 +7,18 @@
 <?php get_template_part('inc/intro'); ?>
 <div class="section page__content container " id="content" role="main">
 
-    <div class="row no-gutter">
-        <div class="col-sm-12 col-md-7 col-lg-6 posts__loop ">
-            <div class=" padded c__y ">
-                <div class="c__w padded ">
-                    <div class="row ">
-                        <?php
+    <div class="row">
+        <div class="col-sm-12 col-md-8">
 
-
-                        $args = [
-                            'post_type' => 'post',
-                            'posts_per_page' => 4,
-                            'post_status' => 'publish'
-                        ];
-
-                        $posts = get_posts($args);
-
-                        foreach ($posts as $post) {
-                            setup_postdata($post);
-                            $app->render('post', [
-
-
-                                'title' => get_the_title($post->ID),
-                                'content' => get_the_content(),
-                                'link' => get_post_permalink($post->ID),
-                                'time' => human_time_diff(get_post_time('U', $post->ID), current_time('timestamp')) . ' temu'
-
-                            ]);
-                            wp_reset_postdata();
-                        }
-
-                        ?>
-
-
-                    </div>
-                </div>
-            </div>
-            <div class="padded text-right">
-                <?php
-                $app->render('link', [
-                    'link' => get_post_type_archive_link('post'),
-                    'text' => 'Wszytskie aktualnosci',
-                    'classes' => 'micro small-center ellipsis',
-                ]);
-                ?>
-
-            </div>
-        </div>
-        <div class=" col-sm-12 col-md-5 col-lg-6">
-            <div class="padded c__w small-center">
-                <span class="t__r micro">Promowana kampania</span>
-            </div>
             <?php get_template_part('promo-campaign'); ?>
+        </div>
+        <div class="col-sm-12 col-md-4">
             <?php get_template_part('last-actions'); ?>
+
+
         </div>
     </div>
+
 
 </div>
 <div class="separator"></div>

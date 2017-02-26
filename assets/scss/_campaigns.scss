@@ -85,10 +85,10 @@
   position: relative;
   background-color: white;
   height: 30px;
-  background-image: repeating-linear-gradient(-45deg, #0049AA, #0049AA 2px, transparent 3px, transparent 4px, #0049AA 4px, #0049AA 8px);
+  background-color: map-get($colors, b);
   .perc {
     height: 100%;
-    background-color: map-get($colors, b);
+    background-color: map-get($colors, g);
   }
   span {
     position: absolute;

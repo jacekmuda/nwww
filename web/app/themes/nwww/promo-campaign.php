@@ -2,7 +2,7 @@
 global $app;
 $campaign = $app->get_promo_campaign();
 $speakout = $app->get_speakout_info($campaign->ID);
-$app->render('campaign', [
+$app->render('campaign-promo', [
     'signed' => $app->calc_perc($speakout),
     'title' => get_the_title($campaign->ID),
     'excerpt' => $app->excerpt_by_id($campaign->ID),
