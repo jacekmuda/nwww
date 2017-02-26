@@ -21,39 +21,19 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="header__wrapper">
-    <header class="page__header container c__w" id="banner">
-        <div class="c__w padded">
 
-            <div class="row is-flex">
-                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 text-left">
-                    <a href="<?php echo home_url(); ?>">
-                        <?php $app->render('header-logo'); ?>
-                    </a>
-                </div>
-                <div class="col-xs-6 text-right hidden-sm hidden-lg menu__toggle hidden-md">
-                    <?php echo file_get_contents($app->_imgr('hamburger.svg')); ?>
-                </div>
-                <div class="col-xs-12 col-md-9 col-sm-9 hidden-xs  col-lg-9 navbar__right self-end">
-                    <nav class="main__menu text-right" id="menu">
-                        <?php wp_nav_menu([
-                            'menu' => 'Top',
-                            'menu_class' => 'nav navbar-nav navbar-right',
-                            'container' => false
-                        ]); ?>
-                    </nav>
-                    <div class="navbar__links text-right">
+<nav class="main__menu top__menu text-center" id="menu">
+    <?php wp_nav_menu([
+        'menu' => 'Top',
+        'menu_class' => 'menu',
+        'container' => false
+    ]); ?>
+</nav>
+<!--<div class="top__social text-right">-->
+<!---->
+<!--    --><?php //$app->get_social(); ?>
+<!---->
+<!---->
+<!--</div>-->
 
-                        <?php $app->get_social(); ?>
-
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </div>
-    </header>
-</div>
+<button class="btn c__w  menu__toggle">MENU</button>

@@ -1,24 +1,7 @@
-.header__wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  // transform: translateY(0px);
-  // transition: all 200ms ease-in-out;
-  &.scrolled {
-    //   transform: translateY(-60px);
-  }
-
-}
 
 body {
-  padding-top: 60px;
-  background: white;
-}
 
-.navbar__links {
-  margin-top: 2.5rem;
+  background: white;
 }
 
 .main__menu {
@@ -50,17 +33,104 @@ body {
 }
 
 .menu__toggle {
-  align-content: center;
-  align-items: flex-end;
-  justify-content: center;
+
   cursor: pointer;
-  rect {
-    fill: map-get($colors, b)
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  z-index: 999;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 0;
+  padding-top: 6px;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  transition: all 300ms ease;
+  cursor: pointer;
+  display: block;
+  &:focus {
+    outline: none;
+
+  }
+  &:focus, &:hover {
+    color: black;
+    background-color: map_get($colors, y);
   }
 }
 
-.navbar__right {
-  margin-top: $padding;
+.top__menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  max-width: 600px;
+  z-index: 999;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  &.open ul li {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    // background-color: black;
+    min-height: 100%;
+    pointer-events: none;
+    li {
+      pointer-events: auto;
+      transform: translateX(100%);
+      transition: all 200ms ease;
+
+      padding: 0;
+      margin: 0;
+      a {
+        cursor: pointer;
+        display: block;
+
+        padding: 3rem;
+        font-size: 5rem;
+        line-height: 1;
+        color: inherit;
+        transition: all 300ms ease;
+      }
+      &:nth-child(4n) a {
+        background-color: map-get($colors, g);
+        color: map-get($colors, b);
+      }
+      &:nth-child(4n+1) a {
+
+        background-color: map-get($colors, r);
+        color: map-get($colors, y);
+      }
+      &:nth-child(4n+2) a {
+        background-color: map-get($colors, b);
+        color: map-get($colors, w);
+
+      }
+      &:nth-child(4n+3) a {
+        background-color: map-get($colors, y);
+        color: black;
+      }
+      &:hover a {
+        background-color: black;
+        color: white;
+      }
+      @for $i from 1 to 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 0.10s;
+
+        }
+      }
+
+    }
+
+  }
 }
 
 @media (min-width: $screen-sm-min) {
@@ -97,37 +167,11 @@ body {
     transition: all 200ms cubic-bezier(0.64, 0.57, 0.67, 1.53);
   }
 
-  .scrolled {
-    .page__header {
-
-      .logo {
-        height: 60px;
-      }
-    }
-
-    .navbar__right {
-
-      display: flex;
-      flex-direction: row !important;
-      flex-wrap: nowrap;
-      align-items: center;
-      justify-items: flex-end;
-      & > * {
-        display: flex;
-      }
-      .navbar__links {
-        margin: 0;
-        margin-left: 20px;
-      }
-
-    }
-  }
-
 }
 
 @media (min-width: $screen-md-min) {
   body {
-    padding-top: 135px;
+    // padding-top: 135px;
   }
 
   .page__header {

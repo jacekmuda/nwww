@@ -1,49 +1,45 @@
-import $ from 'jquery';
-import jQuery from 'jquery';
+import $ from "jquery";
+import jQuery from "jquery";
+import moment from "moment";
+import anime from "animejs";
+import swiper from "swiper";
+import Rotator from "./Rotator";
 
 
 window.$ = $;
 window.jQuery = jQuery;
 
-import moment from 'moment';
 window.moment = moment;
 moment().format();
 moment.locale('pl');
 
 
-import anime from 'animejs';
 window.anime = anime;
 
 
-import swiper from 'swiper';
 window.swiper = swiper;
 
-import Rotator from './Rotator';
-
-let AD =  {
+let AD = {
     ajax: app.ajax_url
 };
 
 AD.init = function () {
     this.menu_scroll = this.menu_scroll.bind(this);
-    this.menu_toggle = this.menu_toggle.bind(this);
-
 
     $(window).on('scroll', this.menu_scroll);
-    $('.menu_toggle').on('click', this.menu_toggle);
 
+    $('.menu__toggle').on('click', function (e) {
+        $('.menu__toggle').toggleClass('toggled');
+        $('.top__menu').toggleClass('open');
+    });
 
 
 }
-AD.menu_toggle = function (e) {
-    $('.navbar__right').toggleClass( 'hidden-xs' );
-}
 
 
-
-AD.menu_scroll = function(e) {
+AD.menu_scroll = function (e) {
     let s = $(window).scrollTop();
-    $('.header__wrapper')[ (s > 200 ? 'addClass' : 'removeClass') ]('scrolled');
+    $('.header__wrapper')[(s > 200 ? 'addClass' : 'removeClass')]('scrolled');
 
 }
 
