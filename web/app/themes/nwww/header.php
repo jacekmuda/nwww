@@ -34,4 +34,4 @@
 </nav>
 
 
-<button class="btn c__w  menu__toggle">MENU</button>
+<button class="btn c__w  menu__toggle h4">MENU</button>

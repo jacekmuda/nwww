@@ -44,7 +44,8 @@
                             $pg = $app->get_page('Polityka prywatności');
                             $app->render('link', [
                                 'text' => ' Zapisując się akceptujesz obowiązującą politykę prywatności',
-                                'link' => $pg['link']
+                                'link' => $pg['link'],
+                                'classes' => 't__y'
                             ]);
                             ?>
                         </div>
