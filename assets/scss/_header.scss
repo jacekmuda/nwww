@@ -60,6 +60,13 @@ body {
   }
 }
 
+.scrolled {
+  .menu__toggle {
+    background-color: black;
+    color: white;
+  }
+}
+
 .top__menu {
   position: fixed;
   top: 0;
