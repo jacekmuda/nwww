@@ -1,11 +1,12 @@
-<article class="col-md-{{ width|default('12')}} post__in__list">
+<article class="col-md-4 col-xs-12 post__in__list">
     <div class="{{ classes }}">
 
         {% if img %}
         <div class="row">
             <div class="col-sm-4 col-md-12">
-                <img src="{{ img | raw }}">
-
+                <a href="{{ link }}">
+                    {{ img | raw }}
+                </a>
             </div>
             <div class="col-sm-8 col-md-12">
                 {% endif %}
@@ -29,7 +30,7 @@
                 <time class="micro"> {{ time }}</time>
             </div>
             <div class="col-sm-4 col-md-4 text-right">
-                {% if link %} <a class="micro" href="{{ link }}">więcej...</a> {% endif %}
+                {% if link %} <a class="micro" href="{{ link }}">→</a> {% endif %}
             </div>
         </div>
         {% endif %}

@@ -28,12 +28,10 @@
         'menu_class' => 'menu',
         'container' => false
     ]); ?>
+
+    <?php // $app->get_social(); ?>
+
 </nav>
-<!--<div class="top__social text-right">-->
-<!---->
-<!--    --><?php //$app->get_social(); ?>
-<!---->
-<!---->
-<!--</div>-->
+
 
 <button class="btn c__w  menu__toggle">MENU</button>

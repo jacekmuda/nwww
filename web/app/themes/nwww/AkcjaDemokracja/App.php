@@ -314,6 +314,10 @@ class App
 
     }
 
+    public function get_placeholder()
+    {
+        return sprintf('<img class="placeholder" src="%s">', $this->_img('placeholders/' . random_int(0, 2) . '.png'));
+    }
 
     public function big_lead()
     {

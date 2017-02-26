@@ -23,8 +23,8 @@ if (function_exists('acf_add_local_field_group')):
                     'id' => '',
                 ),
                 'collapsed' => '',
-                'min' => 4,
-                'max' => 6,
+                'min' => 2,
+                'max' => 2,
                 'layout' => 'table',
                 'button_label' => 'Dodaj wiersz',
                 'sub_fields' => array(
