@@ -47,7 +47,7 @@ endif; ?>
             foreach ($posts as $post) {
                 setup_postdata($post);
                 $app->render('post', [
-
+                    'categories' => $app->cats($post->ID),
                     'img' => (has_post_thumbnail($post->ID)) ? get_the_post_thumbnail($post->ID, 'mid') : $app->get_placeholder(),
                     'title' => get_the_title($post->ID),
                     'content' => get_the_content(),

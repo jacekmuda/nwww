@@ -84,12 +84,27 @@ class App
     function unregister_taxonomies()
     {
         unregister_taxonomy_for_object_type('post_tag', 'post');
-        unregister_taxonomy_for_object_type('category', 'post');
+        // unregister_taxonomy_for_object_type('category', 'post');
     }
 
     function modify_read_more_link()
     {
         return '';
+    }
+
+    function cats($id)
+    {
+        $arr = get_the_category($id);
+
+        return array_map(function ($c) {
+
+            return [
+                'link' => get_category_link($c->term_id),
+                'name' => $c->name,
+                'slug' => $c->slug,
+            ];
+        }, $arr);
+
     }
 
     function get_social()
