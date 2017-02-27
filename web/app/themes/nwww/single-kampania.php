@@ -60,6 +60,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                     <?php the_content(); ?>
                 </div>
                 <div class="col-sm-12 col-md-4 col-lg-4 ">
+                    // related posts
                     <?php
                     if (have_rows('actions')):
                         echo '    <div class=" ">';

@@ -6,10 +6,12 @@
 
             <div class="container">
                 <div class="row">
-                    <div class=" col-sm-12 col-lg-6">
-                        <?php echo get_the_post_thumbnail($post->ID, 'large'); ?>
+                    <?php if (has_post_thumbnail()) : ?>
+                        <div class=" col-sm-12 col-lg-6">
+                            <?php echo get_the_post_thumbnail($post->ID, 'large'); ?>
 
-                    </div>
+                        </div>
+                    <?php endif; ?>
                     <div class=" col-sm-12 col-md-6 ">
 
                         <?php $app->render('categories', ['categories' => $app->cats($post->ID)]); ?>
