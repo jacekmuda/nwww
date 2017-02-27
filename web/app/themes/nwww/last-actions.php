@@ -18,7 +18,7 @@ if ($r) :
                 <div class="swiper-wrapper ">
                     <?php foreach ($r as $itm) :
 
-                        $format = '<div class="last__actions__action  swiper-slide"><div class="nick h4">%s temu</div><p>%s</p></div>';
+                        $format = '<div class="last__actions__action  swiper-slide"><div class="nick h4">%s </div><p>%s</p></div>';
                         echo sprintf($format, $itm->nick, $itm->content);
                     endforeach; ?>
                 </div>
