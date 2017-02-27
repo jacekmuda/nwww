@@ -211,3 +211,12 @@ body {
   }
 
 }
+
+@media (max-width: $screen-md-min) {
+  .menu__toggle {
+    transform: scale(.7);
+    top: 27px;
+    right: 27px;
+  }
+
+}

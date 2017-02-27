@@ -1,40 +1,44 @@
 <?php
 global $app;
 
-
 ?>
 <?php get_template_part('sign'); ?>
-<footer class="page__footer  c__w" id="footer">
-    <div class="page__footer__inner  container">
-        <div class="row is-flex padded items-center ">
-            <div class="col-md-2  footer_col footer__logo">
-                <a href="<?php echo home_url(); ?>">
-                    <img src="<?php $app->_eImg('logo-footer.png'); ?>">
-                </a>
+<?php wp_reset_postdata(); ?>
+<footer class="page__footer   c__w" id="footer">
+    <section class="  section">
+        <div class="  container">
+            <div class="row is-flex  items-center ">
+                <div class="col-md-2  footer_col footer__logo">
+                    <a href="<?php echo home_url(); ?>">
+                        <img src="<?php $app->_eImg('logo-footer.png'); ?>">
+                    </a>
+                </div>
+                <?php
+
+                if (have_rows('columns', 90)):
+                    while (have_rows('columns', 90)) : the_row(); ?>
+                        <div class="col-md-3 footer_col col-sm-4 col-xs-12 text-left">
+
+                            <h1 class="h3">
+                                <?php the_sub_field('title', 90); ?>
+                            </h1>
+                            <?php the_sub_field('content', 90); ?>
+                        </div>
+
+                        <?php
+
+                    endwhile;
+                endif;
+                ?>
+                <div class="col-md-4 footer_col footer_social text-right">
+                    <?php $app->get_social(); ?>
+
+                </div>
+
             </div>
-            <?php
-            if (have_rows('columns', 90)):
-                while (have_rows('columns', 90)) : the_row(); ?>
-                    <div class="col-md-3 footer_col col-sm-4 col-xs-12 text-left">
-
-                        <h1 class="h3">  <?php the_sub_field('title', 90); ?> </h1>
-                        <?php the_sub_field('content', 90); ?>
-
-                    </div>
-
-                    <?php
-
-                endwhile;
-            endif;
-            ?>
-            <div class="col-md-4 footer_col footer_social text-right">
-                <?php $app->get_social(); ?>
-
-            </div>
-
         </div>
-    </div>
-    <div class="footer__menu t__w padded ">
+    </section>
+    <div class="footer__menu t__w section">
         <div class="container">
             <div class="row is-flex items-center">
                 <div class="col-md-9">

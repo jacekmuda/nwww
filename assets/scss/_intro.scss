@@ -42,3 +42,14 @@
   }
 
 }
+
+@media (max-width: $screen-sm-min) {
+  .intro__section {
+    img {
+      height: 100%;
+      width: auto;
+      max-width: 999px;
+    }
+  }
+
+}

@@ -38,12 +38,15 @@ get_header(); ?>
                         ?>
 
 
-                    <?php endwhile;
-
-                    the_posts_navigation();
+                    <?php endwhile; ?>
 
 
-                endif; ?>
+                    <div class="col-xs-12 text-left">
+
+                        <?php $app->numeric_posts_nav(); ?>
+                    </div>
+
+                <?php endif; ?>
 
 
             </div>

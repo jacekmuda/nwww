@@ -6,17 +6,19 @@
 <?php $big_lead = $app->big_lead(); ?>
 
 <?php get_template_part('inc/intro'); ?>
-<div class="section page__content container " id="content" role="main">
+<div class="section page__content  " id="content" role="main">
 
-    <div class="row flex_row">
-        <div class="col-sm-12 col-md-8">
+    <div class="container">
+        <div class="row flex_row">
+            <div class="col-sm-12 col-xs-12 col-md-8">
 
-            <?php get_template_part('promo-campaign'); ?>
-        </div>
-        <div class="col-sm-12 col-md-4">
-            <?php get_template_part('last-actions'); ?>
+                <?php get_template_part('promo-campaign'); ?>
+            </div>
+            <div class="col-sm-12 col-xs-12 col-md-4">
+                <?php get_template_part('last-actions'); ?>
 
 
+            </div>
         </div>
     </div>
 

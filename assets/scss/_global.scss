@@ -217,6 +217,12 @@ body {
   .small-center {
     text-align: center;
   }
+  .small-padded {
+    padding: 27px;
+  }
+  .is-flex {
+    flex-direction: column;
+  }
 }
 
 @media(min-width: 1200px) {

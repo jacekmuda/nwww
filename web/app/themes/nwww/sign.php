@@ -11,7 +11,7 @@
                 <br>
             </div>
             <div class="col-md-6">
-                <form class="form-">
+                <form class="small-padded">
                     <div class="form-group row no-gutter">
                         <div class="col-sm-6">
                             <input type="text" class=" form-control" placeholder="imię"></div>
