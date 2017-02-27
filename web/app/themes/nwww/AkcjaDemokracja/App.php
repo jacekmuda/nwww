@@ -76,7 +76,7 @@ class App
 
     function theme_support()
     {
-        add_theme_support('post-thumbnails', ['post', 'page', 'campaign']);
+        add_theme_support('post-thumbnails', ['post', 'page', 'kampania']);
         add_image_size('mid', 400, 300, true);
         add_image_size('semi', 600, 400, false);
     }
@@ -124,7 +124,7 @@ class App
     {
         $args = [
             'post_status' => 'publish',
-            'post_type' => 'campaign',
+            'post_type' => 'kampania',
             'posts_per_page' => 1,
             'meta_key' => 'promo',
             'meta_value' => 1
@@ -225,7 +225,7 @@ class App
 
     public function pre($query)
     {
-        if ($query->is_post_type_archive('campaign') && $query->is_main_query()) {
+        if ($query->is_post_type_archive('kampania') && $query->is_main_query()) {
             $query->set('post_parent', 0);
             $query->set('posts_per_page', 26);
 
@@ -238,7 +238,7 @@ class App
             if ($post_type)
                 $post_type = $post_type;
             else
-                $post_type = array('nav_menu_item', 'post', 'campaign'); // don't forget nav_menu_item to allow menus to work!
+                $post_type = array('nav_menu_item', 'post', 'kampania'); // don't forget nav_menu_item to allow menus to work!
             $query->set('post_type', $post_type);
             return $query;
         }
