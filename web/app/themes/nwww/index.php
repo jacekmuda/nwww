@@ -34,7 +34,7 @@
 
                     <div class="col-xs-12 text-left">
 
-                        <?php the_posts_navigation(); ?>
+                        <?php $app->numeric_posts_nav(); ?>
                     </div>
                     <?php
 
