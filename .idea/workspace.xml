@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2e78f3e6-b25d-4c55-9d06-ce522b69cb0d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/last-actions.php" afterPath="$PROJECT_DIR$/web/app/themes/nwww/last-actions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/Rotator.js" afterPath="$PROJECT_DIR$/assets/js/Rotator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_last_actions.scss" afterPath="$PROJECT_DIR$/assets/scss/_last_actions.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/css/main.css" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/intro.js.map" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/intro.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/main.js" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/main.js.map" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/main.js.map" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,11 +69,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="last-actions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="last-actions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/last-actions.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="20" column="108" lean-forward="false" selection-start-line="20" selection-start-column="108" selection-end-line="20" selection-end-column="108" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rotator.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/Rotator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_last_actions.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/scss/_last_actions.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="634">
+              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -89,26 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
               <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header-logo.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/templates/header-logo.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="75" column="29" lean-forward="false" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_efx.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scss/_efx.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -174,7 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/app/themes/nwww/page.php" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/archive-campaign.php" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/single-campaign.php" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
@@ -208,7 +212,6 @@
         <option value="$PROJECT_DIR$/web/app/themes/nwww/single-kampania.php" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/category.php" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/assets/scss/_last_actions.scss" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/page-templates/main.php" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/sign.php" />
         <option value="$PROJECT_DIR$/assets/scss/_campaigns.scss" />
@@ -225,6 +228,8 @@
         <option value="$PROJECT_DIR$/web/app/themes/nwww/AkcjaDemokracja/App.php" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/single-post.php" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/last-actions.php" />
+        <option value="$PROJECT_DIR$/assets/scss/_last_actions.scss" />
+        <option value="$PROJECT_DIR$/assets/js/Rotator.js" />
       </list>
     </option>
   </component>
@@ -1083,12 +1088,12 @@
       <workItem from="1486251001846" duration="488000" />
       <workItem from="1487407496281" duration="18252000" />
       <workItem from="1488135558490" duration="29416000" />
-      <workItem from="1488168403506" duration="2796000" />
+      <workItem from="1488168403506" duration="2922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135031000" />
+    <option name="totallyTimeSpent" value="135157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1785" y="-517" width="1518" height="1294" extended-state="0" />
@@ -1177,14 +1182,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/dist/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/templates/title-link.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1425,14 +1422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/_last_actions.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="59" column="18" lean-forward="false" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1597,6 +1586,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="108" lean-forward="false" selection-start-line="20" selection-start-column="108" selection-end-line="20" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/_last_actions.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/Rotator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding />
         </state>
       </provider>

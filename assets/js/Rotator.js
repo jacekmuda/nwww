@@ -16,9 +16,9 @@ export default class Rotator {
                 var swiper = new Swiper('.swiper-container', {
 
                     direction: 'vertical',
-                    autoplay: 3000,
+                    autoplay: 2000,
                     slidesPerView: 'auto',
-                    centeredSlides: true,
+                    //  centeredSlides: true,
                     loop: true
 
 
