@@ -8,7 +8,7 @@
 <section class="intro__section">
     <div class="intro__inner">
         <h1><span class="c__w"><?php echo $first['lead']; ?></span></h1>
-        <img src="<?php echo $first['photos']; ?>">
+        <img src="<?php echo $first['photos']; ?>" class="animated intro__img fade-in">
         <div class="pointer">
             <svg version="1.1" class="arrow" xmlns="http://www.w3.org/2000/svg"
                  x="0px" y="0px"

@@ -94,8 +94,9 @@ body {
   &.open {
     pointer-events: auto;
     transform: translateY(0px);
-    ul li {
+    ul li a {
       opacity: 1;
+      color: inherit;
 
     }
   }
@@ -114,43 +115,44 @@ body {
 
       padding: 0;
       margin: 0;
+
+      @for $i from 1 to 10 {
+        &:nth-child(#{$i}) a {
+          transition-delay: .2 + $i * 0.10s;
+
+        }
+      }
       a {
         cursor: pointer;
         display: block;
-
+        opacity: 0;
         padding: 3rem;
         font-size: 5rem;
         line-height: 1;
         color: inherit;
         transition: all 300ms ease;
       }
-      &:nth-child(4n) a {
+      &:nth-child(4n) {
         background-color: map-get($colors, g);
         color: map-get($colors, b);
       }
-      &:nth-child(4n+1) a {
+      &:nth-child(4n+1) {
 
         background-color: map-get($colors, r);
         color: map-get($colors, y);
       }
-      &:nth-child(4n+2) a {
+      &:nth-child(4n+2) {
         background-color: map-get($colors, b);
         color: map-get($colors, w);
 
       }
-      &:nth-child(4n+3) a {
+      &:nth-child(4n+3) {
         background-color: map-get($colors, y);
         color: black;
       }
       &:hover a {
         background-color: black;
         color: white;
-      }
-      @for $i from 1 to 10 {
-        &:nth-child(#{$i}) {
-          transition-delay: $i * 0.10s;
-
-        }
       }
 
     }
