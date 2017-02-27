@@ -8,7 +8,7 @@
                 <?php
                 if (have_posts()) : ?>
 
-                    <header class="page-header col-xs-12 text-center">
+                    <header class="col-xs-12 text-center">
                         <h1 class="h2 page-title">Aktualności</h1>
                     </header>
 
