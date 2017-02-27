@@ -6,7 +6,7 @@ const margin = 54,
     w = $(window).width(),
     h = $(window).height(),
     iw = w / 4,
-    ih = (h - 100) / 4;
+    ih = h / 4;
 
 function shuffle(a) {
     for (let i = a.length; i; i--) {
@@ -37,6 +37,11 @@ function intro_start() {
                 hh = margin + ih * a,
                 ww = margin + iw * i + (a * 30);
             matrix.scale(.8);
+
+            if (hh > h * 0.9 && i == 0) {
+                hh = hh - 300;
+            }
+
             matrix.translate(ww, hh);
 
 
