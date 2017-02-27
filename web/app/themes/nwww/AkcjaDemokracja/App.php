@@ -78,7 +78,7 @@ class App
     {
         add_theme_support('post-thumbnails', ['post', 'page', 'kampania']);
         add_image_size('mid', 400, 300, true);
-        add_image_size('semi', 600, 400, false);
+        add_image_size('semi', 600, 400, true);
     }
 
     function unregister_taxonomies()

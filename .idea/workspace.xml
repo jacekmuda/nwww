@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2e78f3e6-b25d-4c55-9d06-ce522b69cb0d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/intro.js" afterPath="$PROJECT_DIR$/assets/js/intro.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_header.scss" afterPath="$PROJECT_DIR$/assets/scss/_header.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_intro.scss" afterPath="$PROJECT_DIR$/assets/scss/_intro.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/AkcjaDemokracja/App.php" afterPath="$PROJECT_DIR$/web/app/themes/nwww/AkcjaDemokracja/App.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/css/main.css" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/intro.js" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/intro.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/intro.js.map" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/intro.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/main.js.map" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/main.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/single-post.php" afterPath="$PROJECT_DIR$/web/app/themes/nwww/single-post.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,28 +35,31 @@
       <file leaf-file-name="App.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/AkcjaDemokracja/App.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="35" column="119" lean-forward="false" selection-start-line="35" selection-start-column="119" selection-end-line="35" selection-end-column="119" />
+            <state relative-caret-position="287">
+              <caret line="80" column="47" lean-forward="false" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="intro-logo.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/templates/intro-logo.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="76" column="30" lean-forward="false" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="intro.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="intro.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/intro.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="629">
               <caret line="72" column="10" lean-forward="false" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+              <folding>
+                <marker date="1488170663000" expanded="true" signature="427:1644" ph="{...}" />
+                <marker date="1488170663000" expanded="true" signature="1098:1638" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="single-post.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/single-post.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="78" lean-forward="false" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -82,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/assets/scss/_intro.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -132,8 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>row</find>
-      <find>conta</find>
       <find>btn</find>
       <find>lead</find>
       <find>siz</find>
@@ -162,6 +157,8 @@
       <find>campaign__cats</find>
       <find>themebase</find>
       <find>logo</find>
+      <find>mediu</find>
+      <find>thum</find>
     </findStrings>
     <replaceStrings>
       <replace>'../fonts</replace>
@@ -210,7 +207,6 @@
         <option value="$PROJECT_DIR$/assets/scss/_posts.scss" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/templates/campaign.twig" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/single-kampania.php" />
-        <option value="$PROJECT_DIR$/web/app/themes/nwww/single-post.php" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/category.php" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/last-actions.php" />
@@ -226,9 +222,10 @@
         <option value="$PROJECT_DIR$/web/app/themes/nwww/inc/intro.php" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/templates/intro-logo.twig" />
         <option value="$PROJECT_DIR$/assets/scss/_header.scss" />
-        <option value="$PROJECT_DIR$/web/app/themes/nwww/AkcjaDemokracja/App.php" />
         <option value="$PROJECT_DIR$/assets/scss/_intro.scss" />
         <option value="$PROJECT_DIR$/assets/js/intro.js" />
+        <option value="$PROJECT_DIR$/web/app/themes/nwww/AkcjaDemokracja/App.php" />
+        <option value="$PROJECT_DIR$/web/app/themes/nwww/single-post.php" />
       </list>
     </option>
   </component>
@@ -1087,12 +1084,12 @@
       <workItem from="1486251001846" duration="488000" />
       <workItem from="1487407496281" duration="18252000" />
       <workItem from="1488135558490" duration="29416000" />
-      <workItem from="1488168403506" duration="2187000" />
+      <workItem from="1488168403506" duration="2739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134422000" />
+    <option name="totallyTimeSpent" value="134974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1785" y="-517" width="1518" height="1294" extended-state="0" />
@@ -1192,6 +1189,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1216,6 +1214,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1267,6 +1266,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="34" lean-forward="true" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1274,6 +1274,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="29" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1281,6 +1282,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1288,6 +1290,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1295,6 +1298,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1318,6 +1322,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1325,6 +1330,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,6 +1345,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1358,18 +1365,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/single-post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/wp/wp-includes/general-template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="145" column="9" lean-forward="false" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
+          <folding>
+            <marker date="1484156807000" expanded="true" signature="28836:28849" ph="..." />
+            <marker date="1484156807000" expanded="true" signature="55477:55659" ph="SELECT YEAR(... " />
+            <marker date="1484156807000" expanded="true" signature="56551:56686" ph="SELECT YEAR(... " />
+            <marker date="1484156807000" expanded="true" signature="57451:57695" ph="SELECT YEAR(... " />
+            <marker date="1484156807000" expanded="true" signature="58666:58904" ph="SELECT DISTI... " />
+            <marker date="1484156807000" expanded="true" signature="60308:60366" ph="SELECT * FRO... wp_posts" />
+            <marker date="1484156807000" expanded="true" signature="62669:62764" ph="SELECT 1 as wp_posts" />
+            <marker date="1484156807000" expanded="true" signature="64002:64216" ph="SELECT MONTH... " />
+            <marker date="1484156807000" expanded="true" signature="64245:64476" ph="SELECT MONTH... " />
+            <marker date="1484156807000" expanded="true" signature="64652:64793" ph="..." />
+            <marker date="1484156807000" expanded="true" signature="64787:64793" ph="..." />
+            <marker date="1484156807000" expanded="true" signature="65238:65244" ph="..." />
+            <marker date="1484156807000" expanded="true" signature="66047:66053" ph="..." />
+            <marker date="1484156807000" expanded="true" signature="66146:66381" ph="SELECT DISTI... wp_posts" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1377,6 +1392,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1384,6 +1400,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="29" column="67" lean-forward="false" selection-start-line="29" selection-start-column="67" selection-end-line="29" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1540,6 +1557,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/_intro.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/intro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="72" column="10" lean-forward="false" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+          <folding>
+            <marker date="1488170663000" expanded="true" signature="427:1644" ph="{...}" />
+            <marker date="1488170663000" expanded="true" signature="1098:1638" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/inc/intro.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1550,24 +1586,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/AkcjaDemokracja/App.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="35" column="119" lean-forward="false" selection-start-line="35" selection-start-column="119" selection-end-line="35" selection-end-column="119" />
+        <state relative-caret-position="287">
+          <caret line="80" column="47" lean-forward="false" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/_intro.scss">
+    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/single-post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/intro.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="72" column="10" lean-forward="false" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+        <state relative-caret-position="150">
+          <caret line="10" column="78" lean-forward="false" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
           <folding />
         </state>
       </provider>

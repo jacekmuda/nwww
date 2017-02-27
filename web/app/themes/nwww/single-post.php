@@ -8,7 +8,7 @@
                 <div class="row">
                     <?php if (has_post_thumbnail()) : ?>
                         <div class=" col-sm-12 col-lg-6">
-                            <?php echo get_the_post_thumbnail($post->ID, 'large'); ?>
+                            <?php echo get_the_post_thumbnail($post->ID, 'semi'); ?>
 
                         </div>
                     <?php endif; ?>
@@ -45,6 +45,7 @@
 
                         $campaign = get_post(get_field('campaign_id', $post->ID));
                         $speakout = $app->get_speakout_info($campaign->ID);
+
                         $app->render('campaign', [
                             'signed' => $app->calc_perc($speakout),
                             'title' => get_the_title($campaign->ID),
