@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2e78f3e6-b25d-4c55-9d06-ce522b69cb0d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/intro.js" afterPath="$PROJECT_DIR$/assets/js/intro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_campaigns.scss" afterPath="$PROJECT_DIR$/assets/scss/_campaigns.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/acf-json/group_58851c7a51eb9.json" afterPath="$PROJECT_DIR$/web/app/themes/nwww/acf-json/group_58851c7a51eb9.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/css/main.css" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/intro.js" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/intro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/intro.js.map" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/intro.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/main.js.map" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/js/main.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/single-kampania.php" afterPath="$PROJECT_DIR$/web/app/themes/nwww/single-kampania.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,21 +37,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/AkcjaDemokracja/App.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="80" column="47" lean-forward="false" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
+            <state relative-caret-position="315">
+              <caret line="21" column="138" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="138" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="intro.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/AkcjaDemokracja/App.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="349" column="31" lean-forward="true" selection-start-line="349" selection-start-column="31" selection-end-line="349" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="intro.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/intro.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+            <state relative-caret-position="330">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="single-kampania.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/single-kampania.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="136" column="34" lean-forward="true" selection-start-line="136" selection-start-column="34" selection-end-line="136" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_campaigns.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/scss/_campaigns.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -91,41 +127,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scss/_header.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="105" column="14" lean-forward="false" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_intro.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scss/_intro.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/footer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>btn</find>
       <find>lead</find>
       <find>siz</find>
       <find>mic</find>
@@ -155,6 +160,7 @@
       <find>logo</find>
       <find>mediu</find>
       <find>thum</find>
+      <find>children__campaigns</find>
     </findStrings>
     <replaceStrings>
       <replace>'../fonts</replace>
@@ -201,12 +207,10 @@
         <option value="$PROJECT_DIR$/web/app/themes/nwww/templates/categories.twig" />
         <option value="$PROJECT_DIR$/assets/scss/_posts.scss" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/templates/campaign.twig" />
-        <option value="$PROJECT_DIR$/web/app/themes/nwww/single-kampania.php" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/category.php" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/page-templates/main.php" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/sign.php" />
-        <option value="$PROJECT_DIR$/assets/scss/_campaigns.scss" />
         <option value="$PROJECT_DIR$/assets/scss/_global.scss" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/footer.php" />
         <option value="$PROJECT_DIR$/assets/scss/main.scss" />
@@ -222,6 +226,8 @@
         <option value="$PROJECT_DIR$/assets/scss/_last_actions.scss" />
         <option value="$PROJECT_DIR$/assets/js/Rotator.js" />
         <option value="$PROJECT_DIR$/assets/js/intro.js" />
+        <option value="$PROJECT_DIR$/assets/scss/_campaigns.scss" />
+        <option value="$PROJECT_DIR$/web/app/themes/nwww/single-kampania.php" />
       </list>
     </option>
   </component>
@@ -828,12 +834,12 @@
       <workItem from="1486251001846" duration="488000" />
       <workItem from="1487407496281" duration="18252000" />
       <workItem from="1488135558490" duration="29416000" />
-      <workItem from="1488168403506" duration="3246000" />
+      <workItem from="1488168403506" duration="4121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135481000" />
+    <option name="totallyTimeSpent" value="136356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1785" y="-517" width="1518" height="1294" extended-state="0" />
@@ -1094,14 +1100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/single-kampania.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/wp/wp-includes/general-template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -1162,14 +1160,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="37" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/sign.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1189,13 +1179,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/_campaigns.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="106" column="15" lean-forward="true" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1287,38 +1270,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/inc/intro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/AkcjaDemokracja/App.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="80" column="47" lean-forward="false" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/single-post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/last-actions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="108" lean-forward="false" selection-start-line="20" selection-start-column="108" selection-end-line="20" selection-end-column="108" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/_last_actions.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="634">
@@ -1337,8 +1288,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/intro.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        <state relative-caret-position="330">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/AkcjaDemokracja/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="349" column="31" lean-forward="true" selection-start-line="349" selection-start-column="31" selection-end-line="349" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/_campaigns.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/inc/intro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="138" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="138" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/last-actions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="108" lean-forward="false" selection-start-line="20" selection-start-column="108" selection-end-line="20" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/single-post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/single-kampania.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="136" column="34" lean-forward="true" selection-start-line="136" selection-start-column="34" selection-end-line="136" selection-end-column="34" />
           <folding />
         </state>
       </provider>
