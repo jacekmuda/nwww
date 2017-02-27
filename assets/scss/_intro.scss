@@ -15,14 +15,16 @@
       margin: 0 auto;
     }
   }
-  img {
+  img, svg {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 12;
   }
-
+  svg {
+    z-index: 44;
+  }
   h1 {
     position: absolute;
     bottom: 0;

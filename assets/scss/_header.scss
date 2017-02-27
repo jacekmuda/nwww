@@ -164,32 +164,33 @@ body {
   .navbar__right {
     margin-top: 0;
   }
+  .header__logo {
+    .logo {
+      max-width: 200px;
+      height: auto;
+      overflow: visible !important;
+      g {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+        transition-duration: 200ms;
+        transform: translate(0, 0);
+      }
+      &:hover {
+        g#ak {
+          transform: translate(-5px, -5px);
+        }
+        g#kcja {
+          transform: translate(5px, -5px);
+        }
+        g#demo {
+          transform: translate(-5px, 5px);
+        }
+        g#kracja {
+          transform: translate(5px, 5px);
+        }
+      }
 
-  .logo {
-    max-width: 200px;
-    height: auto;
-    overflow: visible !important;
-    g {
-      transition-property: all;
-      transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
-      transition-duration: 200ms;
-      transform: translate(0, 0);
     }
-    &:hover {
-      g#ak {
-        transform: translate(-5px, -5px);
-      }
-      g#kcja {
-        transform: translate(5px, -5px);
-      }
-      g#demo {
-        transform: translate(-5px, 5px);
-      }
-      g#kracja {
-        transform: translate(5px, 5px);
-      }
-    }
-
   }
 
   .page__header * {
@@ -199,11 +200,8 @@ body {
 }
 
 @media (min-width: $screen-md-min) {
-  body {
-    // padding-top: 135px;
-  }
 
-  .page__header {
+  .header__logo {
 
     .logo {
       height: 100px;
