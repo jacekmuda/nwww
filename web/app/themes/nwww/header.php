@@ -36,7 +36,7 @@
 
 <button class="btn c__w  menu__toggle h4">MENU</button>
 
-<?php if (!is_home()) : ?>
+<?php if (!is_front_page()) : ?>
 
     <section class="section header__logo">
         <div class="container">
