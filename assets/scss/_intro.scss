@@ -8,6 +8,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    height: 50px;
     z-index: 99;
     right: 0;
     text-align: center;
@@ -15,15 +16,20 @@
       margin: 0 auto;
     }
   }
-  img, svg {
+  img, #intrologo {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 12;
   }
-  svg {
-    z-index: 44;
+
+  #intrologo {
+    z-index: 99;
+    opacity: 0;
+    &.show {
+      opacity: 1;
+    }
   }
   h1 {
     position: absolute;

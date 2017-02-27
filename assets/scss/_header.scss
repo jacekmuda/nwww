@@ -95,7 +95,7 @@ body {
     pointer-events: auto;
     transform: translateY(0px);
     ul li a {
-      opacity: 1;
+
       color: inherit;
 
     }
@@ -116,16 +116,10 @@ body {
       padding: 0;
       margin: 0;
 
-      @for $i from 1 to 10 {
-        &:nth-child(#{$i}) a {
-          transition-delay: .2 + $i * 0.10s;
-
-        }
-      }
       a {
         cursor: pointer;
         display: block;
-        opacity: 0;
+
         padding: 3rem;
         font-size: 5rem;
         line-height: 1;

@@ -2,52 +2,84 @@ const
     Snap = require(`imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js`);
 
 const margin = 54,
+    arr = [0, 1, 2, 3],
     w = $(window).width(),
     h = $(window).height(),
     iw = w / 4,
-    ih = h / 4;
-function rand_int(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    ih = (h - 100) / 4;
+
+function shuffle(a) {
+    for (let i = a.length; i; i--) {
+        let j = Math.floor(Math.random() * i);
+        [a[i - 1], a[j]] = [a[j], a[i - 1]];
+    }
 }
-function intro_start(intro_content) {
 
-    $(document).ready(function () {
-
-        let s = Snap('#intrologo');
-        s
-            .attr({viewBox: [0, 0, w, h].join(',')})
-            .attr('height', h)
-            .attr('width', w);
+function intro_start() {
 
 
-        let
-            groups = s.selectAll('.gr');
+    let s = Snap('#intrologo');
+
+    s
+        .attr({viewBox: [0, 0, w, h].join(',')})
+        .attr('height', h)
+        .attr('width', w);
+
+
+    let groups = s.selectAll('.gr');
+
+    function sh() {
+        shuffle(arr);
 
         groups.forEach(function (elem, i) {
-            let matrix = new Snap.Matrix(),
-                hh = margin + ih * rand_int(0, 2),
-                ww = margin + iw * i;
+            let a = arr[i],
+                matrix = new Snap.Matrix(),
+                hh = margin + ih * a,
+                ww = margin + iw * i + (a * 30);
             matrix.scale(.8);
             matrix.translate(ww, hh);
 
 
             elem.attr({transform: matrix})
 
-            console.log(matrix)
+
         });
+    }
+
+    sh();
+
+    s.attr('class', 'show');
+    var curindex = 0;
+    $('.intro__section').click(function () {
+        curindex = curindex + 1;
 
 
+        var
+            photos = intro_content.photos,
+            lead = intro_content.lead,
+            photo = $('.intro__img'),
+            text = $('.intro__section h1 span');
+
+
+        if (typeof photos[curindex] === 'undefined') {
+            curindex = 0;
+        }
+
+        var img = new Image();
+        img.src = photos[curindex]['full'];
+
+        img.onload = function () {
+            photo.attr('src', img.src)
+        };
+
+
+        text.text(lead[curindex]['content'])
+
+        sh();
     });
 
 
-    if (!intro_content) {
-        return;
-    } else {
-        const photos = intro_content.photos,
-            lead = intro_content.lead;
-        console.log(photos)
-
-    }
 }
-
-intro_start();
+$(document).ready(function () {
+    intro_start();
+});

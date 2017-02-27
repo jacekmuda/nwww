@@ -32,8 +32,8 @@ class App
         wp_enqueue_script('app', $this->_assetUrl('js/main.js'), [], random_int(111, 222), true);
 
         if (is_page(get_option('page_on_front'))) {
-            wp_enqueue_script('intro', $this->_assetUrl('js/intro.js'), [], random_int(111, 222), true);
 
+            wp_enqueue_script('intro', $this->_assetUrl('js/intro.js'), ['jquery', 'app'], random_int(111, 222), true);
         }
 
         wp_enqueue_style('app', $this->_assetUrl('css/main.css'), [], random_int(111, 222));
