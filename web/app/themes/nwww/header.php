@@ -35,3 +35,18 @@
 
 
 <button class="btn c__w  menu__toggle h4">MENU</button>
+
+<?php if (!is_home()) : ?>
+
+    <section class="section header__logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="<?php echo home_url(); ?>">
+                        <?php $app->render('header-logo'); ?>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>

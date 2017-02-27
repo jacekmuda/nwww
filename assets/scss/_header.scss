@@ -22,10 +22,10 @@ body {
   }
 }
 
-.page__header {
-
+.header__logo {
+  padding-bottom: 0;
   .logo {
-    height: 60px;
+    height: 100px;
     width: auto;
     cursor: pointer;
   }
@@ -50,17 +50,26 @@ body {
   transition: all 300ms ease;
   cursor: pointer;
   display: block;
+  background-color: black;
+  color: white;
   &:focus {
     outline: none;
 
   }
   &:focus, &:hover {
     color: black;
-    background-color: map_get($colors, y);
+    background-color: map_get($colors, y) !important;
   }
 }
 
-.scrolled {
+.home {
+  .menu__toggle {
+    color: black;
+    background-color: white;
+  }
+}
+
+.home.scrolled {
   .menu__toggle {
     background-color: black;
     color: white;
@@ -155,6 +164,8 @@ body {
   }
 
   .logo {
+    max-width: 200px;
+    height: auto;
     overflow: visible !important;
     g {
       transition-property: all;

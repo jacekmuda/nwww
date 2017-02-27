@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e78f3e6-b25d-4c55-9d06-ce522b69cb0d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_page.scss" afterPath="$PROJECT_DIR$/assets/scss/_page.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_header.scss" afterPath="$PROJECT_DIR$/assets/scss/_header.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/_variables.scss" afterPath="$PROJECT_DIR$/assets/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/dist/css/main.css" afterPath="$PROJECT_DIR$/web/app/themes/nwww/dist/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/header.php" afterPath="$PROJECT_DIR$/web/app/themes/nwww/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/nwww/sign.php" afterPath="$PROJECT_DIR$/web/app/themes/nwww/sign.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,16 +24,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_intro.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scss/_intro.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="App.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/AkcjaDemokracja/App.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -55,14 +47,14 @@
       <file leaf-file-name="_header.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/_header.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1758">
-              <caret line="56" column="20" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+            <state relative-caret-position="180">
+              <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sign.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sign.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/sign.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="417">
@@ -72,11 +64,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_variables.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/scss/_variables.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+            <state relative-caret-position="267">
+              <caret line="40" column="40" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header-logo.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/templates/header-logo.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="57" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -87,16 +99,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_footer.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scss/_footer.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -126,8 +128,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>gutil</find>
-      <find>$fon</find>
       <find>promo__campaign</find>
       <find>hea</find>
       <find>transi</find>
@@ -156,6 +156,8 @@
       <find>img(</find>
       <find>cat</find>
       <find>headi</find>
+      <find>font</find>
+      <find>logo</find>
     </findStrings>
     <replaceStrings>
       <replace>'../fonts</replace>
@@ -205,7 +207,6 @@
         <option value="$PROJECT_DIR$/web/app/themes/nwww/templates/big-lead.twig" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/functions/acf.php" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/inc/loop.php" />
-        <option value="$PROJECT_DIR$/assets/scss/_variables.scss" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/templates/post.twig" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/templates/title-link.twig" />
         <option value="$PROJECT_DIR$/assets/scss/_posts.scss" />
@@ -216,13 +217,14 @@
         <option value="$PROJECT_DIR$/assets/scss/_last_actions.scss" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/inc/intro.php" />
         <option value="$PROJECT_DIR$/assets/scss/_intro.scss" />
-        <option value="$PROJECT_DIR$/assets/scss/_header.scss" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/footer.php" />
         <option value="$PROJECT_DIR$/assets/scss/_global.scss" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/AkcjaDemokracja/App.php" />
-        <option value="$PROJECT_DIR$/web/app/themes/nwww/header.php" />
         <option value="$PROJECT_DIR$/assets/scss/_page.scss" />
         <option value="$PROJECT_DIR$/web/app/themes/nwww/sign.php" />
+        <option value="$PROJECT_DIR$/assets/scss/_variables.scss" />
+        <option value="$PROJECT_DIR$/web/app/themes/nwww/header.php" />
+        <option value="$PROJECT_DIR$/assets/scss/_header.scss" />
       </list>
     </option>
   </component>
@@ -1071,12 +1073,12 @@
       <workItem from="1486242226114" duration="1767000" />
       <workItem from="1486251001846" duration="488000" />
       <workItem from="1487407496281" duration="18252000" />
-      <workItem from="1488135558490" duration="16425000" />
+      <workItem from="1488135558490" duration="17053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119244000" />
+    <option name="totallyTimeSpent" value="119872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1784" y="-225" width="1518" height="1002" extended-state="0" />
@@ -1165,14 +1167,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/categories.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -1492,14 +1486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="49" column="29" lean-forward="false" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/_intro.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1520,14 +1506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/_header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1758">
-          <caret line="56" column="20" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1556,14 +1534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/_page.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
@@ -1576,6 +1546,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
           <caret line="47" column="50" lean-forward="false" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/templates/header-logo.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="57" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/_header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/nwww/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="40" column="40" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="40" />
           <folding />
         </state>
       </provider>
