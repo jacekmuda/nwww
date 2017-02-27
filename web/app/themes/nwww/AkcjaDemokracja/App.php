@@ -293,7 +293,7 @@ class App
             $this->render('link', [
                 'link' => get_category_link($cat[0]->term_id),
                 'text' => $cat[0]->name,
-                'classes' => 'micro'
+                'classes' => 'h4 c__b t__w campaign__cat'
             ]);
         }
 

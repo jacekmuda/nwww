@@ -1,79 +1,96 @@
 <?php get_header(); ?>
-<?php global $app;
+<?php global $app; ?>
+<?php $big_lead = $app->big_lead(); ?>
+<?php
 if (have_posts()) while (have_posts()) : the_post(); ?>
-    <section class="padded section container " id="content" role="main">
+    <section class="campaign__header section  " id="content" role="main">
 
-        <div class="row  is-flex">
-            <div class="col-sm-6 col-md-6 col-lg-6 ">
-                <article class="c__w  exp">
+        <div class="container ">
+            <div class="row ">
 
-
-                    <?php $app->cat_link($post->ID); ?>
-                    <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                    <div class="lead">  <?php the_excerpt(); ?></div>
-                    <a class="btn c__g t__w scroll__link" href="#dzialania">Nasze działania</a>
-
-                </article>
-
-            </div>
-            <div class=" col-sm-6 col-md-6 col-lg-6 ">
+                <div class=" col-sm-8 col-md-6 col-lg-6 ">
 
 
-                <?php
-                global $app;
+                    <?php
 
-                $speakout = $app->get_speakout_info($post->ID);
+                    echo get_the_post_thumbnail($post->ID, 'large');
 
-                $app->render('campaign', [
-                    'signed' => $app->calc_perc($speakout),
-                    'link' => false,
-                    'img' => get_the_post_thumbnail($post->ID, 'large')
-                ]); ?>
+                    $speakout = $app->get_speakout_info($post->ID);
+
+                    ?>
 
 
-            </div>
+                </div>
+                <div class="col-sm-4 col-md-6 col-lg-6 ">
+                    <article class="c__w  exp">
 
 
-        </div>
-        <div class="separator"></div>
-        <div class="row is-flex">
-            <div class="col-sm-12 col-md-8 col-lg-8 campaingn__longtext text-justify">
-                <?php the_content(); ?>
-            </div>
-            <div class="col-sm-12 col-md-4 col-lg-4 ">
-                <?php
-                if (have_rows('actions')):
-                    echo '    <div class=" ">';
-                    while (have_rows('actions')) : the_row();
+                        <?php $app->cat_link($post->ID); ?>
+                        <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
-                        if (get_row_layout() == 'campaign'):
-                            $campaign_id = get_sub_field('id');
+                        <?php $app->render('campaign-signed', [
+                            'signed' => $app->calc_perc($speakout),
 
-                            $speakout = $app->get_speakout_info($campaign_id);
-                            $app->render('campaign', [
-                                'signed' => $app->calc_perc($speakout),
-                                'title' => get_the_title($campaign_id),
-                                'excerpt' => false,
-                                'link' => false,
-                                'img' => get_the_post_thumbnail($campaign_id, 'semi')
-                            ]);
-                            echo '<br>';
+                        ]); ?>
+                        <div class="lead"><br> <?php the_excerpt(); ?></div>
 
-                            //  $app->render('campaign', ['signed' => $app->get_signed($campaign_id)]);
-                            //  echo sprintf('<h1 class="padded side__title c__w h3"><a href="%s">%s</a></h1>', get_post_permalink($campaign_id), get_the_title($campaign_id));
 
-                        endif;
-                    endwhile;
-                    echo '</div>';
-                endif;
+                    </article>
 
-                ?>
+                </div>
+
             </div>
         </div>
+
 
     </section>
+    <?php
+    if ($big_lead[0]) :
 
+        $app->render('big-lead', [
+            'classes' => 'c__g t__w',
+            'text' => $big_lead[0]['content']
+        ]);
 
+    endif; ?>
+    <section class="section campaign__desc">
+        <div class="container">
+            <div class="row is-flex">
+                <div class="col-sm-12 col-md-8 col-lg-8 campaingn__longtext text-justify">
+                    <?php the_content(); ?>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 ">
+                    <?php
+                    if (have_rows('actions')):
+                        echo '    <div class=" ">';
+                        while (have_rows('actions')) : the_row();
+
+                            if (get_row_layout() == 'campaign'):
+                                $campaign_id = get_sub_field('id');
+
+                                $speakout = $app->get_speakout_info($campaign_id);
+                                $app->render('campaign', [
+                                    'signed' => $app->calc_perc($speakout),
+                                    'title' => get_the_title($campaign_id),
+                                    'excerpt' => false,
+                                    'link' => false,
+                                    'img' => get_the_post_thumbnail($campaign_id, 'semi')
+                                ]);
+                                echo '<br>';
+
+                                //  $app->render('campaign', ['signed' => $app->get_signed($campaign_id)]);
+                                //  echo sprintf('<h1 class="padded side__title c__w h3"><a href="%s">%s</a></h1>', get_post_permalink($campaign_id), get_the_title($campaign_id));
+
+                            endif;
+                        endwhile;
+                        echo '</div>';
+                    endif;
+
+                    ?>
+                </div>
+            </div>
+
+    </section>
     <?php
     if (have_rows('actions')): ?>
         <section class="children__campaigns padded section container c__w">

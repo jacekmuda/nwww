@@ -1,4 +1,12 @@
-<div class=" ">
+<div class="post__header">
+    {% if categories %}
+    <div class="post__cats c__b t__w">
+        {% for cat in categories %}
+        <a class="h4" href="{{ cat.link }}">{{ cat.name }}</a>
+
+        {% endfor %}
+    </div>
+    {% endif %}
     <a href="{{ link }}">
         <div class="thumb">
             {{ img | raw }}

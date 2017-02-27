@@ -1,25 +1,35 @@
 .campaign__cats {
   position: sticky;
-  top: 120px;
-  div {
-    h1 {
-      margin: 0;
-      padding: $padding;
+  top: 30px;
+  z-index: 888;
+  background-color: white;
+  h1 {
+    margin: 0;
+    padding: $padding;
+  }
+
+  a {
+    color: inherit;
+    display: block;
+    padding: 1.3rem $padding;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      background-color: map-get($colors, y);
     }
-    color: white;
-    a {
-      color: inherit;
-      display: block;
-      padding: 1.3rem $padding;
-      transition: all 200ms ease-in-out;
-      &:hover {
-        background-color: map-get($colors, b);
-      }
-      &.active {
-        background-color: map-get($colors, b);
-      }
+    &.active {
+      background-color: map-get($colors, y);
     }
-    padding-bottom: 20px;
+
+  }
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.campaign__list {
+  .promo__campaign {
+    margin-bottom: $grid-gutter-width *2;
   }
 }
 
@@ -79,6 +89,13 @@
 
     padding-bottom: $padding;
   }
+}
+
+.campaign__cat {
+  padding: 5px 10px;
+  padding-top: 8px;
+  margin: 0;
+  display: inline-block;
 }
 
 $blue: map_get($colors, g);
