@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 30,
+                "width": 100,
                 "class": "",
                 "id": ""
             },
@@ -36,14 +36,14 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 70,
+                "width": 100,
                 "class": "",
                 "id": ""
             },
             "collapsed": "field_58b3270cf7e9c",
             "min": "",
             "max": "",
-            "layout": "block",
+            "layout": "row",
             "button_label": "Dodaj kolejny",
             "sub_fields": [
                 {
@@ -73,9 +73,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "options_page",
                 "operator": "==",
-                "value": "page-templates\/main.php"
+                "value": "nwww_intro"
             }
         ]
     ],
@@ -87,5 +87,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1488136171
+    "modified": 1489516146
 }

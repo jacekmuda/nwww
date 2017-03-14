@@ -13,6 +13,9 @@ class App
         global $adm;
         $adm = new Admin();
 
+        $localfields = new LocalFields();
+        $localfields->register();
+
         add_action('init', [$this, 'register_campaigns'], 0);
         add_action('init', [$this, 'register_menus'], 0);
         add_action('init', [$this, 'unregister_taxonomies'], 0);
@@ -301,10 +304,11 @@ class App
 
     public function intro_data($first = false)
     {
-        $id = get_option('page_on_front');
 
-        $photos = get_field('photos', $id);
-        $lead = get_field('lead', $id);
+
+        $photos = get_field('photos', 'nwww_intro');
+        $lead = get_field('lead', 'nwww_intro');
+
 
         $photos = array_map(function ($c) {
             return [
@@ -325,7 +329,6 @@ class App
                 'lead' => $lead
             ]);
         }
-
 
     }
 

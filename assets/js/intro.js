@@ -55,8 +55,13 @@ function intro_start() {
 
     s.attr('class', 'show');
     var curindex = 0;
-    $('.intro__section').click(function () {
+    $('.intro__section').on('click', function (e) {
         curindex = curindex + 1;
+
+
+        if ($(e.target).is('.pointer')) {
+            $('html, body').animate({scrollTop: $(window).height()});
+        }
 
 
         var
@@ -87,4 +92,5 @@ function intro_start() {
 }
 $(document).ready(function () {
     intro_start();
+
 });
