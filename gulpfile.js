@@ -53,7 +53,7 @@ gulp.task('js', function () {
 
 
 gulp.task('sass', function () {
-    return gulp.src('assets/scss/main.scss')
+    return gulp.src(['assets/scss/main.scss', 'assets/scss/admin.scss'])
         .pipe($.sass({
             includePaths: sassPaths,
             outputStyle: 'compressed'

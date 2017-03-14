@@ -19,7 +19,7 @@
             "min": "",
             "max": 7,
             "layout": "table",
-            "button_label": "Dodaj wiersz",
+            "button_label": "Dodaj kolejny",
             "sub_fields": [
                 {
                     "key": "field_58b3462b9da98",
@@ -30,7 +30,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": 80,
                         "class": "",
                         "id": ""
                     },
@@ -46,31 +46,25 @@
                     "key": "field_58c82f16604e4",
                     "label": "Color",
                     "name": "color",
-                    "type": "select",
+                    "type": "radio",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": 20,
                         "class": "",
                         "id": ""
                     },
                     "choices": {
-                        "red": "red",
-                        "yellow": "yellow",
-                        "blue": "blue",
-                        "green": "green"
+                        "r": "r",
+                        "b": "b",
+                        "g": "g",
+                        "y": "y"
                     },
-                    "default_value": [
-                        "green"
-                    ],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": "",
-                    "disabled": 0,
-                    "readonly": 0
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "g",
+                    "layout": "vertical"
                 }
             ]
         }
@@ -99,5 +93,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1489514339
+    "modified": 1489517287
 }
