@@ -350,8 +350,11 @@ class App
         $interludes = $this->page_interlude();
         $interludes_counter = $GLOBALS['interludes_counter'];
         if (count($interludes) > $interludes_counter) {
+            $color = $interludes[$interludes_counter]['color'];
+            $classes = sprintf('c__%s t__%s', $color, ($color == 'y' ? 'b' : 'w'));
+
             $this->render('big-lead', [
-                'classes' => 'c__g t__w',
+                'classes' => $classes,
                 'text' => $interludes[$interludes_counter]['content']
             ]);
             $GLOBALS['interludes_counter']++;
@@ -424,14 +427,12 @@ class App
                 echo '<li>…</li>';
         }
 
-        /**    Link to current page, plus 2 pages in either direction if necessary */
         sort($links);
         foreach ((array)$links as $link) {
             $class = $paged == $link ? ' class="active"' : '';
             printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($link)), $link);
         }
 
-        /**    Link to last page, plus ellipses if necessary */
         if (!in_array($max, $links)) {
             if (!in_array($max - 1, $links))
                 echo '<li>…</li>' . "\n";
@@ -440,7 +441,6 @@ class App
             printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($max)), $max);
         }
 
-        /**    Next Post Link */
         if (get_next_posts_link())
             printf('<li>%s</li>' . "\n", get_next_posts_link());
 
