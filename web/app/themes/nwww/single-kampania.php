@@ -1,7 +1,8 @@
 <?php get_header(); ?>
-<?php global $app; ?>
-
 <?php
+global $app;
+
+
 if (have_posts()) while (have_posts()) : the_post(); ?>
     <section class="campaign__header section  " id="content" role="main">
 
@@ -48,17 +49,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
 
 
     </section>
-    <?php
-    $big_lead = $app->big_lead();
-
-    if (!empty($big_lead[0]['content'])) :
-
-        $app->render('big-lead', [
-            'classes' => 'c__g t__w',
-            'text' => $big_lead[0]
-        ]);
-
-    endif; ?>
+    <?php $app->insert_interlude(); ?>
     <section class="section campaign__desc">
         <div class="container">
             <div class="row is-flex">

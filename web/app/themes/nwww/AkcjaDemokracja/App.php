@@ -196,7 +196,7 @@ class App
     public function has_children($post)
     {
 
-        return count(get_posts(['post_parent' => $post->ID, 'post_type' => $post->post_type]));
+        return count(get_posts(['post_parent' => $post->ID, 'post_type' => $post->post_type])) > 0;
     }
 
     public function get_children($id)
@@ -334,12 +334,36 @@ class App
         return sprintf('<img class="placeholder" src="%s">', $this->_img('placeholders/' . random_int(0, 2) . '.png'));
     }
 
-    public function big_lead()
+    public function page_interlude()
     {
-
         global $post;
-        return get_field('przerywnik', $post->id);
+        return array_filter(get_field('przerywnik', $post->id), function ($itm) {
+            return $itm['content'];
+        });
     }
+
+    public function insert_interlude()
+    {
+        $interludes = $this->page_interlude();
+        $interludes_counter = $GLOBALS['interludes_counter'];
+        if (count($interludes) > $interludes_counter) {
+            $this->render('big-lead', [
+                'classes' => 'c__g t__w',
+                'text' => $interludes[$interludes_counter]['content']
+            ]);
+            $GLOBALS['interludes_counter']++;
+        }
+
+    }
+
+    public function update_interludes_count()
+    {
+        if ($GLOBALS['interludes_counter']) {
+            global $post;
+            update_post_meta($post->ID, 'interludes', $GLOBALS['interludes_counter']);
+        }
+    }
+
 
     public function get_page($slug)
     {

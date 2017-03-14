@@ -15,14 +15,11 @@
         <br>
 
 
-        {% if signed %}
-
-        {% include 'campaign-signed.twig' with { 'signed': signed } %}
-
-        {% endif %}
-
-
     </div>
+    {% if signed %}
 
+    {% include 'campaign-signed.twig' with { 'signed': signed } %}
+
+    {% endif %}
 
 </div>

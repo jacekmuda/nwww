@@ -1,5 +1,5 @@
 <?php
-
+global $app;
 
 get_header(); ?>
 
@@ -14,12 +14,8 @@ get_header(); ?>
 
                     <?php
 
-                    while (have_posts()) : the_post(); ?>
+                    while (have_posts()) : the_post();
 
-
-                        <?php
-
-                        global $app;
 
                         $speakout = $app->get_speakout_info($post->ID);
                         $app->render('big-campaign', [
@@ -29,13 +25,10 @@ get_header(); ?>
                             'excerpt' => $app->excerpt_by_id($post->ID),
                             'link' => get_post_permalink($post->ID),
                             'img' => (has_post_thumbnail($post->ID)) ? get_the_post_thumbnail($post->ID, 'mid') : $app->get_placeholder(),
-                            //   'children' => $app->get_children($post)
+                            'classes' => ($app->has_children($post) ? 'has__children' : '')
                         ]);
 
-                        ?>
-
-
-                    <?php endwhile;
+                    endwhile;
 
                     the_posts_navigation();
 
@@ -46,7 +39,7 @@ get_header(); ?>
             </div>
         </div>
 
-    </section><!-- #primary -->
+    </section>
 
 <?php
 

@@ -50,3 +50,6 @@
         </div>
     </section>
 <?php endif; ?>
+<?php $GLOBALS['interludes_counter'] = 0; ?>
+
+<div class="page__wrapper">

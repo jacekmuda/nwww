@@ -36,7 +36,7 @@ if (have_posts()) : $children = $app->get_children($post->ID);
 
                     </div>
                 </div>
-                <div class="col-md-3 campaign__cats">
+                <div class="col-md-3 page__cats">
 
                     <div class="c__g">
 

@@ -10,11 +10,14 @@
     display: block;
     padding: 1.3rem $padding;
     transition: all 200ms ease-in-out;
+
     &:hover {
       background-color: map-get($colors, y);
+
     }
     &.active {
       background-color: map-get($colors, y);
+
     }
 
   }
@@ -32,6 +35,9 @@
 .campaign__list {
   .promo__campaign {
     margin-bottom: $grid-gutter-width *2;
+    .signed {
+      margin-top: $padding;
+    }
   }
 }
 
@@ -67,7 +73,7 @@
 
     }
     .signed {
-      margin-bottom: $padding;
+      margin-top: $padding;
     }
   }
 }
@@ -86,6 +92,12 @@
   .signed__outer {
 
     padding-bottom: $padding;
+  }
+}
+
+.has__children {
+  h2 {
+    font-size: 3em
   }
 }
 

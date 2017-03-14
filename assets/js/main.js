@@ -31,6 +31,7 @@ AD.init = function () {
     $('.menu__toggle').on('click', function (e) {
         $('.menu__toggle').toggleClass('toggled');
         $('.top__menu').toggleClass('open');
+        $('body').toggleClass('menu__open');
     });
 
 

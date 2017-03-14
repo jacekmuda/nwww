@@ -58,3 +58,29 @@
   }
 
 }
+
+.page__cats {
+  color: white;
+  h1 {
+    margin: 0;
+    padding: $padding;
+  }
+
+  a {
+    color: inherit;
+    display: block;
+    padding: 1.3rem $padding;
+    transition: all 200ms ease-in-out;
+    color: white;
+    &:hover {
+      background-color: map-get($colors, b);
+      color: inherit;
+    }
+    &.active {
+      background-color: map-get($colors, b);
+      color: inherit;
+    }
+
+  }
+
+}

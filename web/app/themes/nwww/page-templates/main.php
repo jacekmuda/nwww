@@ -3,7 +3,7 @@
  */ ?>
 <?php get_header(); ?>
 <?php global $app; ?>
-<?php $big_lead = $app->big_lead(); ?>
+
 
 <?php get_template_part('inc/intro'); ?>
 <div class="section page__content  " id="content" role="main">
@@ -25,15 +25,7 @@
 </div>
 
 
-<?php
-if ($big_lead[0]) :
-
-    $app->render('big-lead', [
-        'classes' => 'c__b t__w',
-        'text' => $big_lead[0]['content']
-    ]);
-
-endif; ?>
+<?php $app->insert_interlude(); ?>
 <section class="section section__posts">
     <div class="container">
         <div class="row">
@@ -82,14 +74,9 @@ endif; ?>
 </section>
 
 
-<?php
-if ($big_lead[1]) :
+<?php $app->insert_interlude(); ?>
 
-    $app->render('big-lead', [
-        'classes' => 'c__y ',
-        'text' => $big_lead[1]['content']
-    ]);
 
-endif; ?>
+<?php $app->insert_interlude(); ?>
 
 <?php get_footer(); ?>

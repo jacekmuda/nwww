@@ -15,6 +15,17 @@ $bord: 2px black solid;
   justify-content: center;
 }
 
+.page__wrapper {
+  opacity: 1;
+  filter: grayscale(0%);
+  transition: all 300ms ease;
+}
+
+.menu__open .page__wrapper {
+  opacity: .8;
+  filter: grayscale(100%);
+}
+
 h1, h2, h3, h4 {
   a {
     color: inherit;
