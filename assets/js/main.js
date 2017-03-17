@@ -13,10 +13,7 @@ window.moment = moment;
 moment().format();
 moment.locale('pl');
 
-
 window.anime = anime;
-
-
 window.swiper = swiper;
 
 let AD = {
