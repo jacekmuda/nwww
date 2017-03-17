@@ -37,7 +37,7 @@ AD.init = function () {
 
 AD.menu_scroll = function (e) {
     let s = $(window).scrollTop();
-    $('body')[(s > $(window).height() ? 'addClass' : 'removeClass')]('scrolled');
+    $('body')[(s > $(window).height() - 23 ? 'addClass' : 'removeClass')]('scrolled');
 
 }
 
