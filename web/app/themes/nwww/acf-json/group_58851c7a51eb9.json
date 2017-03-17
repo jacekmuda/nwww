@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_58851c845ff76",
-            "label": "",
+            "label": "Dzia\u0142ania",
             "name": "actions",
             "type": "flexible_content",
             "instructions": "",
@@ -125,7 +125,7 @@
                             },
                             "default_value": "",
                             "tabs": "all",
-                            "toolbar": "full",
+                            "toolbar": "basic",
                             "media_upload": 1
                         },
                         {
@@ -170,11 +170,11 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1488172054
+    "modified": 1489520411
 }

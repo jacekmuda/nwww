@@ -32,7 +32,7 @@ get_header(); ?>
                             'excerpt' => $app->excerpt_by_id($post->ID),
                             'link' => get_post_permalink($post->ID),
                             'img' => (has_post_thumbnail($post->ID)) ? get_the_post_thumbnail($post->ID, 'mid') : $app->get_placeholder(),
-                            //   'children' => $app->get_children($post)
+                            'classes' => ($app->has_children($post) ? 'has__children' : '')
                         ]);
 
                         ?>
