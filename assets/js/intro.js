@@ -56,13 +56,13 @@ function intro_start() {
     s.attr('class', 'show');
     var curindex = 0;
     $('.intro__section').on('click', function (e) {
-        curindex = curindex + 1;
 
-
-        if ($(e.target).is('.pointer')) {
+        if ($(e.target).is('.pointer *')) {
             $('html, body').animate({scrollTop: $(window).height()});
+            return;
         }
 
+        curindex = curindex + 1;
 
         var
             photos = intro_content.photos,

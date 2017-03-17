@@ -8,6 +8,7 @@
 <section class="intro__section">
     <div class="intro__inner">
         <?php $app->render('intro-logo'); ?>
+        <?php $app->render('header-logo'); ?>
         <h1><span class="c__w"><?php echo $first['lead']; ?></span></h1>
         <img src="<?php echo $first['photos']; ?>" class="animated intro__img fade-in">
         <div class="pointer">
