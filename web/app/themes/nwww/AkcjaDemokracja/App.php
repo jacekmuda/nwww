@@ -340,7 +340,13 @@ class App
     public function page_interlude()
     {
         global $post;
-        return array_filter(get_field('przerywnik', $post->id), function ($itm) {
+        $content = get_field('przerywnik', $post->id);
+
+        if ($content == null) {
+            return;
+        }
+
+        return array_filter($content, function ($itm) {
             return $itm['content'];
         });
     }
