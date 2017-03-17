@@ -30,8 +30,9 @@
 
 
         $app->render('link', [
-            'link' => get_category_link($category->term_id),
-            'text' => $category->name . ' (' . $category->count . ')',
+            'link' => get_category_link($category->term_id) . '&post_type=kampania',
+            // 'text' => $category->name . ' (' . $category->count . ')',
+            'text' => $category->name,
             'classes' => $classes
         ]);
     }
