@@ -57,21 +57,22 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                     <?php the_content(); ?>
                 </div>
                 <div class="col-sm-12 col-md-4 col-lg-4 ">
-                    // related posts
+
                     <?php
                     if (have_rows('actions')):
                         echo '    <div class=" ">';
                         while (have_rows('actions')) : the_row();
 
                             if (get_row_layout() == 'campaign'):
-                                $campaign_id = get_sub_field('id');
+                                $campaign_id = get_sub_field('id')[0];
+
 
                                 $speakout = $app->get_speakout_info($campaign_id);
                                 $app->render('campaign', [
                                     'signed' => $app->calc_perc($speakout),
                                     'title' => get_the_title($campaign_id),
                                     'excerpt' => false,
-                                    'link' => false,
+                                    'link' => get_post_permalink($campaign_id),
                                     'img' => get_the_post_thumbnail($campaign_id, 'semi')
                                 ]);
                                 echo '<br>';
@@ -95,7 +96,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
     if (have_rows('actions')):
         $app->render('big-lead', [
             'classes' => 'c__y',
-            'text' => 'Nasze działania'
+            'text' => sprintf('%s: nasze działania', get_the_title($post))
         ]);
         ?>
         <section class="children__campaigns  section  c__w">
@@ -114,7 +115,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                             <article class="col-md-4 ">
                                 <?php
 
-                                $campaign_id = get_sub_field('id');
+                                $campaign_id = get_sub_field('id')[0];
 
 
                                 $speakout = $app->get_speakout_info($campaign_id);
@@ -131,7 +132,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
 
                         elseif (get_row_layout() == 'post'):
 
-                            $post_id = get_sub_field('id');
+                            $post_id = get_sub_field('id')[0];
 
                             $app->render('post', [
                                 'width' => 4,

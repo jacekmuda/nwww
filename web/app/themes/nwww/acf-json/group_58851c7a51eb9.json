@@ -29,7 +29,7 @@
                             "key": "field_58851ccc5ff77",
                             "label": "Wyb\u00f3r kampanii",
                             "name": "id",
-                            "type": "post_object",
+                            "type": "relationship",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -42,10 +42,11 @@
                                 "kampania"
                             ],
                             "taxonomy": [],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "return_format": "id",
-                            "ui": 1
+                            "filters": "",
+                            "elements": "",
+                            "min": "",
+                            "max": "",
+                            "return_format": "id"
                         }
                     ],
                     "min": "",
@@ -61,7 +62,7 @@
                             "key": "field_58851d295ff79",
                             "label": "Wyb\u00f3r wpisu",
                             "name": "id",
-                            "type": "post_object",
+                            "type": "relationship",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -74,10 +75,11 @@
                                 "post"
                             ],
                             "taxonomy": [],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "return_format": "id",
-                            "ui": 1
+                            "filters": "",
+                            "elements": "",
+                            "min": "",
+                            "max": "",
+                            "return_format": "id"
                         }
                     ],
                     "min": "",
@@ -176,5 +178,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1489520411
+    "modified": 1489713091
 }

@@ -6,7 +6,7 @@
             "key": "field_58b3b041dc4d5",
             "label": "Powi\u0105zana kampania",
             "name": "campaign_id",
-            "type": "post_object",
+            "type": "relationship",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -19,10 +19,15 @@
                 "kampania"
             ],
             "taxonomy": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "id"
         }
     ],
     "location": [
@@ -36,11 +41,11 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1488171103
+    "modified": 1489712647
 }
