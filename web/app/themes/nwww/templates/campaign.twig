@@ -1,0 +1,21 @@
+<div class="promo__campaign">
+
+    {% include 'thumb-link.twig' with { 'img': img, 'link': link } %}
+
+    {% if signed %}
+
+
+    {% include 'campaign-signed.twig' with { 'signed': signed } %}
+
+    {% endif %}
+    <div class="c__w  promo__campaign__title">
+
+        {% include 'title-link.twig' with { 'link': link, 'title' : title } %}
+
+        <p> {{ excerpt | raw }}</p>
+
+
+    </div>
+
+
+</div>

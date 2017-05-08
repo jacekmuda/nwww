@@ -1,0 +1,29 @@
+<div class=" col-md-4">
+    <div class="promo__campaign {{ classes }}">
+
+        {% include 'thumb-link.twig' with { 'img': img, 'link': link, 'categories':categories } %}
+
+        {% if signed %}
+
+        {% include 'campaign-signed.twig' with { 'signed': signed } %}
+
+        {% endif %}
+
+
+        <div class="c__w promo__campaign__title">
+
+
+            <h2 class="h2">
+                <a href="{{ link }}">
+                    {{ title }}
+                </a>
+
+            </h2>
+            <br>
+
+
+        </div>
+
+
+    </div>
+</div>

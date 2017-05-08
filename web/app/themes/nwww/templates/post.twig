@@ -1,0 +1,44 @@
+<article class="col-md-4 col-xs-12 post__in__list">
+    <div class="{{ classes }}">
+
+
+        <div class="row">
+            <div class="col-sm-4 col-md-12 ">
+                <div class="post__header ">
+
+                    {% if categories %}
+
+                    {% include 'categories.twig' with { 'categories': categories } %}
+
+                    {% endif %}
+
+
+                    <a href="{{ link }}">
+                        {{ img | raw }}
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-12">
+
+
+                {% include 'title-link.twig' with { 'link': link, 'title' : title } %}
+
+                <p>{{ content | raw }}</p>
+
+
+            </div>
+        </div>
+
+
+        {% if link or time %}
+        <div class="row">
+            <div class="col-sm-8 col-md-8">
+                <time class="h4"> {{ time }}</time>
+            </div>
+            <div class="col-sm-4 col-md-4 text-right">
+                {% if link %} <a class="h4" href="{{ link }}">→</a> {% endif %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</article>

@@ -1,0 +1,48 @@
+.ellipsis__loader {
+
+  position: absolute;
+  text-align: center;
+  @include spread;
+  @include flex-center;
+
+  .dots {
+    span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 2px;
+      transform: scale(1);
+      background-color: map_get($colors, r);
+      border-radius: 50%;
+      &:nth-child(1) {
+        animation: ellipsis 1s linear 0s infinite;
+      }
+      &:nth-child(2) {
+        animation: ellipsis 1s linear .15s infinite;
+      }
+      &:nth-child(3) {
+        animation: ellipsis 1s linear .3s infinite;
+      }
+    }
+
+  }
+}
+
+@keyframes ellipsis {
+  0% {
+    opacity: .7;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  50% {
+    opacity: .7;
+    transform: scale(1);
+  }
+  100% {
+    opacity: .6;
+    transform: scale(1);
+  }
+}

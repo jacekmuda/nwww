@@ -1,0 +1,24 @@
+{
+  "name": "nwww",
+  "dependencies": {},
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "devDependencies": {
+    "jquery": "^3.1.1",
+    "NWWW": "git://github.com/akcjademokracja/NWWW.git",
+    "bootstrap-sass": "^3.3.7"
+  },
+  "homepage": "https://github.com/rak-trzustki/nwww",
+  "authors": [
+    "Estr <e@estrma.net>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT"
+}

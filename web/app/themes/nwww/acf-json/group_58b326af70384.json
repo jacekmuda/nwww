@@ -1,0 +1,91 @@
+{
+    "key": "group_58b326af70384",
+    "title": "Intro",
+    "fields": [
+        {
+            "key": "field_58b326d2f7e9a",
+            "label": "Zdj\u0119cia",
+            "name": "photos",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 100,
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_58b32702f7e9b",
+            "label": "Lead",
+            "name": "lead",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 100,
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_58b3270cf7e9c",
+            "min": "",
+            "max": "",
+            "layout": "row",
+            "button_label": "Dodaj kolejny",
+            "sub_fields": [
+                {
+                    "key": "field_58b3270cf7e9c",
+                    "label": "",
+                    "name": "content",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "nwww_intro"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1489516146
+}

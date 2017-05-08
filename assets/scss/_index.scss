@@ -1,0 +1,19 @@
+.promo__campaign {
+  h1 {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+
+  .about__img {
+    margin-top: $padding;
+  }
+
+  .promo__campaign {
+    h1 {
+      font-size: 5rem;
+    }
+  }
+
+}

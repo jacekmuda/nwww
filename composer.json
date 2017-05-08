@@ -1,0 +1,46 @@
+{
+  "name": "tausendsassa/nwww",
+  "type": "project",
+  "config": {
+    "preferred-install": "dist"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "composer/installers": "~1.0.12",
+    "vlucas/phpdotenv": "^2.0.1",
+    "johnpbloch/wordpress": "4.7.1",
+    "oscarotero/env": "^1.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "twig/twig": "^1.31",
+    "wpackagist-plugin/disable-comments": "*",
+    "wpackagist-plugin/hierarchy": "*"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.5.1"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "web/app/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "web/app/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    },
+    "wordpress-install-dir": "web/wp"
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/phpcs"
+    ]
+  }
+}

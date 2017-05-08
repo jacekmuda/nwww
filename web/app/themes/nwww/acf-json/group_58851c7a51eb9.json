@@ -1,0 +1,182 @@
+{
+    "key": "group_58851c7a51eb9",
+    "title": "Dzia\u0142ania",
+    "fields": [
+        {
+            "key": "field_58851c845ff76",
+            "label": "Dzia\u0142ania",
+            "name": "actions",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Dodaj segment",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "58851c9109841",
+                    "name": "campaign",
+                    "label": "Kampania",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_58851ccc5ff77",
+                            "label": "Wyb\u00f3r kampanii",
+                            "name": "id",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "kampania"
+                            ],
+                            "taxonomy": [],
+                            "filters": "",
+                            "elements": "",
+                            "min": "",
+                            "max": "",
+                            "return_format": "id"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "58851cfe5ff78",
+                    "name": "post",
+                    "label": "Wpis",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_58851d295ff79",
+                            "label": "Wyb\u00f3r wpisu",
+                            "name": "id",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post"
+                            ],
+                            "taxonomy": [],
+                            "filters": "",
+                            "elements": "",
+                            "min": "",
+                            "max": "",
+                            "return_format": "id"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "58851d545ff7a",
+                    "name": "custom",
+                    "label": "Dowolna tre\u015b\u0107",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_58851d645ff7b",
+                            "label": "Tytu\u0142",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_58851d8a5ff7c",
+                            "label": "Tre\u015b\u0107",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 80,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 1
+                        },
+                        {
+                            "key": "field_58851d995ff7d",
+                            "label": "Obraz",
+                            "name": "img",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 20,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "kampania"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1489713091
+}

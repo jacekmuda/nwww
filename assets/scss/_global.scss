@@ -1,0 +1,244 @@
+$padding: 2.8rem;
+
+$bord: 2px black solid;
+
+@mixin spread {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page__wrapper {
+  opacity: 1;
+  filter: grayscale(0%);
+  transition: all 300ms ease;
+}
+
+.menu__open .page__wrapper {
+  opacity: .8;
+  filter: grayscale(100%);
+}
+
+h1, h2, h3, h4 {
+  a {
+    color: inherit;
+  }
+}
+
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.container {
+
+}
+
+.padded {
+  padding: $padding/2;
+}
+
+.section {
+  padding: 54px 0;
+}
+
+.side__title {
+  margin: 0;
+}
+
+.lead, .about__page p {
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.container__inner {
+  background-color: white;
+  padding: $padding;
+}
+
+.big__lead {
+  padding: 54px 0;
+  .h1 {
+    font-size: 2.5rem
+
+  }
+}
+
+h1 a {
+  color: inherit;
+}
+
+.micro {
+  font-family: map-get($fonts, din);
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: .02em;
+}
+
+.framed {
+  border: 10px map_get($colors, r) solid;
+  padding: .5em;
+  transition: all 300ms ease;
+  a {
+    display: block;
+    color: inherit;
+  }
+  &:hover {
+    background-color: map-get($colors, y);
+  }
+}
+
+.btn {
+  text-transform: uppercase;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  transition: all 200ms ease;
+  width: 100%;
+}
+
+.input-group-btn {
+  .btn {
+    padding: 1rem;
+  }
+  input, .btn {
+    height: 5rem;
+  }
+}
+
+.line__over {
+  &:before {
+    content: ' ';
+    background-color: map-get($colors, r);
+    width: 100px;
+    height: 10px;
+    display: block;
+    margin-bottom: 3rem;
+  }
+}
+
+@each $name, $color in $colors {
+  .c__#{$name} {
+    background-color: map-get($colors, $name);
+
+  }
+  .t__#{$name} {
+    color: map-get($colors, $name);
+
+  }
+}
+
+.super {
+  font-size: 10rem;
+}
+
+body {
+  font-family: "Cambria", Caladea, "Times New Roman", Times, "Nimbus Roman No9 L", serif;
+}
+
+.btn-black {
+  color: white;
+  background-color: black;
+  border-radius: 2em;
+  border: none;
+  padding: .5rem 2rem;
+  letter-spacing: .1em;
+  font-size: 2rem;
+
+  &:hover {
+    background-color: map-get($colors, b);
+    color: white;
+
+  }
+
+  &.social {
+    padding: 1rem 0;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 15px;
+    svg {
+      height: 2rem;
+    }
+    path {
+      fill: white;
+    }
+  }
+}
+
+.input-group {
+  input {
+    height: 3em;
+  }
+}
+
+.ellipsis {
+
+  &:after {
+    content: '⬤⬤⬤';
+    display: inline-block;
+    vertical-align: middle;
+    color: map_get($colors, r);
+    font-size: 8px;
+    letter-spacing: .5rem;
+    margin-left: 2rem;
+
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .padded {
+    padding: $padding;
+  }
+  .btn {
+    width: auto;
+  }
+  .separator {
+    height: 50px
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .big__lead {
+    padding: 100px;
+    .h1 {
+      font-size: 5rem;
+      line-height: 1.5;
+    }
+  }
+  .flex_row {
+    display: flex;
+  }
+}
+
+@media(max-width: 767px) {
+  .small-center {
+    text-align: center;
+  }
+  .small-padded {
+    padding: 27px;
+  }
+  .is-flex {
+    flex-direction: column;
+  }
+}
+
+@media(min-width: 1200px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}

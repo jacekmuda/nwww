@@ -1,0 +1,53 @@
+$colors: (g: #009B37, r: #F00601, y: #ffe100, b: #0049AA, w: #ffffff);
+
+#acf-group_58b3460d3c657 {
+  th {
+    display: none;
+  }
+  .acf-field-radio {
+    width: 150px;
+  }
+  .acf-radio-list {
+    input {
+      border: 5px #fff solid;
+      width: 1.5rem;
+      height: 1.5rem;
+      &:checked {
+        border: 5px #999 solid;
+      }
+      &:checked:before {
+        content: '';
+        display: none;
+      }
+    }
+
+    @each $name, $color in $colors {
+      input[value=#{$name}] {
+        background-color: map-get($colors, $name);
+
+      }
+
+    }
+
+  }
+  .acf-bl > li {
+    label {
+      font-size: 0;
+    }
+    display: inline-block;
+    width: 30px;
+  }
+}
+
+#acf-group_58851c7a51eb9 {
+  .layout {
+    .acf-label {
+      label {
+        display: none;
+      }
+    }
+    textarea {
+
+    }
+  }
+}
