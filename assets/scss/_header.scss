@@ -73,6 +73,10 @@ body {
   .menu__toggle {
     background-color: black;
     color: white;
+    &:focus, &:hover {
+      color: black;
+      background-color: map_get($colors, y) !important;
+    }
   }
 }
 

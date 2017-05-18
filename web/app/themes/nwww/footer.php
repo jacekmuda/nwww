@@ -41,15 +41,12 @@ global $app;
         <div class="footer__menu t__w section">
             <div class="container">
                 <div class="row is-flex items-center">
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <?php wp_nav_menu([
                             'menu' => 'Bottom',
                             'menu_class' => 'footer__menu main__menu',
                             'container' => false
                         ]); ?>
-                    </div>
-                    <div class="col-md-3 text-right">
-                        [szukajka]
                     </div>
                 </div>
             </div>
