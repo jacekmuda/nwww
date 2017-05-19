@@ -10,7 +10,7 @@ global $app;
                 <div class="row is-flex  items-center ">
                     <div class="col-md-2  footer_col footer__logo">
                         <a href="<?php echo home_url(); ?>">
-                            <img src="<?php $app->_eImg('logo-footer.png'); ?>">
+                            <img src="<?php $app->_eImg('logo-footer.svg'); ?>">
                         </a>
                     </div>
                     <?php

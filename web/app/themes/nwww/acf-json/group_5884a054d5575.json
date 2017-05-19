@@ -33,6 +33,22 @@
             },
             "message": "",
             "default_value": 0
+        },
+        {
+            "key": "field_591f15aa57cab",
+            "label": "Kampania g\u0142\u00f3wna",
+            "name": "maincampaign",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 30,
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0
         }
     ],
     "location": [
@@ -52,5 +68,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1488157011
+    "modified": 1495209430
 }

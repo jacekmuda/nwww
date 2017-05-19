@@ -18,12 +18,22 @@ get_header(); ?>
 
 
                         $speakout = $app->get_speakout_info($post->ID);
+                        $suf_link = get_field('json');
+                        $su_link = substr($suf_link, 0, -5);
+                        $maincampaign = get_field( 'maincampaign');
+
+                        if( get_field('maincampaign') ):
+                          $linkc = get_post_permalink($post->ID);
+                        else:
+                          $linkc = $su_link;
+                        endif;
+
                         $app->render('big-campaign', [
                             'categories' => $app->cats($post->ID),
                             'signed' => $app->calc_perc($speakout),
                             'title' => get_the_title($post->ID),
                             'excerpt' => $app->excerpt_by_id($post->ID),
-                            'link' => get_post_permalink($post->ID),
+                            'link' => $linkc,
                             'img' => (has_post_thumbnail($post->ID)) ? get_the_post_thumbnail($post->ID, 'mid') : $app->get_placeholder(),
                             'classes' => ($app->has_children($post) ? 'has__children' : '')
                         ]);
