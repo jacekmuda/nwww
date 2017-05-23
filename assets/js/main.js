@@ -31,6 +31,11 @@ AD.init = function () {
         $('.top__menu').toggleClass('open');
         $('body').toggleClass('menu__open');
     });
+    $('.close_menu').on('click', function (e) {
+        $('.menu__toggle').toggleClass('toggled');
+        $('.top__menu').toggleClass('open');
+        $('body').toggleClass('menu__open');
+    });
 }
 
 AD.menu_scroll = function (e) {

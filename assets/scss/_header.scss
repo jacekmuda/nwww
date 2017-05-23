@@ -9,6 +9,9 @@ body {
   text-transform: uppercase;
   ul {
     margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   & > ul > li > a {
     color: black;
@@ -60,6 +63,11 @@ body {
     color: black;
     background-color: map_get($colors, y) !important;
   }
+}
+
+.close_menu {
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.0) !important; 
 }
 
 .home {

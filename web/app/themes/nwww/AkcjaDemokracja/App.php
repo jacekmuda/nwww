@@ -23,6 +23,7 @@ class App
         add_action('after_setup_theme', [$this, 'theme_support'], 0);
         add_action('save_post', [$this, 'set_transient'], 0);
         add_filter('the_content_more_link', [$this, 'modify_read_more_link']);
+        add_filter('wp_nav_menu_items', [$this, 'modify_main_nav']);
         add_action('wp_enqueue_scripts', [$this, 'do_assets']);
         add_action('pre_get_posts', [$this, 'pre']);
 
@@ -96,6 +97,11 @@ class App
         return '';
     }
 
+    function modify_main_nav($items)
+    {
+        $items .= '<li class="close_menu"></li>';
+        return $items;
+    }
     function cats($id)
     {
         $arr = get_the_category($id);
