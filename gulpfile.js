@@ -19,7 +19,7 @@ let sassPaths = [
     bower + 'bootstrap-sass/assets/stylesheets',
     bower + 'NWWW/sass/theme',
     'node_modules/swiper/dist/css',
-
+    'node_modules/owl.carousel/dist/assets',
     bower + 'NWWW/sass/app-style'
 ];
 

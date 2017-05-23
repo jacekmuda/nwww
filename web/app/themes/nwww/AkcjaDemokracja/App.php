@@ -37,6 +37,7 @@ class App
         if (is_page(get_option('page_on_front'))) {
 
             wp_enqueue_script('intro', $this->_assetUrl('js/intro.js'), ['jquery', 'app'], random_int(111, 222), true);
+            wp_enqueue_script('custom', $this->_assetUrl('js/custom.js'), ['jquery', 'app'], random_int(111, 222), true);
         }
 
         wp_enqueue_style('app', $this->_assetUrl('css/main.css'), [], random_int(111, 222));
@@ -127,13 +128,13 @@ class App
     {
         $args = [
             'post_status' => 'publish',
+            'numberposts' => 5,
             'post_type' => 'kampania',
-            'posts_per_page' => 1,
             'meta_key' => 'promo',
             'meta_value' => 1
 
         ];
-        return get_posts($args)[0];
+        return get_posts($args);
     }
 
     public function excerpt_by_id($post_id)
@@ -455,5 +456,3 @@ class App
     }
 
 }
-
-

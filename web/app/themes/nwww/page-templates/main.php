@@ -4,26 +4,23 @@
 <?php get_header(); ?>
 <?php global $app; ?>
 
-
 <?php get_template_part('inc/intro'); ?>
 <div class="section page__content  " id="content" role="main">
 
     <div class="container">
         <div class="row flex_row">
             <div class="col-sm-12 col-xs-12 col-md-8">
-
+              <div class="promo--wrapper owl-carousel owl-adtheme">
                 <?php get_template_part('promo-campaign'); ?>
+              </div>
             </div>
             <div class="col-sm-12 col-xs-12 col-md-4">
                 <?php get_template_part('last-actions'); ?>
-
-
             </div>
         </div>
     </div>
 
 </div>
-
 
 <?php $app->insert_interlude(); ?>
 <section class="section section__posts">
@@ -73,9 +70,7 @@
     </div>
 </section>
 
-
 <?php $app->insert_interlude(); ?>
-
 
 <?php $app->insert_interlude(); ?>
 

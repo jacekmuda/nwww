@@ -16,6 +16,7 @@ moment.locale('pl');
 window.anime = anime;
 window.swiper = swiper;
 
+
 let AD = {
     ajax: app.ajax_url
 };
@@ -30,19 +31,13 @@ AD.init = function () {
         $('.top__menu').toggleClass('open');
         $('body').toggleClass('menu__open');
     });
-
-
 }
-
 
 AD.menu_scroll = function (e) {
     let s = $(window).scrollTop();
     $('body')[(s > $(window).height() - 23 ? 'addClass' : 'removeClass')]('scrolled');
-
 }
 
-
 AD.init();
-
 
 new Rotator('.last__actions__actions');
