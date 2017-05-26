@@ -67,7 +67,7 @@ body {
 
 .close_menu {
     height: 100%;
-    background-color:rgba(0, 0, 0, 0.0) !important; 
+    background-color:rgba(0, 0, 0, 0.0) !important;
 }
 
 .home {
@@ -143,14 +143,12 @@ body {
         color: map-get($colors, b);
       }
       &:nth-child(4n+1) {
-
-        background-color: map-get($colors, r);
-        color: map-get($colors, y);
-      }
-      &:nth-child(4n+2) {
         background-color: map-get($colors, b);
         color: map-get($colors, w);
-
+      }
+      &:nth-child(4n+2) {
+        background-color: map-get($colors, r);
+        color: map-get($colors, y);
       }
       &:nth-child(4n+3) {
         background-color: map-get($colors, y);

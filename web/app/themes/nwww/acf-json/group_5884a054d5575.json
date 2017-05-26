@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 30,
+                "width": 50,
                 "class": "",
                 "id": ""
             },
@@ -27,7 +27,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 30,
+                "width": 10,
                 "class": "",
                 "id": ""
             },
@@ -43,12 +43,89 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 30,
+                "width": 10,
                 "class": "",
                 "id": ""
             },
             "message": "",
             "default_value": 0
+        },
+        {
+            "key": "field_5928360bcab89",
+            "label": "Button Akcji G\u0142\u00f3wnej",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_591f15aa57cab",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 1
+        },
+        {
+            "key": "field_592831c532572",
+            "label": "Button Akcji URL",
+            "name": "call_to_ad_action",
+            "type": "url",
+            "instructions": "Link w nag\u0142\u00f3wku do akcji",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_591f15aa57cab",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59283574fe764",
+            "label": "Button Akcji Tekst",
+            "name": "call_to_ad_action_text",
+            "type": "text",
+            "instructions": "Tekst w buttonie",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_591f15aa57cab",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "We\u017a udzia\u0142!",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
         }
     ],
     "location": [
@@ -68,5 +145,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1495209430
+    "modified": 1495810273
 }

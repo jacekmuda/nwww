@@ -27,6 +27,7 @@
         'menu' => 'Top',
         'menu_class' => 'menu',
         'container' => false,
+        'depth' => 1,
     ]); ?>
 
     <?php // $app->get_social(); ?>

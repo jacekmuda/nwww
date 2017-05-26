@@ -177,10 +177,7 @@ class App
 
 
         $speakout = json_decode($json);
-
-
         return $speakout;
-
 
     }
 
@@ -194,9 +191,10 @@ class App
 
         return [
             'signed' => $signed,
-            'perc' => $signed / $goal * 100
+            'perc' => $signed / $goal * 100,
         ];
     }
+
 
     public function has_parent($post)
     {
@@ -303,7 +301,7 @@ class App
             $this->render('link', [
                 'link' => get_category_link($cat[0]->term_id),
                 'text' => $cat[0]->name,
-                'classes' => 'h4 c__b t__w campaign__cat'
+                'classes' => 'h4 catlink c__b t__w campaign__cat'
             ]);
         }
 

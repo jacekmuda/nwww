@@ -19,9 +19,7 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "twig/twig": "^1.31",
     "wpackagist-plugin/disable-comments": "*",
-    "wpackagist-plugin/hierarchy": "*",
-    "wpackagist-plugin/regenerate-thumbnails": "*",
-    "wpackagist-plugin/wp-migrate-db": "*"
+    "wpackagist-plugin/hierarchy": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

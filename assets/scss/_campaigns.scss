@@ -33,8 +33,10 @@
 }
 
 .campaign__list, .section__cat {
+
   .promo__campaign {
     margin-bottom: $grid-gutter-width *2;
+
     .signed {
       margin-top: $padding;
     }
@@ -58,6 +60,12 @@
   }
   .signed {
     margin-top: $padding;
+  }
+}
+.campaign__bar {
+  padding-bottom: 30px;
+  h2 {
+    font-size: 28px;
   }
 }
 
@@ -105,11 +113,12 @@
 }
 
 $blue: map_get($colors, g);
+$green: map_get($colors, b);
 .signed {
   position: relative;
   background-color: white;
   height: 45px;
-  background-image: repeating-linear-gradient(-45deg, $blue 0px, $blue 3px, transparent 3px, transparent 6px, $blue 6px, $blue 12px);
+  background-image: repeating-linear-gradient(-45deg, $blue 0px, $blue 3px, $green 0px, $green 8px, $blue 6px, $blue 12px);
 
   //background-color: map-get($colors, b);
   .perc {
@@ -126,6 +135,7 @@ $blue: map_get($colors, g);
     padding-top: 4px;
     line-height: 45px;
     padding-left: 2rem;
+    height: 45px;
   }
 }
 

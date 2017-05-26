@@ -25,7 +25,6 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                 <div class="col-sm-4 col-md-6 col-lg-6 ">
                     <article class="c__w  exp">
 
-
                         <?php $app->cat_link($post->ID); ?>
                         <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
@@ -37,8 +36,11 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                             ]);
                         endif;
                         ?>
-                        <div class="lead"><br> <?php the_excerpt(); ?></div>
 
+                        <div class="lead"><br> <?php the_excerpt(); ?></div>
+                        <?php if( get_field('call_to_ad_action') ): ?>
+                          <a href="<?php the_field('call_to_ad_action'); ?>" class="btn-md call-to-action btn btn-primary c__r t__w"><?php the_field('call_to_ad_action_text'); ?></a>
+                        <?php endif; ?>
 
                     </article>
 
@@ -57,8 +59,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                     <?php the_content(); ?>
                 </div>
                 <div class="col-sm-12 col-md-4 col-lg-4 ">
-
-                    <?php
+                  <?php
                     if (have_rows('actions')):
                         echo '    <div class=" ">';
                         while (have_rows('actions')) : the_row();
@@ -68,15 +69,12 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
 
 
                                 $speakout = $app->get_speakout_info($campaign_id);
-                                $app->render('campaign', [
+                                $app->render('campaign-bar', [
                                     'signed' => $app->calc_perc($speakout),
                                     'title' => get_the_title($campaign_id),
                                     'excerpt' => false,
-                                    'link' => get_post_permalink($campaign_id),
-                                    'img' => get_the_post_thumbnail($campaign_id, 'semi')
+                                    'link' => get_post_permalink($campaign_id)
                                 ]);
-                                echo '<br>';
-                                echo '<br>';
 
                                 //  $app->render('campaign', ['signed' => $app->get_signed($campaign_id)]);
                                 //  echo sprintf('<h1 class="padded side__title c__w h3"><a href="%s">%s</a></h1>', get_post_permalink($campaign_id), get_the_title($campaign_id));

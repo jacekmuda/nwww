@@ -31,4 +31,10 @@ function owl() {
 $(document).ready(function() {
   owl();
 
+  var pointerbounce = anime({
+    targets: '.pointer',
+    translateY: -25,
+    direction: 'alternate',
+    loop: true
+  });
 });
