@@ -2,6 +2,13 @@ $padding: 2.8rem;
 
 $bord: 2px black solid;
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 @mixin spread {
   top: 0;
   left: 0;
@@ -119,7 +126,7 @@ h1 a {
 .call-to-action {
   &:hover, &:active, &:focus  {
     color: map-get($colors, y);
-    background-color: map-get($colors, g); 
+    background-color: map-get($colors, g);
   }
 }
 .input-group-btn {
@@ -208,6 +215,14 @@ body {
     margin-left: 2rem;
 
   }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
 }
 
 @media (min-width: $screen-sm-min) {

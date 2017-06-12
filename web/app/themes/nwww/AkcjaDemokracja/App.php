@@ -34,11 +34,11 @@ class App
     {
 
         wp_enqueue_script('app', $this->_assetUrl('js/main.js'), [], random_int(111, 222), true);
+        wp_enqueue_script('custom', $this->_assetUrl('js/custom.js'), ['jquery', 'app'], random_int(111, 222), true);
 
         if (is_page(get_option('page_on_front'))) {
 
             wp_enqueue_script('intro', $this->_assetUrl('js/intro.js'), ['jquery', 'app'], random_int(111, 222), true);
-            wp_enqueue_script('custom', $this->_assetUrl('js/custom.js'), ['jquery', 'app'], random_int(111, 222), true);
         }
 
         wp_enqueue_style('app', $this->_assetUrl('css/main.css'), [], random_int(111, 222));
@@ -158,7 +158,7 @@ class App
         $jsonurl = get_field('json', $id);
         if (!$jsonurl) return false;
         $json = file_get_contents($jsonurl);
-        set_transient('speakout_' . $id, $json, 60 * 60);
+        set_transient('speakout_' . $id, $json, 5);
 
     }
 
@@ -177,9 +177,12 @@ class App
 
 
         $speakout = json_decode($json);
+
+
         return $speakout;
 
     }
+
 
     public function calc_perc($speakout)
     {
@@ -187,14 +190,51 @@ class App
         if (!$speakout) return false;
 
         $signed = (int)$speakout->uniquersigns;
+        $rsings = (int)$speakout->rsigns;
+        $rtweets = (int)$speakout->rtweets;
+        $rfacebooks = (int)$speakout->rfacebooks;
+        $rmails = (int)$speakout->rmails;
+        $rcalls = (int)$speakout->rcalls;
+
+        $action_count = (int)$speakout->action_count;
+
         $goal = (int)$speakout->goal;
 
+        if ( $rsings == 1 && $rtweets == 0 && $rfacebooks == 0 && $rmails == 0 && $rcalls == 0  ) {
         return [
             'signed' => $signed,
             'perc' => $signed / $goal * 100,
-        ];
+            'desofaction' => ' podpis',
+        ]; } else if ( $rsings >= 1 && $rtweets == 0 && $rfacebooks == 0 && $rmails == 0 && $rcalls == 0  ) {
+          return [
+              'signed' => $signed,
+              'perc' => $signed / $goal * 100,
+              'desofaction' => ' podpisów',
+          ]; } else if ( $rsings == 0 && $rtweets == 1 || $rfacebooks == 1 && $rmails == 0 && $rcalls == 0 ) {
+          return [
+              'signed' => $signed,
+              'perc' => $signed / $goal * 100,
+              'desofaction' => ' udostępnienie',
+          ]; } else if ( $rsings == 0 && $rtweets > 1 || $rfacebooks > 1 && $rmails == 0 && $rcalls == 0 ) {
+          $shares = $rtweets + $rfacebooks;
+          return [
+              'signed' => $shares,
+              'perc' => $shares / $goal * 100,
+              'desofaction' => ' udostępnienień',
+          ]; } else if ( $rsings == 0 && $rtweets == 0 && $rfacebooks == 0 && $rmails == 1 && $rcalls == 0 ) {
+          $shares = $rtweets + $rfacebooks;
+          return [
+              'signed' => $rmails,
+              'perc' => $rmails / $goal * 100,
+              'desofaction' => ' wysłana wiadomość',
+          ]; } else if ( $rsings == 0 && $rtweets == 0 && $rfacebooks == 0 && $rmails >= 1 && $rcalls == 0 ) {
+          $shares = $rtweets + $rfacebooks;
+          return [
+              'signed' => $rmails,
+              'perc' => $rmails / $goal * 100,
+              'desofaction' => ' wysłanych wiadomości',
+          ]; }
     }
-
 
     public function has_parent($post)
     {
@@ -301,7 +341,7 @@ class App
             $this->render('link', [
                 'link' => get_category_link($cat[0]->term_id),
                 'text' => $cat[0]->name,
-                'classes' => 'h4 catlink c__b t__w campaign__cat'
+                'classes' => 'h4 c__b t__w campaign__cat catlink'
             ]);
         }
 

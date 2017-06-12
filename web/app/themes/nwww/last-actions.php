@@ -13,7 +13,7 @@ if ($r) :
         <div class=" c__y">
 
 
-            <div class="last__actions__actions swiper-container">
+            <div class="last__actions__actions swiper-container swiper2">
                 <?php $app->render('loader'); ?>
                 <div class="swiper-wrapper ">
                     <?php foreach ($r as $itm) :

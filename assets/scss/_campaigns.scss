@@ -1,3 +1,10 @@
+.campaign__header {
+  .smallpointer {
+    float: right;
+    cursor: pointer;
+  }
+}
+
 .campaign__cats {
 
   h1 {
@@ -24,6 +31,13 @@
 
 }
 
+.campaign__list {
+  .posts-navigation {
+    width: 100%;
+    float: left;
+  }
+}
+
 @media (min-width: $screen-md-min) {
   .campaign__cats {
     display: flex;
@@ -32,10 +46,16 @@
   }
 }
 
+.campaign__list {
+ .col-md-4 {
+   min-height: 650px;
+ }
+}
+
 .campaign__list, .section__cat {
 
   .promo__campaign {
-    margin-bottom: $grid-gutter-width *2;
+    margin-bottom: 50px;
 
     .signed {
       margin-top: $padding;
@@ -46,6 +66,10 @@
 .promo__campaign {
   .thumb {
     overflow: hidden;
+    img {
+      min-width: 400px;
+      min-height: 300px;
+    }
   }
   ul {
     list-style-type: none;
@@ -84,6 +108,7 @@
 
 .post__in__list {
   margin-bottom: 5rem;
+  min-height: 650px;
 }
 
 .signed__outer {

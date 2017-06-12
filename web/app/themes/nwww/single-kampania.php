@@ -42,8 +42,10 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                           <a href="<?php the_field('call_to_ad_action'); ?>" class="btn-md call-to-action btn btn-primary c__r t__w"><?php the_field('call_to_ad_action_text'); ?></a>
                         <?php endif; ?>
 
+                        <div class="smallpointer">
+                          <?php $app->render('smallpointer'); ?>
+                        </div>
                     </article>
-
                 </div>
 
             </div>
@@ -65,7 +67,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                         while (have_rows('actions')) : the_row();
 
                             if (get_row_layout() == 'campaign'):
-                                $campaign_id = get_sub_field('id')[0];
+                                $campaign_id = get_sub_field('id_camp');
 
 
                                 $speakout = $app->get_speakout_info($campaign_id);
@@ -113,8 +115,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                             <article class="col-md-4 ">
                                 <?php
 
-                                $campaign_id = get_sub_field('id')[0];
-
+                                $campaign_id = get_sub_field('id_camp');
 
                                 $speakout = $app->get_speakout_info($campaign_id);
                                 $app->render('campaign', [
@@ -122,7 +123,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
                                     'title' => get_the_title($campaign_id),
                                     'excerpt' => false,
                                     'link' => get_post_permalink($campaign_id),
-                                    'img' => get_the_post_thumbnail($campaign_id, 'medium')
+                                    'img' => get_the_post_thumbnail($campaign_id, array(400, 300))
                                 ]);
                                 ?>
                             </article>
@@ -130,7 +131,7 @@ if (have_posts()) while (have_posts()) : the_post(); ?>
 
                         elseif (get_row_layout() == 'post'):
 
-                            $post_id = get_sub_field('id')[0];
+                            $post_id = get_sub_field('id_post');
 
                             $app->render('post', [
                                 'width' => 4,

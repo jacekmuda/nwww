@@ -4,7 +4,7 @@
 <?php get_header(); ?>
 <?php global $app; ?>
 
-<?php get_template_part('inc/intro'); ?>
+<?php get_template_part('inc/hero'); ?>
 <div class="section page__content  " id="content" role="main">
 
     <div class="container">
@@ -56,15 +56,15 @@
             }
 
             ?>
+            <?php echo do_shortcode( '[ajax_load_more id="loadmore" container_type="div" button_label="pokaż więcej" button_loading_label="ładuję.." post_type="post" posts_per_page="3" offset="6" pause="true" scroll="false" transition_container="false" images_loaded="true"]' ); ?>
             <div class="col-xs-12 text-left">
-
-                <?php
+              <?php /*
                 $app->render('link', [
                     'link' => get_post_type_archive_link('post'),
                     'text' => 'pokaż więcej',
                     'classes' => 'h1 line__over',
                 ]);
-                ?>
+                */ ?>
             </div>
         </div>
     </div>

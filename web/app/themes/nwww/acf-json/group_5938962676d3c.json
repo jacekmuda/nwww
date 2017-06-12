@@ -1,0 +1,265 @@
+{
+    "key": "group_5938962676d3c",
+    "title": "Slider",
+    "fields": [
+        {
+            "key": "field_5938b19d00a69",
+            "label": "Slajder",
+            "name": "slides_ad",
+            "type": "flexible_content",
+            "instructions": "Prosz\u0119 doda\u0107 slajdy. Mo\u017cliwo\u015b\u0107 dodania jpg, png, gif, ogg. Opcjonalnie prosze doda\u0107 wartw\u0119 \"Losowe logo\"",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Dodaj wiersz",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "5938b1c1b70e1",
+                    "name": "static",
+                    "label": "Slajd statyczny",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5938b1f800a6a",
+                            "label": "Obraz",
+                            "name": "slide_pic",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 10,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5938b22600a6b",
+                            "label": "Lead (opcja)",
+                            "name": "slide_lead",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 30,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": 150,
+                            "rows": 6,
+                            "new_lines": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_5938b27900a6c",
+                            "label": "Link (opcja)",
+                            "name": "slide_link",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 30,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5938b2b200a6d",
+                            "label": "Warstwa logo",
+                            "name": "warstwa_logo",
+                            "type": "select",
+                            "instructions": "Czy slajd ma wy\u015bwietla\u0107 logo wymieszane w przypadkowy spos\u00f3b?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 30,
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "false": "Nie",
+                                "true": "Tak"
+                            },
+                            "default_value": [
+                                "false"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5938b35000a6e",
+                    "name": "video",
+                    "label": "Slajd wideo",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5938b3cb5d098",
+                            "label": "MP4 Url",
+                            "name": "mp4_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33.3",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5938b3ed5d099",
+                            "label": "WEBM Url",
+                            "name": "webm_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33.3",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5938b4195d09a",
+                            "label": "OGG Url",
+                            "name": "ogg_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33.3",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5938b4b1e8b5c",
+                            "label": "Lead",
+                            "name": "lead",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 100,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": 150,
+                            "rows": 6,
+                            "new_lines": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_5938b4dce8b5d",
+                            "label": "Link",
+                            "name": "vslide_url",
+                            "type": "url",
+                            "instructions": "Opcjonalny link do tre\u015bci. Link aktywny w polu lead.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5938b45153ae6",
+                            "label": "Warstwa logo",
+                            "name": "warstwa_logo",
+                            "type": "select",
+                            "instructions": "Czy slajd ma wy\u015bwietla\u0107 logo wymieszane w przypadkowy spos\u00f3b?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "false": "Nie",
+                                "true": "Tak"
+                            },
+                            "default_value": [
+                                "false"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/main.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1496923159
+}

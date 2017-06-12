@@ -43,6 +43,7 @@ AD.menu_scroll = function (e) {
     $('body')[(s > $(window).height() - 23 ? 'addClass' : 'removeClass')]('scrolled');
 }
 
+
 AD.init();
 
 new Rotator('.last__actions__actions');

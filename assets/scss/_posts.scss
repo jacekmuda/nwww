@@ -12,6 +12,27 @@
   a {
     color: inherit;
   }
+  #load-more {
+    border: 0;
+    background: transparent;
+    margin-top: 25px;
+    margin-bottom: 12.5px;
+    font-size: 46px;
+    font-family: map-get($fonts, din);
+    font-weight: normal;
+    line-height: 1.1;
+    color: inherit;
+    float: left;
+    clear: both;
+    &:before {
+      content: ' ';
+      background-color: map-get($colors, r);
+      width: 100px;
+      height: 10px;
+      display: block;
+      margin-bottom: 3rem;
+    }
+  }
 }
 
 .posts__navigation {

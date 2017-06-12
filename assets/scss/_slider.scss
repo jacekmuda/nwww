@@ -1,0 +1,174 @@
+.hero__section {
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  position: relative;
+
+  .pointer {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    height: 54px;
+    z-index: 888;
+    right: 0;
+    text-align: center;
+
+    svg {
+      margin: 0 auto;
+      cursor: pointer;
+    }
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .video-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    -ms-transition-property: -ms-transform;
+    transition-property: transform;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  h1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 32;
+    margin: 2*$padding;
+    max-width: 400px;
+
+    span {
+      display: inline-block;
+      padding: 15px;
+      line-height: 3rem;
+      font-size: 2.5rem;
+      //  white-space: pre-wrap;
+    }
+  }
+  a {
+    color: $gray-dark;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+
+  img, #intrologo, #akcja_demokracja_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 12;
+  }
+  #akcja_demokracja_logo {
+    top: 0vh;
+    left: 0;
+    margin: $padding;
+    width: 70%;
+    height: auto;
+    z-index: 13;
+    visibility: hidden;
+  }
+  .static-container,
+  .video-container {
+    position: relative;
+  }
+
+  .static-container {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  #intrologo {
+    visibility: hidden;
+  }
+
+  .hero__section {
+    #akcja_demokracja_logo {
+      visibility: visible;
+    }
+
+    h1 {
+      padding: 0;
+      margin: 0 10px;
+      bottom: 120px;
+      font-size:12px;
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+      max-width: 999px;
+    }
+
+    .pointer {
+      height: 30px;
+    }
+  }
+}
