@@ -1,0 +1,82 @@
+.owl-adtheme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.owl-adtheme .owl-nav [class*='owl-'] {
+  color: #FFF;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.owl-adtheme .owl-nav [class*='owl-']:hover {
+  background: #869791;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.owl-adtheme .owl-nav .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.owl-adtheme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px;
+}
+
+.owl-adtheme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  height: 45px;
+}
+
+.owl-adtheme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.owl-adtheme .owl-dots .owl-dot span {
+  width: 35px;
+  height: 35px;
+  margin: 5px 0 5px 10px;
+  background: #fff;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 30px;
+  border: 8px solid map_get($colors, r);
+}
+
+.owl-adtheme .owl-dots .owl-dot.active span,
+.owl-adtheme .owl-dots .owl-dot:hover span {
+  background: map_get($colors, r);
+}
+
+.two-items {
+  .signed {
+    max-width: 86%;
+  }
+}
+
+.three-items {
+  .signed {
+    max-width: 80%;
+  }
+}
+
+.four-items {
+  .signed {
+    max-width: 74%;
+  }
+}

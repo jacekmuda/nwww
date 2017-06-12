@@ -23,6 +23,7 @@ class App
         add_action('after_setup_theme', [$this, 'theme_support'], 0);
         add_action('save_post', [$this, 'set_transient'], 0);
         add_filter('the_content_more_link', [$this, 'modify_read_more_link']);
+        add_filter('wp_nav_menu_items', [$this, 'modify_main_nav']);
         add_action('wp_enqueue_scripts', [$this, 'do_assets']);
         add_action('pre_get_posts', [$this, 'pre']);
 
@@ -33,6 +34,7 @@ class App
     {
 
         wp_enqueue_script('app', $this->_assetUrl('js/main.js'), [], random_int(111, 222), true);
+        wp_enqueue_script('custom', $this->_assetUrl('js/custom.js'), ['jquery', 'app'], random_int(111, 222), true);
 
         if (is_page(get_option('page_on_front'))) {
 
@@ -95,6 +97,11 @@ class App
         return '';
     }
 
+    function modify_main_nav($items)
+    {
+        $items .= '<li class="close_menu"></li>';
+        return $items;
+    }
     function cats($id)
     {
         $arr = get_the_category($id);
@@ -127,13 +134,13 @@ class App
     {
         $args = [
             'post_status' => 'publish',
+            'numberposts' => 5,
             'post_type' => 'kampania',
-            'posts_per_page' => 1,
             'meta_key' => 'promo',
             'meta_value' => 1
 
         ];
-        return get_posts($args)[0];
+        return get_posts($args);
     }
 
     public function excerpt_by_id($post_id)
@@ -151,7 +158,7 @@ class App
         $jsonurl = get_field('json', $id);
         if (!$jsonurl) return false;
         $json = file_get_contents($jsonurl);
-        set_transient('speakout_' . $id, $json, 60 * 60);
+        set_transient('speakout_' . $id, $json, 5);
 
     }
 
@@ -174,8 +181,8 @@ class App
 
         return $speakout;
 
-
     }
+
 
     public function calc_perc($speakout)
     {
@@ -183,12 +190,50 @@ class App
         if (!$speakout) return false;
 
         $signed = (int)$speakout->uniquersigns;
+        $rsings = (int)$speakout->rsigns;
+        $rtweets = (int)$speakout->rtweets;
+        $rfacebooks = (int)$speakout->rfacebooks;
+        $rmails = (int)$speakout->rmails;
+        $rcalls = (int)$speakout->rcalls;
+
+        $action_count = (int)$speakout->action_count;
+
         $goal = (int)$speakout->goal;
 
+        if ( $rsings == 1 && $rtweets == 0 && $rfacebooks == 0 && $rmails == 0 && $rcalls == 0  ) {
         return [
             'signed' => $signed,
-            'perc' => $signed / $goal * 100
-        ];
+            'perc' => $signed / $goal * 100,
+            'desofaction' => ' podpis',
+        ]; } else if ( $rsings >= 1 && $rtweets == 0 && $rfacebooks == 0 && $rmails == 0 && $rcalls == 0  ) {
+          return [
+              'signed' => $signed,
+              'perc' => $signed / $goal * 100,
+              'desofaction' => ' podpisów',
+          ]; } else if ( $rsings == 0 && $rtweets == 1 || $rfacebooks == 1 && $rmails == 0 && $rcalls == 0 ) {
+          return [
+              'signed' => $signed,
+              'perc' => $signed / $goal * 100,
+              'desofaction' => ' udostępnienie',
+          ]; } else if ( $rsings == 0 && $rtweets > 1 || $rfacebooks > 1 && $rmails == 0 && $rcalls == 0 ) {
+          $shares = $rtweets + $rfacebooks;
+          return [
+              'signed' => $shares,
+              'perc' => $shares / $goal * 100,
+              'desofaction' => ' udostępnienień',
+          ]; } else if ( $rsings == 0 && $rtweets == 0 && $rfacebooks == 0 && $rmails == 1 && $rcalls == 0 ) {
+          $shares = $rtweets + $rfacebooks;
+          return [
+              'signed' => $rmails,
+              'perc' => $rmails / $goal * 100,
+              'desofaction' => ' wysłana wiadomość',
+          ]; } else if ( $rsings == 0 && $rtweets == 0 && $rfacebooks == 0 && $rmails >= 1 && $rcalls == 0 ) {
+          $shares = $rtweets + $rfacebooks;
+          return [
+              'signed' => $rmails,
+              'perc' => $rmails / $goal * 100,
+              'desofaction' => ' wysłanych wiadomości',
+          ]; }
     }
 
     public function has_parent($post)
@@ -296,7 +341,7 @@ class App
             $this->render('link', [
                 'link' => get_category_link($cat[0]->term_id),
                 'text' => $cat[0]->name,
-                'classes' => 'h4 c__b t__w campaign__cat'
+                'classes' => 'h4 c__b t__w campaign__cat catlink'
             ]);
         }
 
@@ -455,5 +500,3 @@ class App
     }
 
 }
-
-

@@ -1,6 +1,8 @@
 @import "variables";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../bower_components/NWWW/sass/app-style/application";
+@import "../../node_modules/owl.carousel/dist/assets/owl.carousel";
+@import "owl_theme";
 @import "flex";
 @import "global";
 @import "loader";
@@ -13,7 +15,4 @@
 @import "efx";
 @import "intro";
 @import "campaigns";
-
-
-
-
+@import "slider";

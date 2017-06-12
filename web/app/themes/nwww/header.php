@@ -26,7 +26,8 @@
     <?php wp_nav_menu([
         'menu' => 'Top',
         'menu_class' => 'menu',
-        'container' => false
+        'container' => false,
+        'depth' => 1,
     ]); ?>
 
     <?php // $app->get_social(); ?>

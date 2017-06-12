@@ -37,7 +37,7 @@
         ]);
     }
     $app->render('link', [
-        'link' => get_post_type_archive_link('campaign'),
+        'link' => get_post_type_archive_link('kampania'),
         'text' => 'Wszystkie',
         'classes' => 'cat__link show__all'
     ]);

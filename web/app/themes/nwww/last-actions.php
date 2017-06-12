@@ -9,11 +9,11 @@ if ($r) :
 
     ?>
     <div class="last__actions">
-        <h3 class="h1 line__over">Z ostatniej chwili</h3>
+        <h3 class="h1 line__over">Ostatnie działania:</h3>
         <div class=" c__y">
 
 
-            <div class="last__actions__actions swiper-container">
+            <div class="last__actions__actions swiper-container swiper2">
                 <?php $app->render('loader'); ?>
                 <div class="swiper-wrapper ">
                     <?php foreach ($r as $itm) :

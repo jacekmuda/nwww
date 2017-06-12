@@ -1,41 +1,34 @@
 export default class Rotator {
-    constructor(selector) {
+  constructor(selector) {
 
+    this.selector = selector;
 
-        this.selector = selector;
+    let $rotator = $(this.selector);
 
+    $(document).ready(() => {
 
-        let $rotator = $(this.selector);
+      $('.ellipsis__loader').fadeOut('slow', function() {
+        $rotator.addClass('loaded');
 
-
-        $(document).ready(() => {
-
-            $('.ellipsis__loader').fadeOut('slow', function () {
-                $rotator.addClass('loaded');
-
-                var swiper = new Swiper('.swiper-container', {
-
-                    direction: 'vertical',
-                    autoplay: 2000,
-                    slidesPerView: 'auto',
-                    //  centeredSlides: true,
-                    loop: true
-
-
-                });
-
-            });
-
-
+        var swiper1 = new Swiper('.swipe1', {
+           slidesPerView: 1,
+           loop: true,
+           effect: 'fade',
+           centeredSlides: true,
+           autoplay: 8500,
+           autoplayDisableOnInteraction: true
         });
 
-    }
+        var swiper2 = new Swiper('.swiper2', {
 
+          direction: 'vertical',
+          autoplay: 2000,
+          slidesPerView: 'auto',
+          //  centeredSlides: true,
+          loop: true
 
+        });
+      });
+    });
+  }
 }
-
-
-
-
-
-

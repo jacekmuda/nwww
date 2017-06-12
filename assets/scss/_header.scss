@@ -3,12 +3,28 @@ body {
 
   background: white;
 }
-
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  background: white;
+  display: block;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .main__menu {
   font-family: map-get($fonts, din);
   text-transform: uppercase;
   ul {
     margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   & > ul > li > a {
     color: black;
@@ -62,6 +78,11 @@ body {
   }
 }
 
+.close_menu {
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.0) !important;
+}
+
 .home {
   .menu__toggle {
     color: black;
@@ -73,6 +94,10 @@ body {
   .menu__toggle {
     background-color: black;
     color: white;
+    &:focus, &:hover {
+      color: black;
+      background-color: map_get($colors, y) !important;
+    }
   }
 }
 
@@ -131,14 +156,12 @@ body {
         color: map-get($colors, b);
       }
       &:nth-child(4n+1) {
-
-        background-color: map-get($colors, r);
-        color: map-get($colors, y);
-      }
-      &:nth-child(4n+2) {
         background-color: map-get($colors, b);
         color: map-get($colors, w);
-
+      }
+      &:nth-child(4n+2) {
+        background-color: map-get($colors, r);
+        color: map-get($colors, y);
       }
       &:nth-child(4n+3) {
         background-color: map-get($colors, y);

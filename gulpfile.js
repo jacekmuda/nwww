@@ -19,7 +19,7 @@ let sassPaths = [
     bower + 'bootstrap-sass/assets/stylesheets',
     bower + 'NWWW/sass/theme',
     'node_modules/swiper/dist/css',
-
+    'node_modules/owl.carousel/dist/assets',
     bower + 'NWWW/sass/app-style'
 ];
 
@@ -105,7 +105,25 @@ gulp.task('deploy', function () {
 
     var remoteFolder = env.base + themebase;
 
-    return gulp.src([themebase + '/**/*'], {
+    return gulp.src([ themebase + '/**/*'], {
+        base: themebase,
+        buffer: false
+    })
+        .pipe(connect.newer(remoteFolder))
+        .pipe(connect.dest(remoteFolder));
+
+
+});
+
+gulp.task('deployst', function () {
+
+    gutil.log('Deploy to ', gutil.colors.magenta(env.host));
+
+    var connect = ftpco();
+
+    var remoteFolder = env.base + themebase;
+
+    return gulp.src([ './web/**/*', './vendor/**/*', './config/**/*'], {
         base: themebase,
         buffer: false
     })

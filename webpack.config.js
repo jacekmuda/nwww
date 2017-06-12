@@ -21,6 +21,7 @@ module.exports = {
     entry: {
         main: './assets/js/main.js',
         intro: './assets/js/intro.js',
+        custom: './assets/js/custom.js',
 
     },
     output: {
